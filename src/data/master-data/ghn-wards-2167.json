@@ -1,0 +1,195 @@
+[
+  {
+    "WardCode": "350905",
+    "DistrictID": 2167,
+    "WardName": "Xã Thanh An",
+    "NameExtension": [
+      "Xã Thanh An",
+      "X.Thanh An",
+      "X Thanh An",
+      "Thanh An",
+      "Xa Thanh An",
+      "thanhan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408796 +0700 +07 m=+0.045133695",
+    "UpdatedAt": "2020-09-29 13:53:40.238619 +0700 +07 m=+244.900785371",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21355",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.937Z"
+  },
+  {
+    "WardCode": "350904",
+    "DistrictID": 2167,
+    "WardName": "Xã Long Sơn",
+    "NameExtension": [
+      "Xã Long Sơn",
+      "X.Long Sơn",
+      "X Long Sơn",
+      "Long Sơn",
+      "Long Son",
+      "Xa Long Son",
+      "longson"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408794 +0700 +07 m=+0.045130903",
+    "UpdatedAt": "2020-09-29 13:53:40.2731 +0700 +07 m=+244.935265716",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21349",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.894Z"
+  },
+  {
+    "WardCode": "350903",
+    "DistrictID": 2167,
+    "WardName": "Xã Long Môn",
+    "NameExtension": [
+      "Xã Long Môn",
+      "X.Long Môn",
+      "X Long Môn",
+      "Long Môn",
+      "Long Mon",
+      "Xa Long Mon",
+      "longmon"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408798 +0700 +07 m=+0.045135074",
+    "UpdatedAt": "2020-09-29 13:53:40.30812 +0700 +07 m=+244.970285222",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21358",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.956Z"
+  },
+  {
+    "WardCode": "350902",
+    "DistrictID": 2167,
+    "WardName": "Xã Long Mai",
+    "NameExtension": [
+      "Xã Long Mai",
+      "X.Long Mai",
+      "X Long Mai",
+      "Long Mai",
+      "Xa Long Mai",
+      "longmai"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408795 +0700 +07 m=+0.045132313",
+    "UpdatedAt": "2020-09-29 13:53:40.349385 +0700 +07 m=+245.011549483",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21352",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.913Z"
+  },
+  {
+    "WardCode": "350901",
+    "DistrictID": 2167,
+    "WardName": "Xã Long Hiệp",
+    "NameExtension": [
+      "Xã Long Hiệp",
+      "X.Long Hiệp",
+      "X Long Hiệp",
+      "Long Hiệp",
+      "Long Hiep",
+      "Xa Long Hiep",
+      "longhiep"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408799 +0700 +07 m=+0.045136448",
+    "UpdatedAt": "2020-09-29 13:53:40.384761 +0700 +07 m=+245.046924811",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21361",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.969Z"
+  }
+]

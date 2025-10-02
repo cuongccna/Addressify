@@ -1,0 +1,270 @@
+[
+  {
+    "WardCode": "630806",
+    "DistrictID": 2227,
+    "WardName": "Xã Quảng Trực",
+    "NameExtension": [
+      "Xã Quảng Trực",
+      "X.Quảng Trực",
+      "X Quảng Trực",
+      "Quảng Trực",
+      "Quang Truc",
+      "Xa Quang Truc",
+      "quangtruc"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.395523 +0700 +07 m=+0.031860367",
+    "UpdatedAt": "2020-09-29 13:50:29.295223 +0700 +07 m=+53.961013590",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "24736",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-12-26T17:00:00Z",
+      "2023-01-02T17:00:00Z",
+      "2023-01-15T17:00:00Z",
+      "2023-06-05T17:00:00Z",
+      "2023-05-30T17:00:00Z",
+      "2025-01-13T17:00:00Z",
+      "2025-01-22T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:30.126Z"
+  },
+  {
+    "WardCode": "630805",
+    "DistrictID": 2227,
+    "WardName": "Xã Quảng Tân",
+    "NameExtension": [
+      "Xã Quảng Tân",
+      "X.Quảng Tân",
+      "X Quảng Tân",
+      "Quảng Tân",
+      "Quang Tan",
+      "Xa Quang Tan",
+      "quangtan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.39553 +0700 +07 m=+0.031867419",
+    "UpdatedAt": "2020-09-29 13:50:29.330599 +0700 +07 m=+53.996388761",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "24748",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-03-15T17:00:00Z",
+      "2022-04-12T17:00:00Z",
+      "2023-06-05T17:00:00Z",
+      "2023-05-30T17:00:00Z",
+      "2025-01-13T17:00:00Z",
+      "2025-01-18T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:30.229Z"
+  },
+  {
+    "WardCode": "630804",
+    "DistrictID": 2227,
+    "WardName": "Xã Quảng Tâm",
+    "NameExtension": [
+      "Xã Quảng Tâm",
+      "X.Quảng Tâm",
+      "X Quảng Tâm",
+      "Quảng Tâm",
+      "Quang Tam",
+      "Xa Quang Tam",
+      "quangtam"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.395526 +0700 +07 m=+0.031863209",
+    "UpdatedAt": "2020-09-29 13:50:29.364984 +0700 +07 m=+54.030772660",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "24740",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-13T17:00:00Z",
+      "2025-01-22T17:00:00Z",
+      "2025-03-17T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--eform.Form--UpdateWhiteListClient",
+    "UpdatedDate": "2025-03-17T17:00:08.031Z"
+  },
+  {
+    "WardCode": "630803",
+    "DistrictID": 2227,
+    "WardName": "Xã Đắk R'Tíh",
+    "NameExtension": [
+      "Xã Đắk R'Tíh",
+      "X.Đắk R'Tíh",
+      "X Đắk R'Tíh",
+      "Đắk R'Tíh",
+      "Dak R'Tih",
+      "Xa Dak R'Tih",
+      "dakrtih"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.395527 +0700 +07 m=+0.031864619",
+    "UpdatedAt": "2020-09-29 13:50:29.397855 +0700 +07 m=+54.063643452",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "24742",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-11-08T17:00:00Z",
+      "2025-01-13T17:00:00Z",
+      "2025-01-22T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:30.186Z"
+  },
+  {
+    "WardCode": "630802",
+    "DistrictID": 2227,
+    "WardName": "Xã Đắk Ngo",
+    "NameExtension": [
+      "Xã Đắk Ngo",
+      "X.Đắk Ngo",
+      "X Đắk Ngo",
+      "Đắk Ngo",
+      "Dak Ngo",
+      "Xa Dak Ngo",
+      "dakngo"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.395529 +0700 +07 m=+0.031866023",
+    "UpdatedAt": "2020-09-29 13:50:29.434275 +0700 +07 m=+54.100062491",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "24746",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-11-14T17:00:00Z",
+      "2025-01-13T17:00:00Z",
+      "2025-01-18T17:00:00Z",
+      "2025-03-03T17:00:00Z",
+      "2025-03-17T17:00:00Z",
+      "2025-03-24T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--eform.Form--UpdateWhiteListClient",
+    "UpdatedDate": "2025-03-24T17:00:03.377Z"
+  },
+  {
+    "WardCode": "630801",
+    "DistrictID": 2227,
+    "WardName": "Xã Đắk Búk So",
+    "NameExtension": [
+      "Xã Đắk Búk So",
+      "X.Đắk Búk So",
+      "X Đắk Búk So",
+      "Đắk Búk So",
+      "Dak Buk So",
+      "Xa Dak Buk So",
+      "dakbukso"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.395524 +0700 +07 m=+0.031861800",
+    "UpdatedAt": "2020-09-29 13:50:29.488089 +0700 +07 m=+54.153875916",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "24739",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-13T17:00:00Z",
+      "2025-01-22T17:00:00Z",
+      "2025-03-03T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:30.147Z"
+  }
+]

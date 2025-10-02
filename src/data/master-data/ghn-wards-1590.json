@@ -1,0 +1,486 @@
+[
+  {
+    "WardCode": "91369",
+    "DistrictID": 1590,
+    "WardName": "Phường Bắc Hà",
+    "NameExtension": [
+      "phường bắc hà",
+      "Phường Bắc Hà",
+      "phuong bac ha",
+      "Phuong Bac Ha",
+      "bắc hà",
+      "Bắc Hà",
+      "bac ha",
+      "Bac Ha",
+      "p.bắc hà",
+      "P.bắc Hà",
+      "P.bắc hà",
+      "p.bac ha",
+      "P.bac Ha"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "11449",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-07-23T17:00:00Z",
+      "2025-07-21T17:00:00Z"
+    ],
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:17:26.172Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-07-23T17:00:05.73Z"
+  },
+  {
+    "WardCode": "30410",
+    "DistrictID": 1590,
+    "WardName": "Phường Văn Đẩu",
+    "NameExtension": [
+      "Phường Văn Đẩu",
+      "P.Văn Đẩu",
+      "P Văn Đẩu",
+      "Văn Đẩu",
+      "Van Dau",
+      "Phuong Van Dau",
+      "vandau"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.400115 +0700 +07 m=+0.036451827",
+    "UpdatedAt": "2020-09-29 13:54:33.046067 +0700 +07 m=+297.707230781",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "11446",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-09-26T17:00:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-21T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-07-23T17:00:05.716Z"
+  },
+  {
+    "WardCode": "30409",
+    "DistrictID": 1590,
+    "WardName": "Phường Tràng Minh",
+    "NameExtension": [
+      "Phường Tràng Minh",
+      "P.Tràng Minh",
+      "P Tràng Minh",
+      "Tràng Minh",
+      "Trang Minh",
+      "Phuong Trang Minh",
+      "trangminh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.400118 +0700 +07 m=+0.036455011",
+    "UpdatedAt": "2020-09-29 13:54:33.080296 +0700 +07 m=+297.741458962",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-09-26T17:00:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-21T17:00:00Z"
+    ],
+    "UpdatedEmployee": 1711127,
+    "UpdatedDate": "2025-07-23T17:00:05.693Z"
+  },
+  {
+    "WardCode": "30408",
+    "DistrictID": 1590,
+    "WardName": "Phường Trần Thành Ngọ",
+    "NameExtension": [
+      "Phường Trần Thành Ngọ",
+      "P.Trần Thành Ngọ",
+      "P Trần Thành Ngọ",
+      "Trần Thành Ngọ",
+      "Tran Thanh Ngo",
+      "Phuong Tran Thanh Ngo",
+      "tranthanhngo"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.400113 +0700 +07 m=+0.036450367",
+    "UpdatedAt": "2020-09-29 13:54:33.114621 +0700 +07 m=+297.775783294",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "11443",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-09-26T17:00:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-21T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-07-23T17:00:05.685Z"
+  },
+  {
+    "WardCode": "30407",
+    "DistrictID": 1590,
+    "WardName": "Phường Quán Trữ",
+    "NameExtension": [
+      "Phường Quán Trữ",
+      "P.Quán Trữ",
+      "P Quán Trữ",
+      "Quán Trữ",
+      "Quan Tru",
+      "Phuong Quan Tru",
+      "quantru"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.400104 +0700 +07 m=+0.036441017",
+    "UpdatedAt": "2020-09-29 13:54:33.148483 +0700 +07 m=+297.809645078",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2023-08-21T17:00:00Z",
+      "2023-08-28T17:00:00Z",
+      "2024-02-02T17:00:00Z",
+      "2024-09-26T17:00:00Z",
+      "2024-10-27T17:00:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-21T17:00:00Z"
+    ],
+    "UpdatedEmployee": 1711127,
+    "UpdatedDate": "2025-07-23T17:00:05.675Z"
+  },
+  {
+    "WardCode": "30406",
+    "DistrictID": 1590,
+    "WardName": "Phường Phù Liễn",
+    "NameExtension": [
+      "Phường Phù Liễn",
+      "P.Phù Liễn",
+      "P Phù Liễn",
+      "Phù Liễn",
+      "Phu Lien",
+      "Phuong Phu Lien",
+      "phulien"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.400116 +0700 +07 m=+0.036453558",
+    "UpdatedAt": "2020-09-29 13:54:33.184985 +0700 +07 m=+297.846146150",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-09-26T17:00:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-21T17:00:00Z"
+    ],
+    "UpdatedEmployee": 1711127,
+    "UpdatedDate": "2025-07-23T17:00:05.666Z"
+  },
+  {
+    "WardCode": "30405",
+    "DistrictID": 1590,
+    "WardName": "Phường Ngọc Sơn",
+    "NameExtension": [
+      "Phường Ngọc Sơn",
+      "P.Ngọc Sơn",
+      "P Ngọc Sơn",
+      "Ngọc Sơn",
+      "Ngoc Son",
+      "Phuong Ngoc Son",
+      "ngocson"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.400111 +0700 +07 m=+0.036448468",
+    "UpdatedAt": "2020-09-29 13:54:33.22578 +0700 +07 m=+297.886940384",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "11440",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-09-26T17:00:00Z",
+      "2024-10-27T17:00:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-21T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-07-23T17:00:05.656Z"
+  },
+  {
+    "WardCode": "30404",
+    "DistrictID": 1590,
+    "WardName": "Phường Nam Sơn",
+    "NameExtension": [
+      "Phường Nam Sơn",
+      "P.Nam Sơn",
+      "P Nam Sơn",
+      "Nam Sơn",
+      "Nam Son",
+      "Phuong Nam Son",
+      "namson"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.40011 +0700 +07 m=+0.036447041",
+    "UpdatedAt": "2020-09-29 13:54:33.259375 +0700 +07 m=+297.920534887",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "11437",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-09-26T17:00:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-21T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-07-23T17:00:05.648Z"
+  },
+  {
+    "WardCode": "30403",
+    "DistrictID": 1590,
+    "WardName": "Phường Lãm Hà",
+    "NameExtension": [
+      "Phường Lãm Hà",
+      "P.Lãm Hà",
+      "P Lãm Hà",
+      "Lãm Hà",
+      "Lam Ha",
+      "Phuong Lam Ha",
+      "lamha"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.400105 +0700 +07 m=+0.036442524",
+    "UpdatedAt": "2020-09-29 13:54:33.294867 +0700 +07 m=+297.956026249",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2023-08-21T17:00:00Z",
+      "2023-08-28T17:00:00Z",
+      "2024-02-02T17:00:00Z",
+      "2024-09-26T17:00:00Z",
+      "2024-10-27T17:00:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-21T17:00:00Z"
+    ],
+    "UpdatedEmployee": 1711127,
+    "UpdatedDate": "2025-07-23T17:00:05.64Z"
+  },
+  {
+    "WardCode": "30402",
+    "DistrictID": 1590,
+    "WardName": "Phường Đồng Hoà",
+    "NameExtension": [
+      "Phường Đồng Hoà",
+      "P.Đồng Hoà",
+      "P Đồng Hoà",
+      "Đồng Hoà",
+      "Dong Hoa",
+      "Phuong Dong Hoa",
+      "Phường Đồng Hòa",
+      "donghoa"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.400107 +0700 +07 m=+0.036444090",
+    "UpdatedAt": "2020-09-29 13:54:33.331794 +0700 +07 m=+297.992952597",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "11431",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-02-02T17:00:00Z",
+      "2024-09-26T17:00:00Z",
+      "2024-10-27T17:00:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-21T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-07-23T17:00:05.628Z"
+  },
+  {
+    "WardCode": "30401",
+    "DistrictID": 1590,
+    "WardName": "Phường Bắc Sơn",
+    "NameExtension": [
+      "Phường Bắc Sơn",
+      "P.Bắc Sơn",
+      "P Bắc Sơn",
+      "Bắc Sơn",
+      "Bac Son",
+      "Phuong Bac Son",
+      "bacson"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.400108 +0700 +07 m=+0.036445580",
+    "UpdatedAt": "2020-09-29 13:54:33.377564 +0700 +07 m=+298.038722054",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "11434",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2023-08-21T17:00:00Z",
+      "2023-08-28T17:00:00Z",
+      "2024-09-26T17:00:00Z",
+      "2024-10-27T17:00:00Z",
+      "2025-07-23T17:00:00Z",
+      "2025-07-21T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-07-23T17:00:05.617Z"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "name": "Addressify",
+  "short_name": "Addressify",
+  "description": "Nền tảng Address Intelligence giúp chủ shop Việt Nam chuẩn hóa địa chỉ và tối ưu vận chuyển.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "lang": "vi"
+}

@@ -1,0 +1,296 @@
+[
+  {
+    "WardCode": "22307",
+    "DistrictID": 1534,
+    "WardName": "Xã Phước Lộc",
+    "NameExtension": [
+      "Xã Phước Lộc",
+      "X.Phước Lộc",
+      "X Phước Lộc",
+      "Phước Lộc",
+      "Phuoc Loc",
+      "Xa Phuoc Loc",
+      "phuocloc"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.401361 +0700 +07 m=+0.037697952",
+    "UpdatedAt": "2020-09-29 13:56:57.91034 +0700 +07 m=+442.568754518",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "27649",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:15:21.216Z"
+  },
+  {
+    "WardCode": "22306",
+    "DistrictID": 1534,
+    "WardName": "Xã Phước Kiển",
+    "NameExtension": [
+      "Xã Phước Kiểng",
+      "Xã Phước Kiển",
+      "X.Phước Kiển",
+      "X Phước Kiển",
+      "Phước Kiển",
+      "Phuoc Kien",
+      "Xa Phuoc Kien",
+      "phuockien"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.401359 +0700 +07 m=+0.037696592",
+    "UpdatedAt": "2020-09-29 13:56:57.973663 +0700 +07 m=+442.632075977",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "27646",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:15:21.205Z"
+  },
+  {
+    "WardCode": "22305",
+    "DistrictID": 1534,
+    "WardName": "Xã Phú Xuân",
+    "NameExtension": [
+      "Xã Phú Xuân",
+      "X.Phú Xuân",
+      "X Phú Xuân",
+      "Phú Xuân",
+      "Phu Xuan",
+      "Xa Phu Xuan",
+      "phuxuan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.401365 +0700 +07 m=+0.037701831",
+    "UpdatedAt": "2020-09-29 13:56:58.061257 +0700 +07 m=+442.719668773",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "27655",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-09-30T17:00:00Z",
+      "2025-01-20T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:15:21.235Z"
+  },
+  {
+    "WardCode": "22304",
+    "DistrictID": 1534,
+    "WardName": "Xã Nhơn Đức",
+    "NameExtension": [
+      "Xã Nhơn Đức",
+      "X.Nhơn Đức",
+      "X Nhơn Đức",
+      "Nhơn Đức",
+      "Nhon Duc",
+      "Xa Nhon Duc",
+      "nhonduc"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.401362 +0700 +07 m=+0.037699350",
+    "UpdatedAt": "2020-09-29 13:56:58.144798 +0700 +07 m=+442.803208291",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "27652",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:15:21.224Z"
+  },
+  {
+    "WardCode": "22303",
+    "DistrictID": 1534,
+    "WardName": "Xã Long Thới",
+    "NameExtension": [
+      "Xã Long Thới",
+      "X.Long Thới",
+      "X Long Thới",
+      "Long Thới",
+      "Long Thoi",
+      "Xa Long Thoi",
+      "longthoi"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.401366 +0700 +07 m=+0.037703306",
+    "UpdatedAt": "2020-09-29 13:56:58.199135 +0700 +07 m=+442.857544331",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "27658",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:15:21.242Z"
+  },
+  {
+    "WardCode": "22302",
+    "DistrictID": 1534,
+    "WardName": "Xã Hiệp Phước",
+    "NameExtension": [
+      "Xã Hiệp Phước",
+      "X.Hiệp Phước",
+      "X Hiệp Phước",
+      "Hiệp Phước",
+      "Hiep Phuoc",
+      "Xa Hiep Phuoc",
+      "hiepphuoc"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.401367 +0700 +07 m=+0.037704698",
+    "UpdatedAt": "2020-09-29 13:56:58.242919 +0700 +07 m=+442.901327194",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "27661",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-11-29T17:00:00Z",
+      "2024-02-05T17:00:00Z",
+      "2024-02-03T17:00:00Z",
+      "2024-09-29T17:00:00Z",
+      "2024-10-06T17:00:00Z",
+      "2024-10-14T17:00:00Z",
+      "2024-10-22T17:00:00Z",
+      "2025-01-18T17:00:00Z",
+      "2025-01-20T17:00:00Z",
+      "2025-01-26T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:15:21.253Z"
+  },
+  {
+    "WardCode": "22301",
+    "DistrictID": 1534,
+    "WardName": "Thị trấn Nhà Bè",
+    "NameExtension": [
+      "Thị trấn Nhà Bè",
+      "TT.Nhà Bè",
+      "TT Nhà Bè",
+      "Nhà Bè",
+      "Nha Be",
+      "Thi tran Nha Be",
+      "nhabe"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.401358 +0700 +07 m=+0.037695218",
+    "UpdatedAt": "2020-09-29 13:56:58.333387 +0700 +07 m=+442.991793321",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "27643",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:15:21.193Z"
+  }
+]

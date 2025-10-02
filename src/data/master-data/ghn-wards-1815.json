@@ -1,0 +1,1118 @@
+[
+  {
+    "WardCode": "800010",
+    "DistrictID": 1815,
+    "WardName": "Xã Yên Hòa",
+    "NameExtension": [
+      "Xã Yên Hòa",
+      "Yen Hoa",
+      "Xa Yen Hoa",
+      "yenhoa"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.414338 +0700 +07 m=+0.050675313",
+    "UpdatedAt": "2020-09-29 13:50:18.927867 +0700 +07 m=+43.593853691",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18679",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.727Z"
+  },
+  {
+    "WardCode": "800009",
+    "DistrictID": 1815,
+    "WardName": "Xã Nam Phúc Thăng",
+    "NameExtension": [
+      "Xã Nam Phúc Thăng",
+      "Nam Phuc Thang",
+      "Xa Nam Phuc Thang",
+      "namphucthang"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.414338 +0700 +07 m=+0.050675313",
+    "UpdatedAt": "2020-09-29 13:50:18.96421 +0700 +07 m=+43.630196126",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18712",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-02-07T17:00:00Z",
+      "2024-02-03T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.836Z"
+  },
+  {
+    "WardCode": "300927",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Yên",
+    "NameExtension": [
+      "Xã Cẩm Yên",
+      "X.Cẩm Yên",
+      "X Cẩm Yên",
+      "Cẩm Yên",
+      "Cam Yen",
+      "Xa Cam Yen",
+      "camyen"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399531 +0700 +07 m=+0.035867853",
+    "UpdatedAt": "2020-09-29 13:54:37.185837 +0700 +07 m=+301.846922398",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null
+  },
+  {
+    "WardCode": "300926",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Vịnh",
+    "NameExtension": [
+      "Xã Cẩm Vĩnh",
+      "X.Cẩm Vĩnh",
+      "X Cẩm Vĩnh",
+      "Cẩm Vĩnh",
+      "Cam Vinh",
+      "Xa Cam Vinh",
+      "Xã Cẩm Vịnh",
+      "camvinh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399532 +0700 +07 m=+0.035869229",
+    "UpdatedAt": "2020-09-29 13:54:37.251371 +0700 +07 m=+301.912454672",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-01-31T17:00:00Z"
+    ],
+    "UpdatedEmployee": 1711127,
+    "UpdatedDate": "2024-01-31T17:00:02.748Z"
+  },
+  {
+    "WardCode": "300925",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Trung",
+    "NameExtension": [
+      "Xã Cẩm Trung",
+      "X.Cẩm Trung",
+      "X Cẩm Trung",
+      "Cẩm Trung",
+      "Cam Trung",
+      "Xa Cam Trung",
+      "camtrung"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399556 +0700 +07 m=+0.035892875",
+    "UpdatedAt": "2020-09-29 13:54:37.295593 +0700 +07 m=+301.956675865",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18742",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.964Z"
+  },
+  {
+    "WardCode": "300924",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Thịnh",
+    "NameExtension": [
+      "Xã Cẩm Thịnh",
+      "X.Cẩm Thịnh",
+      "X Cẩm Thịnh",
+      "Cẩm Thịnh",
+      "Cam Thinh",
+      "Xa Cam Thinh",
+      "camthinh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399553 +0700 +07 m=+0.035890100",
+    "UpdatedAt": "2020-09-29 13:54:37.337968 +0700 +07 m=+301.999050599",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18736",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.94Z"
+  },
+  {
+    "WardCode": "300923",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Thành",
+    "NameExtension": [
+      "Xã Cẩm Thành",
+      "X.Cẩm Thành",
+      "X Cẩm Thành",
+      "Cẩm Thành",
+      "Cam Thanh",
+      "Xa Cam Thanh",
+      "camthanh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399533 +0700 +07 m=+0.035870590",
+    "UpdatedAt": "2020-09-29 13:54:37.372844 +0700 +07 m=+302.033925490",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18694",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.754Z"
+  },
+  {
+    "WardCode": "300922",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Thăng",
+    "NameExtension": [
+      "Xã Cẩm Thăng",
+      "X.Cẩm Thăng",
+      "X Cẩm Thăng",
+      "Cẩm Thăng",
+      "Cam Thang",
+      "Xa Cam Thang",
+      "camthang"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399542 +0700 +07 m=+0.035878926",
+    "UpdatedAt": "2020-09-29 13:54:37.407953 +0700 +07 m=+302.069034026",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null
+  },
+  {
+    "WardCode": "300921",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Thạch",
+    "NameExtension": [
+      "Xã Cẩm Thạch",
+      "X.Cẩm Thạch",
+      "X Cẩm Thạch",
+      "Cẩm Thạch",
+      "Cam Thach",
+      "Xa Cam Thach",
+      "camthach"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399539 +0700 +07 m=+0.035876139",
+    "UpdatedAt": "2020-09-29 13:54:37.453871 +0700 +07 m=+302.114951679",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18706",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.803Z"
+  },
+  {
+    "WardCode": "300920",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Sơn",
+    "NameExtension": [
+      "Xã Cẩm Sơn",
+      "X.Cẩm Sơn",
+      "X Cẩm Sơn",
+      "Cẩm Sơn",
+      "Cam Son",
+      "Xa Cam Son",
+      "camson"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399557 +0700 +07 m=+0.035894262",
+    "UpdatedAt": "2020-09-29 13:54:37.492441 +0700 +07 m=+302.153520155",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18745",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.973Z"
+  },
+  {
+    "WardCode": "300919",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Quang",
+    "NameExtension": [
+      "Xã Cẩm Quang",
+      "X.Cẩm Quang",
+      "X Cẩm Quang",
+      "Cẩm Quang",
+      "Cam Quang",
+      "Xa Cam Quang",
+      "camquang"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399535 +0700 +07 m=+0.035871955",
+    "UpdatedAt": "2020-09-29 13:54:37.540073 +0700 +07 m=+302.201151250",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18697",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.771Z"
+  },
+  {
+    "WardCode": "300918",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Quan",
+    "NameExtension": [
+      "Xã Cẩm Quan",
+      "X.Cẩm Quan",
+      "X Cẩm Quan",
+      "Cẩm Quan",
+      "Cam Quan",
+      "Xa Cam Quan",
+      "camquan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399547 +0700 +07 m=+0.035884577",
+    "UpdatedAt": "2020-09-29 13:54:37.573989 +0700 +07 m=+302.235067166",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18724",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.879Z"
+  },
+  {
+    "WardCode": "300917",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Phúc",
+    "NameExtension": [
+      "Xã Cẩm Phúc",
+      "X.Cẩm Phúc",
+      "X Cẩm Phúc",
+      "Cẩm Phúc",
+      "Cam Phuc",
+      "Xa Cam Phuc",
+      "camphuc"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399544 +0700 +07 m=+0.035881712",
+    "UpdatedAt": "2020-09-29 13:54:37.609205 +0700 +07 m=+302.270282197",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null
+  },
+  {
+    "WardCode": "300916",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Nhượng",
+    "NameExtension": [
+      "Xã Cẩm Nhượng",
+      "X.Cẩm Nhượng",
+      "X Cẩm Nhượng",
+      "Cẩm Nhượng",
+      "Cam Nhuong",
+      "Xa Cam Nhuong",
+      "camnhuong"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.39954 +0700 +07 m=+0.035877538",
+    "UpdatedAt": "2020-09-29 13:54:37.648258 +0700 +07 m=+302.309334748",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18709",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.823Z"
+  },
+  {
+    "WardCode": "300915",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Nam",
+    "NameExtension": [
+      "Xã Cẩm Nam",
+      "X.Cẩm Nam",
+      "X Cẩm Nam",
+      "Cẩm Nam",
+      "Cam Nam",
+      "Xa Cam Nam",
+      "camnam"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399536 +0700 +07 m=+0.035873303",
+    "UpdatedAt": "2020-09-29 13:54:37.686734 +0700 +07 m=+302.347809521",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null
+  },
+  {
+    "WardCode": "300914",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Mỹ",
+    "NameExtension": [
+      "Xã Cẩm Mỹ",
+      "X.Cẩm Mỹ",
+      "X Cẩm Mỹ",
+      "Cẩm Mỹ",
+      "Cam My",
+      "Xa Cam My",
+      "cammy"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399554 +0700 +07 m=+0.035891508",
+    "UpdatedAt": "2020-09-29 13:54:37.723978 +0700 +07 m=+302.385053503",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18739",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-02-07T17:00:00Z",
+      "2024-02-03T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.951Z"
+  },
+  {
+    "WardCode": "300913",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Minh",
+    "NameExtension": [
+      "Xã Cẩm Minh",
+      "X.Cẩm Minh",
+      "X Cẩm Minh",
+      "Cẩm Minh",
+      "Cam Minh",
+      "Xa Cam Minh",
+      "camminh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.39956 +0700 +07 m=+0.035897079",
+    "UpdatedAt": "2020-09-29 13:54:37.760509 +0700 +07 m=+302.421583531",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18751",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:42.008Z"
+  },
+  {
+    "WardCode": "300912",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Lộc",
+    "NameExtension": [
+      "Xã Cẩm Lộc",
+      "X.Cẩm Lộc",
+      "X Cẩm Lộc",
+      "Cẩm Lộc",
+      "Cam Loc",
+      "Xa Cam Loc",
+      "camloc"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.39955 +0700 +07 m=+0.035887360",
+    "UpdatedAt": "2020-09-29 13:54:37.794328 +0700 +07 m=+302.455401537",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18730",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-02-07T17:00:00Z",
+      "2024-02-03T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.913Z"
+  },
+  {
+    "WardCode": "300911",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Lĩnh",
+    "NameExtension": [
+      "Xã Cẩm Lĩnh",
+      "X.Cẩm Lĩnh",
+      "X Cẩm Lĩnh",
+      "Cẩm Lĩnh",
+      "Cam Linh",
+      "Xa Cam Linh",
+      "camlinh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399546 +0700 +07 m=+0.035883107",
+    "UpdatedAt": "2020-09-29 13:54:37.829649 +0700 +07 m=+302.490722030",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18721",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.868Z"
+  },
+  {
+    "WardCode": "300910",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Lạc",
+    "NameExtension": [
+      "Xã Cẩm Lạc",
+      "X.Cẩm Lạc",
+      "X Cẩm Lạc",
+      "Cẩm Lạc",
+      "Cam Lac",
+      "Xa Cam Lac",
+      "camlac"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399558 +0700 +07 m=+0.035895662",
+    "UpdatedAt": "2020-09-29 13:54:37.864566 +0700 +07 m=+302.525638870",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18748",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.987Z"
+  },
+  {
+    "WardCode": "300909",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Huy",
+    "NameExtension": [
+      "Xã Cẩm Huy",
+      "X.Cẩm Huy",
+      "X Cẩm Huy",
+      "Cẩm Huy",
+      "Cam Huy",
+      "Xa Cam Huy",
+      "camhuy"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399537 +0700 +07 m=+0.035874727",
+    "UpdatedAt": "2020-09-29 13:54:37.922784 +0700 +07 m=+302.583855771",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null
+  },
+  {
+    "WardCode": "300908",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Hưng",
+    "NameExtension": [
+      "Xã Cẩm Hưng",
+      "X.Cẩm Hưng",
+      "X Cẩm Hưng",
+      "Cẩm Hưng",
+      "Cam Hung",
+      "Xa Cam Hung",
+      "camhung"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399551 +0700 +07 m=+0.035888727",
+    "UpdatedAt": "2020-09-29 13:54:37.957193 +0700 +07 m=+302.618263386",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18733",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.93Z"
+  },
+  {
+    "WardCode": "300907",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Hòa",
+    "NameExtension": [
+      "Xã Cẩm Hòa",
+      "X.Cẩm Hòa",
+      "X Cẩm Hòa",
+      "Cẩm Hòa",
+      "Cam Hoa",
+      "Xa Cam Hoa",
+      "Xã Cẩm Hoà",
+      "camhoa"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399526 +0700 +07 m=+0.035863714",
+    "UpdatedAt": "2020-09-29 13:54:37.991957 +0700 +07 m=+302.653026740",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null
+  },
+  {
+    "WardCode": "300906",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Hà",
+    "NameExtension": [
+      "Xã Cẩm Hà",
+      "X.Cẩm Hà",
+      "X Cẩm Hà",
+      "Cẩm Hà",
+      "Cam Ha",
+      "Xa Cam Ha",
+      "camha"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399549 +0700 +07 m=+0.035885990",
+    "UpdatedAt": "2020-09-29 13:54:38.027055 +0700 +07 m=+302.688124214",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18727",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-01-31T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.896Z"
+  },
+  {
+    "WardCode": "300905",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Dương",
+    "NameExtension": [
+      "Xã Cẩm Dương",
+      "X.Cẩm Dương",
+      "X Cẩm Dương",
+      "Cẩm Dương",
+      "Cam Duong",
+      "Xa Cam Duong",
+      "camduong"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399528 +0700 +07 m=+0.035865067",
+    "UpdatedAt": "2020-09-29 13:54:38.069367 +0700 +07 m=+302.730435698",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18682",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.739Z"
+  },
+  {
+    "WardCode": "300904",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Duệ",
+    "NameExtension": [
+      "Xã Cẩm Duệ",
+      "X.Cẩm Duệ",
+      "X Cẩm Duệ",
+      "Cẩm Duệ",
+      "Cam Due",
+      "Xa Cam Due",
+      "camdue"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399543 +0700 +07 m=+0.035880333",
+    "UpdatedAt": "2020-09-29 13:54:38.104925 +0700 +07 m=+302.765992776",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18715",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-02-07T17:00:00Z",
+      "2024-02-03T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.849Z"
+  },
+  {
+    "WardCode": "300903",
+    "DistrictID": 1815,
+    "WardName": "Xã Cẩm Bình",
+    "NameExtension": [
+      "Xã Cẩm Bình",
+      "X.Cẩm Bình",
+      "X Cẩm Bình",
+      "Cẩm Bình",
+      "Cam Binh",
+      "Xa Cam Binh",
+      "cambinh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399529 +0700 +07 m=+0.035866462",
+    "UpdatedAt": "2020-09-29 13:54:38.141001 +0700 +07 m=+302.802068089",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null
+  },
+  {
+    "WardCode": "300902",
+    "DistrictID": 1815,
+    "WardName": "Thị trấn Thiên Cầm",
+    "NameExtension": [
+      "Thị trấn Thiên Cầm",
+      "TT.Thiên Cầm",
+      "TT Thiên Cầm",
+      "Thiên Cầm",
+      "Thien Cam",
+      "Thi tran Thien Cam",
+      "thiencam"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399525 +0700 +07 m=+0.035862360",
+    "UpdatedAt": "2020-09-29 13:54:38.173865 +0700 +07 m=+302.834931320",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18676",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-02-07T17:00:00Z",
+      "2024-02-03T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.712Z"
+  },
+  {
+    "WardCode": "300901",
+    "DistrictID": 1815,
+    "WardName": "Thị trấn Cẩm Xuyên",
+    "NameExtension": [
+      "Thị trấn Cẩm Xuyên",
+      "TT.Cẩm Xuyên",
+      "TT Cẩm Xuyên",
+      "Cẩm Xuyên",
+      "Cam Xuyen",
+      "Thi tran Cam Xuyen",
+      "camxuyen"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399524 +0700 +07 m=+0.035860984",
+    "UpdatedAt": "2020-09-29 13:54:38.2094 +0700 +07 m=+302.870465422",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18673",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:41.699Z"
+  }
+]

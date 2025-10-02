@@ -1,0 +1,450 @@
+[
+  {
+    "WardCode": "91622",
+    "DistrictID": 3704,
+    "WardName": "Xã Láng Dài",
+    "NameExtension": [
+      "xã láng dài",
+      "Xã Láng Dài",
+      "xa lang dai",
+      "Xa Lang Dai",
+      "láng dài",
+      "Láng Dài",
+      "lang dai",
+      "Lang Dai",
+      "x.láng dài",
+      "X.láng Dài",
+      "X.láng dài",
+      "x.lang dai",
+      "X.lang Dai"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "26698",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:22:02.491Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:22:02.491Z"
+  },
+  {
+    "WardCode": "91621",
+    "DistrictID": 3704,
+    "WardName": "Xã Long Tân",
+    "NameExtension": [
+      "xã long tân",
+      "Xã Long Tân",
+      "xa long tan",
+      "Xa Long Tan",
+      "long tân",
+      "Long Tân",
+      "long tan",
+      "Long Tan",
+      "x.long tân",
+      "X.long Tân",
+      "X.long tân",
+      "x.long tan",
+      "X.long Tan"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "26695",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:22:01.809Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:22:01.809Z"
+  },
+  {
+    "WardCode": "91620",
+    "DistrictID": 3704,
+    "WardName": "Thị trấn Phước Hải",
+    "NameExtension": [
+      "thị trấn phước hải",
+      "Thị Trấn Phước Hải",
+      "Thị trấn Phước Hải",
+      "thi tran phuoc hai",
+      "Thi Tran Phuoc Hai"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "26689",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:22:01.038Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:22:01.038Z"
+  },
+  {
+    "WardCode": "91619",
+    "DistrictID": 3704,
+    "WardName": "Xã Phước Hội",
+    "NameExtension": [
+      "xã phước hội",
+      "Xã Phước Hội",
+      "xa phuoc hoi",
+      "Xa Phuoc Hoi",
+      "phước hội",
+      "Phước Hội",
+      "phuoc hoi",
+      "Phuoc Hoi",
+      "x.phước hội",
+      "X.phước Hội",
+      "X.phước hội",
+      "x.phuoc hoi",
+      "X.phuoc Hoi"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "26686",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:22:00.322Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:22:00.322Z"
+  },
+  {
+    "WardCode": "91618",
+    "DistrictID": 3704,
+    "WardName": "Xã Phước Long Thọ",
+    "NameExtension": [
+      "xã phước long thọ",
+      "Xã Phước Long Thọ",
+      "xa phuoc long tho",
+      "Xa Phuoc Long Tho",
+      "phước long thọ",
+      "Phước Long Thọ",
+      "phuoc long tho",
+      "Phuoc Long Tho",
+      "x.phước long thọ",
+      "X.phước Long Thọ",
+      "X.phước long thọ",
+      "x.phuoc long tho",
+      "X.phuoc Long Tho"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "26683",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:21:59.579Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:21:59.579Z"
+  },
+  {
+    "WardCode": "91617",
+    "DistrictID": 3704,
+    "WardName": "Thị trấn Đất Đỏ",
+    "NameExtension": [
+      "thị trấn đất đỏ",
+      "Thị Trấn Đất Đỏ",
+      "Thị trấn Đất Đỏ",
+      "thi tran dat do",
+      "Thi Tran Dat Do"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "26680",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:21:58.888Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:21:58.888Z"
+  },
+  {
+    "WardCode": "91616",
+    "DistrictID": 3704,
+    "WardName": "Xã Phước Hưng",
+    "NameExtension": [
+      "xã phước hưng",
+      "Xã Phước Hưng",
+      "xa phuoc hung",
+      "Xa Phuoc Hung",
+      "phước hưng",
+      "Phước Hưng",
+      "phuoc hung",
+      "Phuoc Hung",
+      "x.phước hưng",
+      "X.phước Hưng",
+      "X.phước hưng",
+      "x.phuoc hung",
+      "X.phuoc Hung"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "26677",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:21:58.113Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:21:58.113Z"
+  },
+  {
+    "WardCode": "91615",
+    "DistrictID": 3704,
+    "WardName": "Xã Phước Tỉnh",
+    "NameExtension": [
+      "xã phước tỉnh",
+      "Xã Phước Tỉnh",
+      "xa phuoc tinh",
+      "Xa Phuoc Tinh",
+      "phước tỉnh",
+      "Phước Tỉnh",
+      "phuoc tinh",
+      "Phuoc Tinh",
+      "x.phước tỉnh",
+      "X.phước Tỉnh",
+      "X.phước tỉnh",
+      "x.phuoc tinh",
+      "X.phuoc Tinh"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "26674",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:21:57.368Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:21:57.368Z"
+  },
+  {
+    "WardCode": "91614",
+    "DistrictID": 3704,
+    "WardName": "Xã Tam An",
+    "NameExtension": [
+      "xã tam an",
+      "Xã Tam An",
+      "xa tam an",
+      "Xa Tam An",
+      "tam an",
+      "Tam An",
+      "x.tam an",
+      "X.tam An",
+      "X.tam an"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "26668",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:21:56.613Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:21:56.613Z"
+  },
+  {
+    "WardCode": "91613",
+    "DistrictID": 3704,
+    "WardName": "Thị trấn Long Hải",
+    "NameExtension": [
+      "thị trấn long hải",
+      "Thị Trấn Long Hải",
+      "Thị trấn Long Hải",
+      "thi tran long hai",
+      "Thi Tran Long Hai"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "26662",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:21:55.931Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:21:55.931Z"
+  },
+  {
+    "WardCode": "91612",
+    "DistrictID": 3704,
+    "WardName": "Thị trấn Long Điền",
+    "NameExtension": [
+      "thị trấn long điền",
+      "Thị Trấn Long Điền",
+      "Thị trấn Long Điền",
+      "thi tran long dien",
+      "Thi Tran Long Dien"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "26659",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:21:55.255Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:21:55.255Z"
+  }
+]

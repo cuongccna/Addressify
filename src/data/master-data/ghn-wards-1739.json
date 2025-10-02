@@ -1,0 +1,823 @@
+[
+  {
+    "WardCode": "91591",
+    "DistrictID": 1739,
+    "WardName": "Xã Xuân Đồng",
+    "NameExtension": [
+      "xã xuân đồng",
+      "Xã Xuân Đồng",
+      "xa xuan dong",
+      "Xa Xuan Dong",
+      "xuân đồng",
+      "Xuân Đồng",
+      "xuan dong",
+      "Xuan Dong",
+      "x.xuân đồng",
+      "X.xuân Đồng",
+      "X.xuân đồng",
+      "x.xuan dong",
+      "X.xuan Dong"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22660",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:21:34.376Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:21:34.376Z"
+  },
+  {
+    "WardCode": "800301",
+    "DistrictID": 1739,
+    "WardName": "Xã Bình Lộc",
+    "NameExtension": [
+      "Xã Bình Lộc",
+      "Binh Loc",
+      "Xa Binh Loc",
+      "binhloc"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.414338 +0700 +07 m=+0.050675313",
+    "UpdatedAt": "2020-09-29 13:50:02.028438 +0700 +07 m=+26.694745870",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22696",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.989Z"
+  },
+  {
+    "WardCode": "410419",
+    "DistrictID": 1739,
+    "WardName": "Xã Suối Tiên",
+    "NameExtension": [
+      "Xã Suối Tiên",
+      "X.Suối Tiên",
+      "X Suối Tiên",
+      "Suối Tiên",
+      "Suoi Tien",
+      "Xa Suoi Tien",
+      "suoitien"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402112 +0700 +07 m=+0.038449735",
+    "UpdatedAt": "2020-09-29 13:52:51.064546 +0700 +07 m=+195.727645717",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22705",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:19.02Z"
+  },
+  {
+    "WardCode": "410418",
+    "DistrictID": 1739,
+    "WardName": "Xã Suối Hiệp",
+    "NameExtension": [
+      "Xã Suối Hiệp",
+      "X.Suối Hiệp",
+      "X Suối Hiệp",
+      "Suối Hiệp",
+      "Suoi Hiep",
+      "Xa Suoi Hiep",
+      "suoihiep"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.40211 +0700 +07 m=+0.038447564",
+    "UpdatedAt": "2020-09-29 13:52:51.098683 +0700 +07 m=+195.761782277",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22702",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:19.002Z"
+  },
+  {
+    "WardCode": "410417",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Xuân",
+    "NameExtension": [
+      "Xã Diên Xuân",
+      "X.Diên Xuân",
+      "X Diên Xuân",
+      "Diên Xuân",
+      "Dien Xuan",
+      "Xa Dien Xuan",
+      "dienxuan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402091 +0700 +07 m=+0.038427987",
+    "UpdatedAt": "2020-09-29 13:52:51.155189 +0700 +07 m=+195.818286388",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-12-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 1711127,
+    "UpdatedDate": "2024-12-25T17:00:03.911Z"
+  },
+  {
+    "WardCode": "410416",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Toàn",
+    "NameExtension": [
+      "Xã Diên Toàn",
+      "X.Diên Toàn",
+      "X Diên Toàn",
+      "Diên Toàn",
+      "Dien Toan",
+      "Xa Dien Toan",
+      "dientoan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402105 +0700 +07 m=+0.038442084",
+    "UpdatedAt": "2020-09-29 13:52:51.190722 +0700 +07 m=+195.853819254",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22690",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.959Z"
+  },
+  {
+    "WardCode": "410415",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Thọ",
+    "NameExtension": [
+      "Xã Diên Thọ",
+      "X.Diên Thọ",
+      "X Diên Thọ",
+      "Diên Thọ",
+      "Dien Tho",
+      "Xa Dien Tho",
+      "dientho"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402096 +0700 +07 m=+0.038433659",
+    "UpdatedAt": "2020-09-29 13:52:51.265324 +0700 +07 m=+195.928419400",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22672",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.844Z"
+  },
+  {
+    "WardCode": "410414",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Thạnh",
+    "NameExtension": [
+      "Xã Diên Thạnh",
+      "X.Diên Thạnh",
+      "X Diên Thạnh",
+      "Diên Thạnh",
+      "Dien Thanh",
+      "Xa Dien Thanh",
+      "dienthanh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402103 +0700 +07 m=+0.038440711",
+    "UpdatedAt": "2020-09-29 13:52:51.326994 +0700 +07 m=+195.990088377",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22687",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.945Z"
+  },
+  {
+    "WardCode": "410413",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Tân",
+    "NameExtension": [
+      "Xã Diên Tân",
+      "X.Diên Tân",
+      "X Diên Tân",
+      "Diên Tân",
+      "Dien Tan",
+      "Xa Dien Tan",
+      "dientan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402101 +0700 +07 m=+0.038437929",
+    "UpdatedAt": "2020-09-29 13:52:51.377043 +0700 +07 m=+196.040136706",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22681",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.918Z"
+  },
+  {
+    "WardCode": "410412",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Sơn",
+    "NameExtension": [
+      "Xã Diên Sơn",
+      "X.Diên Sơn",
+      "X Diên Sơn",
+      "Diên Sơn",
+      "Dien Son",
+      "Xa Dien Son",
+      "dienson"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402092 +0700 +07 m=+0.038429408",
+    "UpdatedAt": "2020-09-29 13:52:51.458199 +0700 +07 m=+196.121291645",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22663",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.823Z"
+  },
+  {
+    "WardCode": "410411",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Phước",
+    "NameExtension": [
+      "Xã Diên Phước",
+      "X.Diên Phước",
+      "X Diên Phước",
+      "Diên Phước",
+      "Dien Phuoc",
+      "Xa Dien Phuoc",
+      "dienphuoc"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402098 +0700 +07 m=+0.038435067",
+    "UpdatedAt": "2020-09-29 13:52:51.521213 +0700 +07 m=+196.184304225",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22675",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.873Z"
+  },
+  {
+    "WardCode": "410410",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Phú",
+    "NameExtension": [
+      "Xã Diên Phú",
+      "X.Diên Phú",
+      "X Diên Phú",
+      "Diên Phú",
+      "Dien Phu",
+      "Xa Dien Phu",
+      "dienphu"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402095 +0700 +07 m=+0.038432268",
+    "UpdatedAt": "2020-09-29 13:52:51.596746 +0700 +07 m=+196.259835079",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22669",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.833Z"
+  },
+  {
+    "WardCode": "410409",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Lộc",
+    "NameExtension": [
+      "Xã Diên Lộc",
+      "X.Diên Lộc",
+      "X Diên Lộc",
+      "Diên Lộc",
+      "Dien Loc",
+      "Xa Dien Loc",
+      "dienloc"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402109 +0700 +07 m=+0.038446194",
+    "UpdatedAt": "2020-09-29 13:52:51.648964 +0700 +07 m=+196.312052533",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 242614,
+    "UpdatedDate": "2024-02-01T05:22:48.277Z"
+  },
+  {
+    "WardCode": "410408",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Lâm",
+    "NameExtension": [
+      "Xã Diên Lâm",
+      "X.Diên Lâm",
+      "X Diên Lâm",
+      "Diên Lâm",
+      "Dien Lam",
+      "Xa Dien Lam",
+      "dienlam"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402088 +0700 +07 m=+0.038425218",
+    "UpdatedAt": "2020-09-29 13:52:51.761869 +0700 +07 m=+196.424955175",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22654",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-12-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.134Z"
+  },
+  {
+    "WardCode": "410407",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Lạc",
+    "NameExtension": [
+      "Xã Diên Lạc",
+      "X.Diên Lạc",
+      "X Diên Lạc",
+      "Diên Lạc",
+      "Dien Lac",
+      "Xa Dien Lac",
+      "dienlac"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402099 +0700 +07 m=+0.038436408",
+    "UpdatedAt": "2020-09-29 13:52:51.799832 +0700 +07 m=+196.462917359",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22678",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.891Z"
+  },
+  {
+    "WardCode": "410406",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Hòa",
+    "NameExtension": [
+      "Xã Diên Hòa",
+      "X.Diên Hòa",
+      "X Diên Hòa",
+      "Diên Hòa",
+      "Dien Hoa",
+      "Xa Dien Hoa",
+      "dienhoa"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402102 +0700 +07 m=+0.038439339",
+    "UpdatedAt": "2020-09-29 13:52:51.83284 +0700 +07 m=+196.495924783",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22684",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.932Z"
+  },
+  {
+    "WardCode": "410405",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Đồng",
+    "NameExtension": [
+      "Xã Diên Đồng",
+      "X.Diên Đồng",
+      "X Diên Đồng",
+      "Diên Đồng",
+      "Dien Dong",
+      "Xa Dien Dong",
+      "diendong"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402094 +0700 +07 m=+0.038430882",
+    "UpdatedAt": "2020-09-29 13:52:51.873453 +0700 +07 m=+196.536537560",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 242614,
+    "UpdatedDate": "2024-02-01T05:22:48.277Z"
+  },
+  {
+    "WardCode": "410404",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Điền",
+    "NameExtension": [
+      "Xã Diên Điền",
+      "X.Diên Điền",
+      "X Diên Điền",
+      "Diên Điền",
+      "Dien Dien",
+      "Xa Dien Dien",
+      "diendien"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402089 +0700 +07 m=+0.038426599",
+    "UpdatedAt": "2020-09-29 13:52:51.907414 +0700 +07 m=+196.570497599",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22657",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-12-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.143Z"
+  },
+  {
+    "WardCode": "410403",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên Bình",
+    "NameExtension": [
+      "Xã Diên Bình",
+      "X.Diên Bình",
+      "X Diên Bình",
+      "Diên Bình",
+      "Dien Binh",
+      "Xa Dien Binh",
+      "dienbinh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402108 +0700 +07 m=+0.038444833",
+    "UpdatedAt": "2020-09-29 13:52:51.953991 +0700 +07 m=+196.617073163",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 242614,
+    "UpdatedDate": "2024-02-01T05:22:48.277Z"
+  },
+  {
+    "WardCode": "410402",
+    "DistrictID": 1739,
+    "WardName": "Xã Diên An",
+    "NameExtension": [
+      "Xã Diên An",
+      "X.Diên An",
+      "X Diên An",
+      "Diên An",
+      "Dien An",
+      "Xa Dien An",
+      "dienan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402106 +0700 +07 m=+0.038443479",
+    "UpdatedAt": "2020-09-29 13:52:51.999099 +0700 +07 m=+196.662181028",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22693",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-12-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.97Z"
+  },
+  {
+    "WardCode": "410401",
+    "DistrictID": 1739,
+    "WardName": "Thị trấn Diên Khánh",
+    "NameExtension": [
+      "Thị trấn Diên Khánh",
+      "TT.Diên Khánh",
+      "TT Diên Khánh",
+      "Diên Khánh",
+      "Dien Khanh",
+      "Thi tran Dien Khanh",
+      "dienkhanh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402087 +0700 +07 m=+0.038423850",
+    "UpdatedAt": "2020-09-29 13:52:52.058952 +0700 +07 m=+196.722032663",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "22651",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:18.126Z"
+  }
+]

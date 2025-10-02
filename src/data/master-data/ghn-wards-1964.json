@@ -1,0 +1,651 @@
+[
+  {
+    "WardCode": "430516",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Thuận",
+    "NameExtension": [
+      "Xã Lộc Thuận",
+      "X.Lộc Thuận",
+      "X Lộc Thuận",
+      "Lộc Thuận",
+      "Loc Thuan",
+      "Xa Loc Thuan",
+      "locthuan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.393998 +0700 +07 m=+0.030335712",
+    "UpdatedAt": "2020-09-29 13:52:39.477691 +0700 +07 m=+184.141010970",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25288",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.216Z"
+  },
+  {
+    "WardCode": "430515",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Thịnh",
+    "NameExtension": [
+      "Xã Lộc Thịnh",
+      "X.Lộc Thịnh",
+      "X Lộc Thịnh",
+      "Lộc Thịnh",
+      "Loc Thinh",
+      "Xa Loc Thinh",
+      "locthinh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.394008 +0700 +07 m=+0.030345741",
+    "UpdatedAt": "2020-09-29 13:52:39.513828 +0700 +07 m=+184.177146662",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25305",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-03-23T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.327Z"
+  },
+  {
+    "WardCode": "430514",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Thiện",
+    "NameExtension": [
+      "Xã Lộc Thiện",
+      "X.Lộc Thiện",
+      "X Lộc Thiện",
+      "Lộc Thiện",
+      "Loc Thien",
+      "Xa Loc Thien",
+      "locthien"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.393997 +0700 +07 m=+0.030334306",
+    "UpdatedAt": "2020-09-29 13:52:39.554377 +0700 +07 m=+184.217694543",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25285",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.201Z"
+  },
+  {
+    "WardCode": "430513",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Thạnh",
+    "NameExtension": [
+      "Xã Lộc Thạnh",
+      "X.Lộc Thạnh",
+      "X Lộc Thạnh",
+      "Lộc Thạnh",
+      "Loc Thanh",
+      "Xa Loc Thanh",
+      "locthanh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.393994 +0700 +07 m=+0.030331191",
+    "UpdatedAt": "2020-09-29 13:52:39.590936 +0700 +07 m=+184.254253052",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25280",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2023-03-21T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:21:52.99Z"
+  },
+  {
+    "WardCode": "430512",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Thành",
+    "NameExtension": [
+      "Xã Lộc Thành",
+      "X.Lộc Thành",
+      "X Lộc Thành",
+      "Lộc Thành",
+      "Loc Thanh",
+      "Xa Loc Thanh",
+      "locthanh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.394003 +0700 +07 m=+0.030340150",
+    "UpdatedAt": "2020-09-29 13:52:39.624956 +0700 +07 m=+184.288273270",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25294",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-05-28T17:00:00Z",
+      "2022-05-13T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:21:53.051Z"
+  },
+  {
+    "WardCode": "430511",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Thái",
+    "NameExtension": [
+      "Xã Lộc Thái",
+      "X.Lộc Thái",
+      "X Lộc Thái",
+      "Lộc Thái",
+      "Loc Thai",
+      "Xa Loc Thai",
+      "locthai"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.394004 +0700 +07 m=+0.030341556",
+    "UpdatedAt": "2020-09-29 13:52:39.668174 +0700 +07 m=+184.331489829",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25297",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.276Z"
+  },
+  {
+    "WardCode": "430510",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Tấn",
+    "NameExtension": [
+      "Xã Lộc Tấn",
+      "X.Lộc Tấn",
+      "X Lộc Tấn",
+      "Lộc Tấn",
+      "Loc Tan",
+      "Xa Loc Tan",
+      "loctan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.393992 +0700 +07 m=+0.030329413",
+    "UpdatedAt": "2020-09-29 13:52:39.711346 +0700 +07 m=+184.374661241",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25279",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.134Z"
+  },
+  {
+    "WardCode": "430509",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Quang",
+    "NameExtension": [
+      "Xã Lộc Quang",
+      "X.Lộc Quang",
+      "X Lộc Quang",
+      "Lộc Quang",
+      "Loc Quang",
+      "Xa Loc Quang",
+      "locquang"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.394 +0700 +07 m=+0.030337254",
+    "UpdatedAt": "2020-09-29 13:52:39.745547 +0700 +07 m=+184.408861172",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25291",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.23Z"
+  },
+  {
+    "WardCode": "430508",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Phú",
+    "NameExtension": [
+      "Xã Lộc Phú",
+      "X.Lộc Phú",
+      "X Lộc Phú",
+      "Lộc Phú",
+      "Loc Phu",
+      "Xa Loc Phu",
+      "locphu"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.394001 +0700 +07 m=+0.030338742",
+    "UpdatedAt": "2020-09-29 13:52:39.812554 +0700 +07 m=+184.475866631",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25292",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.238Z"
+  },
+  {
+    "WardCode": "430507",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Khánh",
+    "NameExtension": [
+      "Xã Lộc Khánh",
+      "X.Lộc Khánh",
+      "X Lộc Khánh",
+      "Lộc Khánh",
+      "Loc Khanh",
+      "Xa Loc Khanh",
+      "lockhanh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.39401 +0700 +07 m=+0.030347132",
+    "UpdatedAt": "2020-09-29 13:52:39.852715 +0700 +07 m=+184.516027543",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25306",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.342Z"
+  },
+  {
+    "WardCode": "430506",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Hưng",
+    "NameExtension": [
+      "Xã Lộc Hưng",
+      "X.Lộc Hưng",
+      "X Lộc Hưng",
+      "Lộc Hưng",
+      "Loc Hung",
+      "Xa Loc Hung",
+      "lochung"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.394007 +0700 +07 m=+0.030344320",
+    "UpdatedAt": "2020-09-29 13:52:39.900021 +0700 +07 m=+184.563332227",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25303",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.31Z"
+  },
+  {
+    "WardCode": "430505",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Hòa",
+    "NameExtension": [
+      "Xã Lộc Hòa",
+      "X.Lộc Hòa",
+      "X Lộc Hòa",
+      "Lộc Hòa",
+      "Loc Hoa",
+      "Xa Loc Hoa",
+      "lochoa"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.393989 +0700 +07 m=+0.030326511",
+    "UpdatedAt": "2020-09-29 13:52:39.9362 +0700 +07 m=+184.599510697",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25273",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.108Z"
+  },
+  {
+    "WardCode": "430504",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Hiệp",
+    "NameExtension": [
+      "Xã Lộc Hiệp",
+      "X.Lộc Hiệp",
+      "X Lộc Hiệp",
+      "Lộc Hiệp",
+      "Loc Hiep",
+      "Xa Loc Hiep",
+      "lochiep"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.393996 +0700 +07 m=+0.030332900",
+    "UpdatedAt": "2020-09-29 13:52:40.001243 +0700 +07 m=+184.664552658",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25282",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.175Z"
+  },
+  {
+    "WardCode": "430503",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc Điền",
+    "NameExtension": [
+      "Xã Lộc Điền",
+      "X.Lộc Điền",
+      "X Lộc Điền",
+      "Lộc Điền",
+      "Loc Dien",
+      "Xa Loc Dien",
+      "locdien"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.394006 +0700 +07 m=+0.030342944",
+    "UpdatedAt": "2020-09-29 13:52:40.035955 +0700 +07 m=+184.699264430",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25300",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-03-23T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.294Z"
+  },
+  {
+    "WardCode": "430502",
+    "DistrictID": 1964,
+    "WardName": "Xã Lộc An",
+    "NameExtension": [
+      "Xã Lộc An",
+      "X.Lộc An",
+      "X Lộc An",
+      "Lộc An",
+      "Loc An",
+      "Xa Loc An",
+      "locan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.393991 +0700 +07 m=+0.030327988",
+    "UpdatedAt": "2020-09-29 13:52:40.122914 +0700 +07 m=+184.786221658",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25276",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-05-13T17:00:00Z",
+      "2025-01-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.126Z"
+  },
+  {
+    "WardCode": "430501",
+    "DistrictID": 1964,
+    "WardName": "Thị trấn Lộc Ninh",
+    "NameExtension": [
+      "Thị trấn Lộc Ninh",
+      "TT.Lộc Ninh",
+      "TT Lộc Ninh",
+      "Lộc Ninh",
+      "Loc Ninh",
+      "Thi tran Loc Ninh",
+      "locninh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.393988 +0700 +07 m=+0.030325112",
+    "UpdatedAt": "2020-09-29 13:52:40.234335 +0700 +07 m=+184.897639723",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "25270",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-07-20T17:00:00Z",
+      "2024-02-13T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:58.09Z"
+  }
+]

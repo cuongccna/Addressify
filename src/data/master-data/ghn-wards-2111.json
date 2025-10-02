@@ -1,0 +1,41 @@
+[
+  {
+    "WardCode": "541305",
+    "DistrictID": 2111,
+    "WardName": "Côn Đảo",
+    "NameExtension": [
+      "Xã Côn Đảo",
+      "X.Côn Đảo",
+      "X Côn Đảo",
+      "Côn Đảo",
+      "Con Dao",
+      "condao",
+      "huyencondao"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402316 +0700 +07 m=+0.038653732",
+    "UpdatedAt": "2020-09-29 13:51:24.469529 +0700 +07 m=+109.134271841",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-02-13T17:00:00Z"
+    ],
+    "UpdatedEmployee": 1711127,
+    "UpdatedDate": "2024-02-13T17:00:07.143Z"
+  }
+]

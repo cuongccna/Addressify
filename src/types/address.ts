@@ -5,6 +5,21 @@ export interface AddressData {
   ward: string
   isValid: boolean
   normalizedAddress?: string
+  streetNumber?: string
+  streetName?: string
+  country?: string
+  // GHN Master Data IDs (from fuzzy matching)
+  ghnProvinceId?: number
+  ghnProvinceName?: string
+  ghnDistrictId?: number
+  ghnDistrictName?: string
+  ghnWardCode?: string
+  ghnWardName?: string
+  matchConfidence?: {
+    province?: number
+    district?: number
+    ward?: number
+  }
   coordinates?: {
     lat: number
     lng: number

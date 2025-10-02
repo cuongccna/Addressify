@@ -1,0 +1,42 @@
+[
+  {
+    "WardCode": "541306",
+    "DistrictID": 2112,
+    "WardName": "Hoàng Sa",
+    "NameExtension": [
+      "Xã Hoàng Sa",
+      "X.Hoàng Sa",
+      "X Hoàng Sa",
+      "Hoàng Sa",
+      "Huyện Đảo Hoàng Sa",
+      "Đảo Hoàng Sa",
+      "Hoang Sa",
+      "hoangsa"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.402316 +0700 +07 m=+0.038653732",
+    "UpdatedAt": "2020-09-29 13:51:24.425549 +0700 +07 m=+109.090292896",
+    "SupportType": 0,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 2,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedIP": "203.205.29.215",
+    "UpdatedEmployee": 1705038,
+    "UpdatedSource": "internal",
+    "UpdatedDate": "2023-04-18T02:11:10.861Z"
+  }
+]

@@ -1,0 +1,313 @@
+[
+  {
+    "WardCode": "90835",
+    "DistrictID": 3696,
+    "WardName": "Xã Phú Thuận A",
+    "NameExtension": [
+      "xã phú thuận a"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedIP": "35.247.155.234",
+    "CreatedEmployee": 1705038,
+    "CreatedSource": "internal",
+    "CreatedDate": "2021-11-12T10:37:01.548Z",
+    "UpdatedEmployee": 3006735,
+    "UpdatedDate": "2023-10-06T07:41:04.182Z"
+  },
+  {
+    "WardCode": "90834",
+    "DistrictID": 3696,
+    "WardName": "Xã Phú Thuận B",
+    "NameExtension": [
+      "xã phú thuận b"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedIP": "35.247.155.234",
+    "CreatedEmployee": 1705038,
+    "CreatedSource": "internal",
+    "CreatedDate": "2021-11-12T10:36:03.098Z",
+    "UpdatedEmployee": 3006735,
+    "UpdatedDate": "2023-10-06T07:41:04.182Z"
+  },
+  {
+    "WardCode": "90833",
+    "DistrictID": 3696,
+    "WardName": "Xã Long Thuận",
+    "NameExtension": [
+      "xã long thuận"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedIP": "35.247.155.234",
+    "CreatedEmployee": 1705038,
+    "CreatedSource": "internal",
+    "CreatedDate": "2021-11-12T10:35:04.296Z",
+    "UpdatedEmployee": 3006735,
+    "UpdatedDate": "2023-10-06T07:41:04.182Z"
+  },
+  {
+    "WardCode": "90832",
+    "DistrictID": 3696,
+    "WardName": "Xã Long Khánh B",
+    "NameExtension": [
+      "xã long khánh b"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedIP": "35.247.155.234",
+    "CreatedEmployee": 1705038,
+    "CreatedSource": "internal",
+    "CreatedDate": "2021-11-12T10:34:51.007Z",
+    "UpdatedEmployee": 3006735,
+    "UpdatedDate": "2023-10-06T07:41:04.182Z"
+  },
+  {
+    "WardCode": "90831",
+    "DistrictID": 3696,
+    "WardName": "Xã Long Khánh A",
+    "NameExtension": [
+      "xã long khánh a"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedIP": "35.247.155.234",
+    "CreatedEmployee": 1705038,
+    "CreatedSource": "internal",
+    "CreatedDate": "2021-11-12T10:34:12.378Z",
+    "UpdatedEmployee": 3006735,
+    "UpdatedDate": "2023-10-06T07:41:04.182Z"
+  },
+  {
+    "WardCode": "90830",
+    "DistrictID": 3696,
+    "WardName": "Xã Thường Lạc",
+    "NameExtension": [
+      "xã thường lạc"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedIP": "35.247.155.234",
+    "CreatedEmployee": 1705038,
+    "CreatedSource": "internal",
+    "CreatedDate": "2021-11-12T10:33:58.217Z",
+    "UpdatedEmployee": 3006735,
+    "UpdatedDate": "2023-10-06T07:41:04.182Z"
+  },
+  {
+    "WardCode": "90829",
+    "DistrictID": 3696,
+    "WardName": "Xã Thường Phước 2",
+    "NameExtension": [
+      "xã thường phước 2"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedIP": "35.247.155.234",
+    "CreatedEmployee": 1705038,
+    "CreatedSource": "internal",
+    "CreatedDate": "2021-11-12T10:33:43.708Z",
+    "UpdatedEmployee": 3006735,
+    "UpdatedDate": "2023-10-06T07:41:04.182Z"
+  },
+  {
+    "WardCode": "90828",
+    "DistrictID": 3696,
+    "WardName": "Thị trấn Thường Thới Tiền",
+    "NameExtension": [
+      "thị trấn thường thới tiền"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedIP": "35.247.155.234",
+    "CreatedEmployee": 1705038,
+    "CreatedSource": "internal",
+    "CreatedDate": "2021-11-12T10:33:23.433Z",
+    "UpdatedEmployee": 3006735,
+    "UpdatedDate": "2023-10-06T07:41:04.182Z"
+  },
+  {
+    "WardCode": "90827",
+    "DistrictID": 3696,
+    "WardName": "Xã Thường Thới Hậu A",
+    "NameExtension": [
+      "xã thường thời hậu a"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedIP": "35.247.155.234",
+    "CreatedEmployee": 1705038,
+    "CreatedSource": "internal",
+    "CreatedDate": "2021-11-12T10:33:04.984Z",
+    "UpdatedEmployee": 3006735,
+    "UpdatedDate": "2023-10-06T07:41:04.182Z"
+  },
+  {
+    "WardCode": "90826",
+    "DistrictID": 3696,
+    "WardName": "Xã Thường Phước 1",
+    "NameExtension": [
+      "xã thường phước 1",
+      "thuong phuoc 1"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedIP": "35.247.155.234",
+    "CreatedEmployee": 1705038,
+    "CreatedSource": "internal",
+    "CreatedDate": "2021-11-12T10:32:47.268Z",
+    "UpdatedEmployee": 3006735,
+    "UpdatedDate": "2023-10-06T07:41:04.182Z"
+  }
+]

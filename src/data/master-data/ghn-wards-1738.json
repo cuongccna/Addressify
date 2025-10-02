@@ -1,0 +1,631 @@
+[
+  {
+    "WardCode": "350715",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Trung",
+    "NameExtension": [
+      "Xã Nghĩa Trung",
+      "X.Nghĩa Trung",
+      "X Nghĩa Trung",
+      "Nghĩa Trung",
+      "Nghia Trung",
+      "Xa Nghia Trung",
+      "nghiatrung"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408755 +0700 +07 m=+0.045092296",
+    "UpdatedAt": "2020-09-29 13:53:40.866092 +0700 +07 m=+245.528246644",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21277",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-09T17:00:00Z",
+      "2025-01-24T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.482Z"
+  },
+  {
+    "WardCode": "350714",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Thương",
+    "NameExtension": [
+      "Xã Nghĩa Thương",
+      "X.Nghĩa Thương",
+      "X Nghĩa Thương",
+      "Nghĩa Thương",
+      "Nghia Thuong",
+      "Xa Nghia Thuong",
+      "nghiathuong"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408754 +0700 +07 m=+0.045090866",
+    "UpdatedAt": "2020-09-29 13:53:40.902657 +0700 +07 m=+245.564810934",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21274",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-24T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.469Z"
+  },
+  {
+    "WardCode": "350713",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Thuận",
+    "NameExtension": [
+      "Xã Nghĩa Thuận",
+      "X.Nghĩa Thuận",
+      "X Nghĩa Thuận",
+      "Nghĩa Thuận",
+      "Nghia Thuan",
+      "Xa Nghia Thuan",
+      "nghiathuan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408745 +0700 +07 m=+0.045082540",
+    "UpdatedAt": "2020-09-29 13:53:40.936297 +0700 +07 m=+245.598450268",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21247",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-10-30T17:00:00Z",
+      "2024-10-27T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.422Z"
+  },
+  {
+    "WardCode": "350712",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Thọ",
+    "NameExtension": [
+      "Xã Nghĩa Thọ",
+      "X.Nghĩa Thọ",
+      "X Nghĩa Thọ",
+      "Nghĩa Thọ",
+      "Nghia Tho",
+      "Xa Nghia Tho",
+      "nghiatho"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408749 +0700 +07 m=+0.045086742",
+    "UpdatedAt": "2020-09-29 13:53:40.973271 +0700 +07 m=+245.635423658",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-09-22T17:00:00Z",
+      "2024-09-18T17:00:00Z",
+      "2024-09-19T17:00:00Z",
+      "2024-10-30T17:00:00Z",
+      "2024-10-27T17:00:00Z"
+    ],
+    "UpdatedEmployee": 1711127,
+    "UpdatedDate": "2024-10-30T17:00:10.912Z"
+  },
+  {
+    "WardCode": "350711",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Thắng",
+    "NameExtension": [
+      "Xã Nghĩa Thắng",
+      "X.Nghĩa Thắng",
+      "X Nghĩa Thắng",
+      "Nghĩa Thắng",
+      "Nghia Thang",
+      "Xa Nghia Thang",
+      "nghiathang"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408744 +0700 +07 m=+0.045081162",
+    "UpdatedAt": "2020-09-29 13:53:41.018103 +0700 +07 m=+245.680254775",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21244",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-10-30T17:00:00Z",
+      "2024-10-27T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.404Z"
+  },
+  {
+    "WardCode": "350710",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Sơn",
+    "NameExtension": [
+      "Xã Nghĩa Sơn",
+      "X.Nghĩa Sơn",
+      "X Nghĩa Sơn",
+      "Nghĩa Sơn",
+      "Nghia Son",
+      "Xa Nghia Son",
+      "nghiason"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408748 +0700 +07 m=+0.045085339",
+    "UpdatedAt": "2020-09-29 13:53:41.056328 +0700 +07 m=+245.718478627",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21259",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-09-22T17:00:00Z",
+      "2024-09-18T17:00:00Z",
+      "2024-09-19T17:00:00Z",
+      "2024-10-30T17:00:00Z",
+      "2024-10-27T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.438Z"
+  },
+  {
+    "WardCode": "350709",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Phương",
+    "NameExtension": [
+      "Xã Nghĩa Phương",
+      "X.Nghĩa Phương",
+      "X Nghĩa Phương",
+      "Nghĩa Phương",
+      "Nghia Phuong",
+      "Xa Nghia Phuong",
+      "Xã Nghĩa Phú",
+      "nghiaphuong"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408758 +0700 +07 m=+0.045095070",
+    "UpdatedAt": "2020-09-29 13:53:41.090778 +0700 +07 m=+245.752927711",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21283",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-24T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.501Z"
+  },
+  {
+    "WardCode": "350708",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Mỹ",
+    "NameExtension": [
+      "Xã Nghĩa Mỹ",
+      "X.Nghĩa Mỹ",
+      "X Nghĩa Mỹ",
+      "Nghĩa Mỹ",
+      "Nghia My",
+      "Xa Nghia My",
+      "nghiamy"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408759 +0700 +07 m=+0.045096494",
+    "UpdatedAt": "2020-09-29 13:53:41.125972 +0700 +07 m=+245.788121542",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-24T17:00:00Z"
+    ],
+    "UpdatedEmployee": 1711127,
+    "UpdatedDate": "2025-01-24T17:00:03.375Z"
+  },
+  {
+    "WardCode": "350707",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Lâm",
+    "NameExtension": [
+      "Xã Nghĩa Lâm",
+      "X.Nghĩa Lâm",
+      "X Nghĩa Lâm",
+      "Nghĩa Lâm",
+      "Nghia Lam",
+      "Xa Nghia Lam",
+      "nghialam"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408742 +0700 +07 m=+0.045079801",
+    "UpdatedAt": "2020-09-29 13:53:41.1597 +0700 +07 m=+245.821849002",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21241",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-10-30T17:00:00Z",
+      "2024-10-27T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.393Z"
+  },
+  {
+    "WardCode": "350706",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Kỳ",
+    "NameExtension": [
+      "Xã Nghĩa Kỳ",
+      "X.Nghĩa Kỳ",
+      "X Nghĩa Kỳ",
+      "Nghĩa Kỳ",
+      "Nghia Ky",
+      "Xa Nghia Ky",
+      "nghiaky"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408747 +0700 +07 m=+0.045083931",
+    "UpdatedAt": "2020-09-29 13:53:41.203074 +0700 +07 m=+245.865221950",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21250",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-10-30T17:00:00Z",
+      "2024-10-27T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.431Z"
+  },
+  {
+    "WardCode": "350705",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Hòa",
+    "NameExtension": [
+      "Xã Nghĩa Hòa",
+      "X.Nghĩa Hòa",
+      "X Nghĩa Hòa",
+      "Nghĩa Hòa",
+      "Nghia Hoa",
+      "Xa Nghia Hoa",
+      "nghiahoa"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408751 +0700 +07 m=+0.045088116",
+    "UpdatedAt": "2020-09-29 13:53:41.238351 +0700 +07 m=+245.900498767",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21268",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-09T17:00:00Z",
+      "2025-01-24T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.45Z"
+  },
+  {
+    "WardCode": "350704",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Hiệp",
+    "NameExtension": [
+      "Xã Nghĩa Hiệp",
+      "X.Nghĩa Hiệp",
+      "X Nghĩa Hiệp",
+      "Nghĩa Hiệp",
+      "Nghia Hiep",
+      "Xa Nghia Hiep",
+      "nghiahiep"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408756 +0700 +07 m=+0.045093682",
+    "UpdatedAt": "2020-09-29 13:53:41.276351 +0700 +07 m=+245.938497530",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21280",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-24T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.492Z"
+  },
+  {
+    "WardCode": "350703",
+    "DistrictID": 1738,
+    "WardName": "Xã Nghĩa Điền",
+    "NameExtension": [
+      "Xã Nghĩa Điền",
+      "X.Nghĩa Điền",
+      "X Nghĩa Điền",
+      "Nghĩa Điền",
+      "Nghia Dien",
+      "Xa Nghia Dien",
+      "nghiadien"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408752 +0700 +07 m=+0.045089491",
+    "UpdatedAt": "2020-09-29 13:53:41.311626 +0700 +07 m=+245.973772290",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21271",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-10-30T17:00:00Z",
+      "2024-10-27T17:00:00Z",
+      "2024-12-30T17:00:00Z",
+      "2025-01-09T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.462Z"
+  },
+  {
+    "WardCode": "350702",
+    "DistrictID": 1738,
+    "WardName": "Thị trấn Sông Vệ",
+    "NameExtension": [
+      "Thị trấn Sông Vệ",
+      "TT.Sông Vệ",
+      "TT Sông Vệ",
+      "Sông Vệ",
+      "Song Ve",
+      "Thi tran Song Ve",
+      "songve"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.408741 +0700 +07 m=+0.045078366",
+    "UpdatedAt": "2020-09-29 13:53:41.455993 +0700 +07 m=+246.118136175",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21238",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-24T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.381Z"
+  },
+  {
+    "WardCode": "350701",
+    "DistrictID": 1738,
+    "WardName": "Thị trấn La Hà",
+    "NameExtension": [
+      "Thị trấn La Hà",
+      "TT.La Hà",
+      "TT La Hà",
+      "La Hà",
+      "La Ha",
+      "Thi tran La Ha",
+      "laha"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.40874 +0700 +07 m=+0.045076876",
+    "UpdatedAt": "2020-09-29 13:53:42.061309 +0700 +07 m=+246.723441072",
+    "SupportType": 3,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "21235",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2025-01-25T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:14:09.372Z"
+  }
+]

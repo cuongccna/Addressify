@@ -1,0 +1,412 @@
+[
+  {
+    "WardCode": "292110",
+    "DistrictID": 1849,
+    "WardName": "Xã Quỳnh Vinh",
+    "NameExtension": [
+      "Xã Quỳnh Vinh",
+      "X.Quỳnh Vinh",
+      "X Quỳnh Vinh",
+      "Quỳnh Vinh",
+      "Quynh Vinh",
+      "Xa Quynh Vinh",
+      "quynhvinh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.406328 +0700 +07 m=+0.042665580",
+    "UpdatedAt": "2020-09-29 13:54:46.014629 +0700 +07 m=+310.675546309",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "17104",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-10-09T17:00:00Z",
+      "2022-10-04T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:12.862Z"
+  },
+  {
+    "WardCode": "292109",
+    "DistrictID": 1849,
+    "WardName": "Xã Quỳnh Trang",
+    "NameExtension": [
+      "Xã Quỳnh Trang",
+      "X.Quỳnh Trang",
+      "X Quỳnh Trang",
+      "Quỳnh Trang",
+      "Quynh Trang",
+      "Xa Quynh Trang",
+      "quynhtrang"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.406334 +0700 +07 m=+0.042671721",
+    "UpdatedAt": "2020-09-29 13:54:46.070625 +0700 +07 m=+310.731541743",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "17116",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-10-09T17:00:00Z",
+      "2022-10-04T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:12.912Z"
+  },
+  {
+    "WardCode": "292108",
+    "DistrictID": 1849,
+    "WardName": "Xã Quỳnh Lộc",
+    "NameExtension": [
+      "Xã Quỳnh Lộc",
+      "X.Quỳnh Lộc",
+      "X Quỳnh Lộc",
+      "Quỳnh Lộc",
+      "Quynh Loc",
+      "Xa Quynh Loc",
+      "quynhloc"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.40633 +0700 +07 m=+0.042667041",
+    "UpdatedAt": "2020-09-29 13:54:46.151685 +0700 +07 m=+310.812600654",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "17107",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-09-27T17:00:00Z",
+      "2024-09-23T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:12.873Z"
+  },
+  {
+    "WardCode": "292107",
+    "DistrictID": 1849,
+    "WardName": "Xã Quỳnh Liên",
+    "NameExtension": [
+      "Xã Quỳnh Liên",
+      "X.Quỳnh Liên",
+      "X Quỳnh Liên",
+      "Quỳnh Liên",
+      "Quynh Lien",
+      "Xa Quynh Lien",
+      "quynhlien"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.406343 +0700 +07 m=+0.042680053",
+    "UpdatedAt": "2020-09-29 13:54:46.191024 +0700 +07 m=+310.851938378",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "17137",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:12.97Z"
+  },
+  {
+    "WardCode": "292106",
+    "DistrictID": 1849,
+    "WardName": "Xã Quỳnh Lập",
+    "NameExtension": [
+      "Xã Quỳnh Lập",
+      "X.Quỳnh Lập",
+      "X Quỳnh Lập",
+      "Quỳnh Lập",
+      "Quynh Lap",
+      "Xa Quynh Lap",
+      "quynhlap"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.406333 +0700 +07 m=+0.042670215",
+    "UpdatedAt": "2020-09-29 13:54:46.228469 +0700 +07 m=+310.889382986",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "17113",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-10-09T17:00:00Z",
+      "2022-10-04T17:00:00Z",
+      "2023-02-22T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:12.896Z"
+  },
+  {
+    "WardCode": "292105",
+    "DistrictID": 1849,
+    "WardName": "Phường Quỳnh Xuân",
+    "NameExtension": [
+      "Phường Quỳnh Xuân",
+      "P.Quỳnh Xuân",
+      "P Quỳnh Xuân",
+      "Quỳnh Xuân",
+      "Quynh Xuan",
+      "Phuong Quynh Xuan",
+      "quynhxuan"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.40634 +0700 +07 m=+0.042676883",
+    "UpdatedAt": "2020-09-29 13:54:46.287185 +0700 +07 m=+310.948097348",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "17131",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:12.943Z"
+  },
+  {
+    "WardCode": "292104",
+    "DistrictID": 1849,
+    "WardName": "Phường Quỳnh Thiện",
+    "NameExtension": [
+      "Phường Quỳnh Thiện",
+      "P.Quỳnh Thiện",
+      "P Quỳnh Thiện",
+      "Quỳnh Thiện",
+      "Quynh Thien",
+      "Phuong Quynh Thien",
+      "quynhthien"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.406332 +0700 +07 m=+0.042668849",
+    "UpdatedAt": "2020-09-29 13:54:46.35395 +0700 +07 m=+311.014861290",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "17110",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:12.884Z"
+  },
+  {
+    "WardCode": "292103",
+    "DistrictID": 1849,
+    "WardName": "Phường Quỳnh Phương",
+    "NameExtension": [
+      "Phường Quỳnh Phương",
+      "P.Quỳnh Phương",
+      "P Quỳnh Phương",
+      "Quỳnh Phương",
+      "Quynh Phuong",
+      "Phuong Quynh Phuong",
+      "quynhphuong"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.406341 +0700 +07 m=+0.042678487",
+    "UpdatedAt": "2020-09-29 13:54:46.401859 +0700 +07 m=+311.062769684",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "17134",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-09-13T17:00:00Z",
+      "2022-09-24T17:00:00Z",
+      "2022-09-19T17:00:00Z",
+      "2023-02-22T17:00:00Z",
+      "2024-09-27T17:00:00Z",
+      "2024-09-23T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:12.952Z"
+  },
+  {
+    "WardCode": "292102",
+    "DistrictID": 1849,
+    "WardName": "Phường Quỳnh Dị",
+    "NameExtension": [
+      "Phường Quỳnh Dị",
+      "P.Quỳnh Dị",
+      "P Quỳnh Dị",
+      "Quỳnh Dị",
+      "Quynh Di",
+      "Phuong Quynh Di",
+      "quynhdi"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.406338 +0700 +07 m=+0.042675096",
+    "UpdatedAt": "2020-09-29 13:54:46.437103 +0700 +07 m=+311.098013283",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "17128",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:12.932Z"
+  },
+  {
+    "WardCode": "292101",
+    "DistrictID": 1849,
+    "WardName": "Phường Mai Hùng",
+    "NameExtension": [
+      "Phường Mai Hùng",
+      "P.Mai Hùng",
+      "P Mai Hùng",
+      "Mai Hùng",
+      "Mai Hung",
+      "Phuong Mai Hung",
+      "maihung"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.406336 +0700 +07 m=+0.042673188",
+    "UpdatedAt": "2020-09-29 13:54:46.470534 +0700 +07 m=+311.131443602",
+    "SupportType": 3,
+    "PickType": 3,
+    "DeliverType": 3,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "17125",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:12.921Z"
+  }
+]

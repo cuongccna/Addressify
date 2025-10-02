@@ -1,0 +1,1270 @@
+[
+  {
+    "WardCode": "91513",
+    "DistrictID": 1618,
+    "WardName": "Xã Cẩm Vịnh",
+    "NameExtension": [
+      "xã cẩm vịnh",
+      "Xã Cẩm Vịnh",
+      "xa cam vinh",
+      "Xa Cam Vinh",
+      "cẩm vịnh",
+      "Cẩm Vịnh",
+      "cam vinh",
+      "Cam Vinh",
+      "x.cẩm vịnh",
+      "X.cẩm Vịnh",
+      "X.cẩm vịnh",
+      "x.cam vinh",
+      "X.cam Vinh"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18691",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:58.321Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:58.321Z"
+  },
+  {
+    "WardCode": "91512",
+    "DistrictID": 1618,
+    "WardName": "Xã Cẩm Bình",
+    "NameExtension": [
+      "xã cẩm bình",
+      "Xã Cẩm Bình",
+      "xa cam binh",
+      "Xa Cam Binh",
+      "cẩm bình",
+      "Cẩm Bình",
+      "cam binh",
+      "Cam Binh",
+      "x.cẩm bình",
+      "X.cẩm Bình",
+      "X.cẩm bình",
+      "x.cam binh",
+      "X.cam Binh"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18685",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:57.649Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:57.649Z"
+  },
+  {
+    "WardCode": "91511",
+    "DistrictID": 1618,
+    "WardName": "Xã Tân Lâm Hương",
+    "NameExtension": [
+      "xã tân lâm hương",
+      "Xã Tân Lâm Hương",
+      "xa tan lam huong",
+      "Xa Tan Lam Huong",
+      "tân lâm hương",
+      "Tân Lâm Hương",
+      "tan lam huong",
+      "Tan Lam Huong",
+      "x.tân lâm hương",
+      "X.tân Lâm Hương",
+      "X.tân lâm hương",
+      "x.tan lam huong",
+      "X.tan Lam Huong"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18652",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:56.972Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:56.972Z"
+  },
+  {
+    "WardCode": "91510",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Hội",
+    "NameExtension": [
+      "xã thạch hội",
+      "Xã Thạch Hội",
+      "xa thach hoi",
+      "Xa Thach Hoi",
+      "thạch hội",
+      "Thạch Hội",
+      "thach hoi",
+      "Thach Hoi",
+      "x.thạch hội",
+      "X.thạch Hội",
+      "X.thạch hội",
+      "x.thach hoi",
+      "X.thach Hoi"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18649",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:56.297Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:56.297Z"
+  },
+  {
+    "WardCode": "91509",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Đài",
+    "NameExtension": [
+      "xã thạch đài",
+      "Xã Thạch Đài",
+      "xa thach dai",
+      "Xa Thach Dai",
+      "thạch đài",
+      "Thạch Đài",
+      "thach dai",
+      "Thach Dai",
+      "x.thạch đài",
+      "X.thạch Đài",
+      "X.thạch đài",
+      "x.thach dai",
+      "X.thach Dai"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18643",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:55.63Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:55.63Z"
+  },
+  {
+    "WardCode": "91508",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Thắng",
+    "NameExtension": [
+      "xã thạch thắng",
+      "Xã Thạch Thắng",
+      "xa thach thang",
+      "Xa Thach Thang",
+      "thạch thắng",
+      "Thạch Thắng",
+      "thach thang",
+      "Thach Thang",
+      "x.thạch thắng",
+      "X.thạch Thắng",
+      "X.thạch thắng",
+      "x.thach thang",
+      "X.thach Thang"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18637",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:54.964Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:54.964Z"
+  },
+  {
+    "WardCode": "91507",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Văn",
+    "NameExtension": [
+      "xã thạch văn",
+      "Xã Thạch Văn",
+      "xa thach van",
+      "Xa Thach Van",
+      "thạch văn",
+      "Thạch Văn",
+      "thach van",
+      "Thach Van",
+      "x.thạch văn",
+      "X.thạch Văn",
+      "X.thạch văn",
+      "x.thach van",
+      "X.thach Van"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18631",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:54.198Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:54.198Z"
+  },
+  {
+    "WardCode": "91506",
+    "DistrictID": 1618,
+    "WardName": "Xã Tượng Sơn",
+    "NameExtension": [
+      "xã tượng sơn",
+      "Xã Tượng Sơn",
+      "xa tuong son",
+      "Xa Tuong Son",
+      "tượng sơn",
+      "Tượng Sơn",
+      "tuong son",
+      "Tuong Son",
+      "x.tượng sơn",
+      "X.tượng Sơn",
+      "X.tượng sơn",
+      "x.tuong son",
+      "X.tuong Son"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18628",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:53.403Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:53.403Z"
+  },
+  {
+    "WardCode": "91505",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Lạc",
+    "NameExtension": [
+      "xã thạch lạc",
+      "Xã Thạch Lạc",
+      "xa thach lac",
+      "Xa Thach Lac",
+      "thạch lạc",
+      "Thạch Lạc",
+      "thach lac",
+      "Thach Lac",
+      "x.thạch lạc",
+      "X.thạch Lạc",
+      "X.thạch lạc",
+      "x.thach lac",
+      "X.thach Lac"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18622",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:52.705Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:52.705Z"
+  },
+  {
+    "WardCode": "91504",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Trị",
+    "NameExtension": [
+      "xã thạch trị",
+      "Xã Thạch Trị",
+      "xa thach tri",
+      "Xa Thach Tri",
+      "thạch trị",
+      "Thạch Trị",
+      "thach tri",
+      "Thach Tri",
+      "x.thạch trị",
+      "X.thạch Trị",
+      "X.thạch trị",
+      "x.thach tri",
+      "X.thach Tri"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18619",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:52.031Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:52.031Z"
+  },
+  {
+    "WardCode": "91503",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Khê",
+    "NameExtension": [
+      "xã thạch khê",
+      "Xã Thạch Khê",
+      "xa thach khe",
+      "Xa Thach Khe",
+      "thạch khê",
+      "Thạch Khê",
+      "thach khe",
+      "Thach Khe",
+      "x.thạch khê",
+      "X.thạch Khê",
+      "X.thạch khê",
+      "x.thach khe",
+      "X.thach Khe"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18604",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:51.346Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:51.346Z"
+  },
+  {
+    "WardCode": "91502",
+    "DistrictID": 1618,
+    "WardName": "Xã Hộ Độ",
+    "NameExtension": [
+      "xã hộ độ",
+      "Xã Hộ Độ",
+      "xa ho do",
+      "Xa Ho Do",
+      "hộ độ",
+      "Hộ Độ",
+      "ho do",
+      "Ho Do",
+      "x.hộ độ",
+      "X.hộ Độ",
+      "X.hộ độ",
+      "x.ho do",
+      "X.ho Do"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18598",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:50.658Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:50.658Z"
+  },
+  {
+    "WardCode": "91501",
+    "DistrictID": 1618,
+    "WardName": "Xã Đỉnh Bàn",
+    "NameExtension": [
+      "xã đỉnh bàn",
+      "Xã Đỉnh Bàn",
+      "xa dinh ban",
+      "Xa Dinh Ban",
+      "đỉnh bàn",
+      "Đỉnh Bàn",
+      "dinh ban",
+      "Dinh Ban",
+      "x.đỉnh bàn",
+      "X.đỉnh Bàn",
+      "X.đỉnh bàn",
+      "x.dinh ban",
+      "X.dinh Ban"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18595",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:49.986Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:49.986Z"
+  },
+  {
+    "WardCode": "91500",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Hải",
+    "NameExtension": [
+      "xã thạch hải",
+      "Xã Thạch Hải",
+      "xa thach hai",
+      "Xa Thach Hai",
+      "thạch hải",
+      "Thạch Hải",
+      "thach hai",
+      "Thach Hai",
+      "x.thạch hải",
+      "X.thạch Hải",
+      "X.thạch hải",
+      "x.thach hai",
+      "X.thach Hai"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 3,
+    "PickType": 0,
+    "DeliverType": 0,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18571",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedEmployee": 8888,
+    "CreatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "CreatedDate": "2025-03-05T11:19:49.269Z",
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T11:19:49.269Z"
+  },
+  {
+    "WardCode": "800172",
+    "DistrictID": 1618,
+    "WardName": "Xã Đồng Môn",
+    "NameExtension": [
+      "Xã Đồng Môn",
+      "Dong Mon",
+      "Xa Dong Mon",
+      "dongmon"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.414338 +0700 +07 m=+0.050675313",
+    "UpdatedAt": "2020-09-29 13:50:08.553896 +0700 +07 m=+33.220080352",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18103",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:13.094Z"
+  },
+  {
+    "WardCode": "300116",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Trung",
+    "NameExtension": [
+      "Xã Thạch Trung",
+      "X.Thạch Trung",
+      "X Thạch Trung",
+      "Thạch Trung",
+      "Thach Trung",
+      "Xa Thach Trung",
+      "thachtrung"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399142 +0700 +07 m=+0.035479109",
+    "UpdatedAt": "2020-09-29 13:54:45.312346 +0700 +07 m=+309.973276920",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18088",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:13.042Z"
+  },
+  {
+    "WardCode": "300115",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Môn",
+    "NameExtension": [
+      "Xã Thạch Môn",
+      "X.Thạch Môn",
+      "X Thạch Môn",
+      "Thạch Môn",
+      "Thach Mon",
+      "Xa Thach Mon",
+      "thachmon"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399149 +0700 +07 m=+0.035486366",
+    "UpdatedAt": "2020-09-29 13:54:45.3624 +0700 +07 m=+310.023329826",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null
+  },
+  {
+    "WardCode": "300114",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Hưng",
+    "NameExtension": [
+      "Xã Thạch Hưng",
+      "X.Thạch Hưng",
+      "X Thạch Hưng",
+      "Thạch Hưng",
+      "Thach Hung",
+      "Xa Thach Hung",
+      "thachhung"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399152 +0700 +07 m=+0.035489196",
+    "UpdatedAt": "2020-09-29 13:54:45.4113 +0700 +07 m=+310.072229741",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18109",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:13.108Z"
+  },
+  {
+    "WardCode": "300113",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Hạ",
+    "NameExtension": [
+      "Xã Thạch Hạ",
+      "X.Thạch Hạ",
+      "X Thạch Hạ",
+      "Thạch Hạ",
+      "Thach Ha",
+      "Xa Thach Ha",
+      "thachha"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399148 +0700 +07 m=+0.035484955",
+    "UpdatedAt": "2020-09-29 13:54:45.460074 +0700 +07 m=+310.121002754",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18100",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:13.08Z"
+  },
+  {
+    "WardCode": "300112",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Đồng",
+    "NameExtension": [
+      "Xã Thạch Đồng",
+      "X.Thạch Đồng",
+      "X Thạch Đồng",
+      "Thạch Đồng",
+      "Thach Dong",
+      "Xa Thach Dong",
+      "thachdong"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.39915 +0700 +07 m=+0.035487791",
+    "UpdatedAt": "2020-09-29 13:54:45.512438 +0700 +07 m=+310.173365121",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null
+  },
+  {
+    "WardCode": "300111",
+    "DistrictID": 1618,
+    "WardName": "Xã Thạch Bình",
+    "NameExtension": [
+      "Xã Thạch Bình",
+      "X.Thạch Bình",
+      "X Thạch Bình",
+      "Thạch Bình",
+      "Thach Binh",
+      "Xa Thach Binh",
+      "thachbinh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399153 +0700 +07 m=+0.035490534",
+    "UpdatedAt": "2020-09-29 13:54:45.544668 +0700 +07 m=+310.205594494",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18112",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:13.119Z"
+  },
+  {
+    "WardCode": "300110",
+    "DistrictID": 1618,
+    "WardName": "Phường Văn Yên",
+    "NameExtension": [
+      "Phường Văn Yên",
+      "P.Văn Yên",
+      "P Văn Yên",
+      "Văn Yên",
+      "Van Yen",
+      "Phuong Van Yen",
+      "vanyen"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399146 +0700 +07 m=+0.035483521",
+    "UpdatedAt": "2020-09-29 13:54:45.632696 +0700 +07 m=+310.293620690",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18097",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:13.071Z"
+  },
+  {
+    "WardCode": "300109",
+    "DistrictID": 1618,
+    "WardName": "Phường Trần Phú",
+    "NameExtension": [
+      "Phường Trần Phú",
+      "P.Trần Phú",
+      "P Trần Phú",
+      "Trần Phú",
+      "Tran Phu",
+      "Phuong Tran Phu",
+      "tranphu"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399131 +0700 +07 m=+0.035468308",
+    "UpdatedAt": "2020-09-29 13:54:45.66714 +0700 +07 m=+310.328064060",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18094",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:13.063Z"
+  },
+  {
+    "WardCode": "300108",
+    "DistrictID": 1618,
+    "WardName": "Phường Thạch Quý",
+    "NameExtension": [
+      "Phường Thạch Quý",
+      "P.Thạch Quý",
+      "P Thạch Quý",
+      "Thạch Quý",
+      "Thach Quy",
+      "Phuong Thach Quy",
+      "thachquy"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399143 +0700 +07 m=+0.035480637",
+    "UpdatedAt": "2020-09-29 13:54:45.705907 +0700 +07 m=+310.366831274",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18091",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2024-02-07T17:00:00Z",
+      "2024-02-03T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:13.057Z"
+  },
+  {
+    "WardCode": "300107",
+    "DistrictID": 1618,
+    "WardName": "Phường Thạch Linh",
+    "NameExtension": [
+      "Phường Thạch Linh",
+      "P.Thạch Linh",
+      "P Thạch Linh",
+      "Thạch Linh",
+      "Thach Linh",
+      "Phuong Thach Linh",
+      "thachlinh"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399145 +0700 +07 m=+0.035482067",
+    "UpdatedAt": "2020-09-29 13:54:45.742733 +0700 +07 m=+310.403655669",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null
+  },
+  {
+    "WardCode": "300106",
+    "DistrictID": 1618,
+    "WardName": "Phường Tân Giang",
+    "NameExtension": [
+      "Phường Tân Giang",
+      "P.Tân Giang",
+      "P Tân Giang",
+      "Tân Giang",
+      "Tan Giang",
+      "Phuong Tan Giang",
+      "tangiang"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399137 +0700 +07 m=+0.035474734",
+    "UpdatedAt": "2020-09-29 13:54:45.778371 +0700 +07 m=+310.439293644",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18079",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:13.008Z"
+  },
+  {
+    "WardCode": "300105",
+    "DistrictID": 1618,
+    "WardName": "Phường Nguyễn Du",
+    "NameExtension": [
+      "Phường Nguyễn Du",
+      "P.Nguyễn Du",
+      "P Nguyễn Du",
+      "Nguyễn Du",
+      "Nguyen Du",
+      "Phuong Nguyen Du",
+      "nguyendu"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399136 +0700 +07 m=+0.035473251",
+    "UpdatedAt": "2020-09-29 13:54:45.816509 +0700 +07 m=+310.477430339",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null
+  },
+  {
+    "WardCode": "300104",
+    "DistrictID": 1618,
+    "WardName": "Phường Nam Hà",
+    "NameExtension": [
+      "Phường Nam Hà",
+      "P.Nam Hà",
+      "P Nam Hà",
+      "Nam Hà",
+      "Nam Ha",
+      "Phuong Nam Ha",
+      "namha"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399133 +0700 +07 m=+0.035469961",
+    "UpdatedAt": "2020-09-29 13:54:45.850436 +0700 +07 m=+310.511357033",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18073",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:12.986Z"
+  },
+  {
+    "WardCode": "300103",
+    "DistrictID": 1618,
+    "WardName": "Phường Hà Huy Tập",
+    "NameExtension": [
+      "Phường Hà Huy Tập",
+      "P.Hà Huy Tập",
+      "P Hà Huy Tập",
+      "Hà Huy Tập",
+      "Ha Huy Tap",
+      "Phuong Ha Huy Tap",
+      "hahuytap"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.39914 +0700 +07 m=+0.035477705",
+    "UpdatedAt": "2020-09-29 13:54:45.886114 +0700 +07 m=+310.547034213",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18085",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": [
+      "2022-10-21T17:00:00Z",
+      "2022-10-14T17:00:00Z",
+      "2023-02-17T17:00:00Z",
+      "2023-02-09T17:00:00Z"
+    ],
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:13.03Z"
+  },
+  {
+    "WardCode": "300102",
+    "DistrictID": 1618,
+    "WardName": "Phường Đại Nài",
+    "NameExtension": [
+      "Phường Đại Nài",
+      "P.Đại Nài",
+      "P Đại Nài",
+      "Đại Nài",
+      "Dai Nai",
+      "Phuong Dai Nai",
+      "dainai"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399139 +0700 +07 m=+0.035476244",
+    "UpdatedAt": "2020-09-29 13:54:45.920433 +0700 +07 m=+310.581352675",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18082",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:13.018Z"
+  },
+  {
+    "WardCode": "300101",
+    "DistrictID": 1618,
+    "WardName": "Phường Bắc Hà",
+    "NameExtension": [
+      "Phường Bắc Hà",
+      "P.Bắc Hà",
+      "P Bắc Hà",
+      "Bắc Hà",
+      "Bac Ha",
+      "Phuong Bac Ha",
+      "bacha"
+    ],
+    "IsEnable": 1,
+    "CanUpdateCOD": false,
+    "UpdatedBy": 1718600,
+    "CreatedAt": "2019-12-05 16:02:20.399134 +0700 +07 m=+0.035471699",
+    "UpdatedAt": "2020-09-29 13:54:45.968323 +0700 +07 m=+310.629241530",
+    "SupportType": 3,
+    "PickType": 1,
+    "DeliverType": 1,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "GovernmentCode": "18077",
+    "Status": 1,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "UpdatedEmployee": 8888,
+    "UpdatedSource": "online--stream--master-data.RawData--UpdateMasterData",
+    "UpdatedDate": "2025-03-05T10:12:12.996Z"
+  }
+]

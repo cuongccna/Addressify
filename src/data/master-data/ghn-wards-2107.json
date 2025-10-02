@@ -1,0 +1,39 @@
+[
+  {
+    "WardCode": "90836",
+    "DistrictID": 2107,
+    "WardName": "Bạch Long Vĩ",
+    "NameExtension": [
+      "bạc long vĩ",
+      "Bạch Long Vĩ",
+      "bạch long vĩ",
+      "bach long vi",
+      "Bach Long Vi"
+    ],
+    "CanUpdateCOD": false,
+    "SupportType": 0,
+    "PickType": 2,
+    "DeliverType": 2,
+    "WhiteListClient": {
+      "From": [],
+      "To": [],
+      "Return": []
+    },
+    "WhiteListWard": {
+      "From": null,
+      "To": null
+    },
+    "Status": 2,
+    "ReasonCode": "",
+    "ReasonMessage": "",
+    "OnDates": null,
+    "CreatedIP": "35.247.155.234",
+    "CreatedEmployee": 1705038,
+    "CreatedSource": "internal",
+    "CreatedDate": "2021-12-15T04:51:08.545Z",
+    "UpdatedIP": "35.247.155.234",
+    "UpdatedEmployee": 1705038,
+    "UpdatedSource": "internal",
+    "UpdatedDate": "2021-12-15T04:51:31.679Z"
+  }
+]
