@@ -1,0 +1,94 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+  schemas  = ["public", "auth"]
+}
+
+// User model - synced with Supabase Auth
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  shops     Shop[]
+  
+  @@map("addressify_users")
+  @@schema("public")
+}
+
+// Shop model - each user can have multiple shops
+model Shop {
+  id              String   @id @default(uuid())
+  name            String
+  userId          String
+  
+  // Sender address configuration
+  senderAddress   String
+  senderDistrict  String
+  senderProvince  String
+  
+  // GHN IDs (optional)
+  ghnProvinceId   String?
+  ghnDistrictId   String?
+  ghnWardCode     String?
+  ghnShopId       String?
+  
+  // GHTK configuration (optional)
+  ghtkPickAddress String?
+  ghtkPickProvince String?
+  ghtkPickDistrict String?
+  ghtkPickWard    String?
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quoteHistories  QuoteHistory[]
+  
+  @@index([userId])
+  @@map("addressify_shops")
+  @@schema("public")
+}
+
+// Quote history - track all bulk quote requests
+model QuoteHistory {
+  id                String   @id @default(uuid())
+  shopId            String
+  
+  // Address information
+  recipientName     String
+  recipientPhone    String
+  recipientAddress  String
+  normalizedAddress String
+  province          String
+  district          String
+  ward              String
+  wardCode          String?
+  confidence        Float
+  
+  // Quote results (JSON)
+  quotes            Json     // Array of {provider: string, service: string, amount: number, currency: string}
+  
+  // Metadata
+  weight            Int      @default(1000) // grams
+  value             Int      @default(0)    // VND
+  note              String?
+  
+  createdAt         DateTime @default(now())
+  
+  shop              Shop     @relation(fields: [shopId], references: [id], onDelete: Cascade)
+  
+  @@index([shopId, createdAt])
+  @@map("addressify_quote_histories")
+  @@schema("public")
+}

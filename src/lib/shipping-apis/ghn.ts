@@ -118,11 +118,12 @@ export class GHNClient extends BaseShippingClient {
       const response = await this.post<GHNApiEnvelope<GHNFeeResponse>>("/v2/shipping-order/fee", payload);
       console.log('[GHNClient] calculateFee response:', JSON.stringify(response, null, 2));
       return mapFeeEnvelope(response);
-    } catch (error: any) {
+    } catch (error: unknown) {
+      const err = error as { message?: string; response?: { status?: number; data?: unknown } };
       console.error('[GHNClient] calculateFee error:', {
-        message: error.message,
-        status: error.response?.status,
-        data: error.response?.data
+        message: err.message,
+        status: err.response?.status,
+        data: err.response?.data
       });
       throw error;
     }

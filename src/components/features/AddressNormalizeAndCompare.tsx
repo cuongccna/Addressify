@@ -7,9 +7,11 @@ import { Card } from "@/components/ui/Card";
 import { buttonVariants } from "@/components/ui/buttonVariants";
 import { cn } from "@/utils/cn";
 import type { AddressData } from "@/types/address";
+import { SenderConfigDialog } from "./SenderConfigDialog";
+import { exportAddressesToCSV, exportBulkQuotesToCSV, downloadCSV, type BulkQuoteResult } from "@/utils/csvExport";
 
 type ProviderQuote = {
-  provider: 'GHN' | 'GHTK' | 'VTP';
+  provider: string; // Can be "GHN", "GHTK", "VTP", or "GHN - Service Name"
   amount?: number;
   days?: number | null;
   service?: string;
@@ -19,9 +21,14 @@ type ProviderQuote = {
 type AggResponse = {
   success: boolean;
   data?: {
-    ghn?: { quote?: { total: number; service_type_id?: number }; leadtime?: { estimatedDays?: number | null }; error?: string };
-    ghtk?: { quote?: { total: number }; leadtime?: { estimatedDays?: number | null }; error?: string };
-    vtp?: { quote?: { total: number }; leadtime?: { estimatedDays?: number | null }; error?: string };
+    ghn?: { 
+      quotes?: Array<Record<string, unknown>>; 
+      quote?: { total: number; service_type_id?: number }; 
+      leadtime?: { estimatedDays?: number | null }; 
+      error?: string 
+    };
+    ghtk?: { quote?: Record<string, unknown>; leadtime?: { estimatedDays?: number | null }; error?: string };
+    vtp?: { quote?: Record<string, unknown>; leadtime?: { estimatedDays?: number | null }; error?: string };
   };
   message?: string;
 };
@@ -31,20 +38,144 @@ const currency = new Intl.NumberFormat("vi-VN", { style: "currency", currency: "
 export function AddressNormalizeAndCompare() {
   const [addresses, setAddresses] = useState<AddressData[]>([]);
   const [selected, setSelected] = useState<AddressData | null>(null);
-  const [sender] = useState({
+  const [sender, setSender] = useState<{
+    pickProvince: string;
+    pickDistrict: string;
+    pickAddress: string;
+    ghnProvinceId?: number;
+    ghnDistrictId?: number;
+    ghnWardCode?: string;
+  }>({
     pickProvince: "TP. Hồ Chí Minh",
     pickDistrict: "Quận 1",
     pickAddress: "19 Nguyễn Trãi",
     // GHN IDs for sender (Quận 1, TPHCM)
     ghnProvinceId: 202,
-    ghnDistrictId: 1454 // Example: Quận 1
+    ghnDistrictId: 1454, // Example: Quận 1
+    ghnWardCode: undefined
   });
   const [weight, setWeight] = useState("1000");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [quotes, setQuotes] = useState<ProviderQuote[]>([]);
+  const [showSenderConfig, setShowSenderConfig] = useState(false);
+  const [bulkProcessing, setBulkProcessing] = useState(false);
+  const [bulkProgress, setBulkProgress] = useState({ current: 0, total: 0 });
 
   const validCount = useMemo(() => addresses.filter((a) => a.isValid).length, [addresses]);
+
+  // Export addresses to CSV
+  const handleExportAddresses = () => {
+    const csv = exportAddressesToCSV(addresses);
+    const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
+    downloadCSV(csv, `addresses-${timestamp}.csv`);
+  };
+
+  // Bulk quote processing
+  const handleBulkQuote = async () => {
+    if (addresses.length === 0) return;
+
+    setBulkProcessing(true);
+    setBulkProgress({ current: 0, total: addresses.length });
+
+    const results: BulkQuoteResult[] = [];
+
+    for (let i = 0; i < addresses.length; i++) {
+      const addr = addresses[i];
+      setBulkProgress({ current: i + 1, total: addresses.length });
+
+      // Skip invalid addresses
+      if (!addr.isValid) {
+        results.push({ address: addr, quotes: [] });
+        continue;
+      }
+
+      try {
+        // Call aggregator
+        const payload: Record<string, unknown> = {
+          weightInGrams: Number(weight) || 1000,
+          pickProvince: sender.pickProvince,
+          pickDistrict: sender.pickDistrict,
+          pickAddress: sender.pickAddress,
+          province: addr.province,
+          district: addr.district,
+          address: [addr.ward, addr.district, addr.province].filter(Boolean).join(", ")
+        };
+
+        if (addr.ghnProvinceId && addr.ghnDistrictId) {
+          payload.fromDistrictId = sender.ghnDistrictId;
+          payload.toDistrictId = addr.ghnDistrictId;
+          if (addr.ghnWardCode) {
+            payload.toWardCode = addr.ghnWardCode;
+          }
+          payload.senderDistrictId = sender.ghnDistrictId;
+          payload.receiverDistrictId = addr.ghnDistrictId;
+          if (addr.ghnWardCode) {
+            payload.receiverWardCode = addr.ghnWardCode;
+          }
+        }
+
+        const res = await fetch("/api/shipping/quotes", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const data: AggResponse = await res.json();
+        const quotes: ProviderQuote[] = [];
+
+        // Parse quotes (reuse existing logic)
+        if (data.data?.ghn?.quotes) {
+          for (const quote of data.data.ghn.quotes as Array<Record<string, unknown>>) {
+            const fee = quote.fee as Record<string, unknown> | undefined;
+            const service = quote.service as Record<string, unknown> | undefined;
+            quotes.push({
+              provider: `GHN - ${(service?.shortName as string) || 'Unknown'}`,
+              amount: (fee?.total as number) || 0,
+              service: (service?.shortName as string) || ''
+            });
+          }
+        }
+
+        if (data.data?.ghtk?.quote) {
+          const ghtkData = data.data.ghtk as Record<string, unknown>;
+          const ghtkQuote = ghtkData.quote as Record<string, unknown>;
+          quotes.push({
+            provider: 'GHTK',
+            amount: (ghtkQuote.shipFee as number) || 0
+          });
+        }
+
+        if (data.data?.vtp?.quote) {
+          const vtpQuote = data.data.vtp.quote as Record<string, unknown>;
+          quotes.push({
+            provider: 'VTP',
+            amount: (vtpQuote.total as number) || 0
+          });
+        }
+
+        results.push({ address: addr, quotes });
+
+      } catch (e) {
+        console.error(`Bulk quote error for address ${i}:`, e);
+        results.push({ 
+          address: addr, 
+          quotes: [{ provider: 'Error', error: e instanceof Error ? e.message : 'Unknown error' }] 
+        });
+      }
+
+      // Small delay to avoid rate limits
+      await new Promise(resolve => setTimeout(resolve, 200));
+    }
+
+    // Export results to CSV
+    const csv = exportBulkQuotesToCSV(results);
+    const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
+    downloadCSV(csv, `bulk-quotes-${timestamp}.csv`);
+
+    setBulkProcessing(false);
+    setBulkProgress({ current: 0, total: 0 });
+  };
 
   const requestQuote = async (addr: AddressData) => {
     setSelected(addr);
@@ -183,9 +314,10 @@ export function AddressNormalizeAndCompare() {
         if (data.data.vtp.error) {
           results.push({ provider: 'VTP', error: data.data.vtp.error });
         } else if (data.data.vtp.quote) {
+          const vtpQuote = data.data.vtp.quote as Record<string, unknown>;
           results.push({
             provider: 'VTP',
-            amount: data.data.vtp.quote.total,
+            amount: (vtpQuote.total as number) || undefined,
             days: data.data.vtp.leadtime?.estimatedDays ?? null
           });
         }
@@ -193,7 +325,11 @@ export function AddressNormalizeAndCompare() {
 
       // Add placeholder for missing providers to show why they failed
       const expectedProviders = ['GHN', 'GHTK', 'VTP'] as const;
-      const returnedProviders = new Set(results.map(r => r.provider));
+      const returnedProviders = new Set(results.map(r => {
+        // Handle "GHN - Service Name" by extracting base provider
+        const match = r.provider.match(/^(GHN|GHTK|VTP)/);
+        return match ? match[1] : r.provider;
+      }));
       
       expectedProviders.forEach(provider => {
         if (!returnedProviders.has(provider)) {
@@ -250,6 +386,47 @@ export function AddressNormalizeAndCompare() {
               <p className="mt-1 text-xs text-slate-300">Hợp lệ: {validCount}/{addresses.length}</p>
             </div>
             <div className="flex items-center gap-3">
+              <button
+                onClick={() => setShowSenderConfig(true)}
+                className={cn(
+                  buttonVariants({ variant: "secondary" }),
+                  "px-3 py-1.5 text-xs"
+                )}
+                title="Cấu hình địa chỉ gửi hàng"
+              >
+                ⚙️ Địa chỉ gửi
+              </button>
+              
+              {addresses.length > 0 && (
+                <>
+                  <button
+                    onClick={handleExportAddresses}
+                    className={cn(
+                      buttonVariants({ variant: "outline" }),
+                      "px-3 py-1.5 text-xs"
+                    )}
+                    title="Export địa chỉ đã chuẩn hóa ra CSV"
+                  >
+                    📥 Export địa chỉ
+                  </button>
+                  
+                  <button
+                    onClick={handleBulkQuote}
+                    disabled={bulkProcessing || validCount === 0}
+                    className={cn(
+                      buttonVariants({ variant: "primary" }),
+                      "px-3 py-1.5 text-xs disabled:opacity-50"
+                    )}
+                    title={`Lấy báo giá hàng loạt cho ${validCount} địa chỉ hợp lệ và export CSV`}
+                  >
+                    {bulkProcessing 
+                      ? `⏳ ${bulkProgress.current}/${bulkProgress.total}` 
+                      : `🚀 Lấy ${validCount} báo giá`
+                    }
+                  </button>
+                </>
+              )}
+              
               <label className="text-xs text-slate-300">
                 Cân nặng (gram)
                 <input
@@ -447,6 +624,18 @@ export function AddressNormalizeAndCompare() {
           </div>
         </Card>
       </div>
+      
+      {showSenderConfig && (
+        <SenderConfigDialog
+          config={sender}
+          onSave={(newConfig) => {
+            setSender(newConfig);
+            // Save to localStorage for persistence
+            localStorage.setItem('sender-config', JSON.stringify(newConfig));
+          }}
+          onClose={() => setShowSenderConfig(false)}
+        />
+      )}
     </div>
   );
 }
