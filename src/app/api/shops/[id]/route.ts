@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { prisma } from '@/lib/prisma'
+import { triggerWebhook } from '@/lib/webhooks/trigger'
 
 interface RouteContext {
   params: Promise<{ id: string }>
@@ -75,6 +76,15 @@ export async function PATCH(request: NextRequest, context: RouteContext) {
       },
     })
 
+    // Trigger webhook asynchronously
+    triggerWebhook(user.id, 'shop.updated', {
+      shopId: shop.id,
+      changes: body,
+      updatedAt: shop.updatedAt.toISOString(),
+    }).catch(error => {
+      console.error('Failed to trigger shop.updated webhook:', error);
+    });
+
     return NextResponse.json({ shop })
   } catch (error) {
     console.error('Error updating shop:', error)
@@ -113,6 +123,14 @@ export async function DELETE(_request: NextRequest, context: RouteContext) {
     await prisma.shop.delete({
       where: { id },
     })
+
+    // Trigger webhook asynchronously
+    triggerWebhook(user.id, 'shop.deleted', {
+      shopId: id,
+      deletedAt: new Date().toISOString(),
+    }).catch(error => {
+      console.error('Failed to trigger shop.deleted webhook:', error);
+    });
 
     return NextResponse.json({ success: true })
   } catch (error) {

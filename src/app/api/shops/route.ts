@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { prisma } from '@/lib/prisma'
+import { triggerShopCreated } from '@/lib/webhooks/trigger'
 
 // GET /api/shops - Get all shops for current user
 export async function GET() {
@@ -78,6 +79,16 @@ export async function POST(request: NextRequest) {
         ghtkPickWard,
       },
     })
+
+    // Trigger webhook asynchronously
+    triggerShopCreated(user.id, {
+      id: shop.id,
+      name: shop.name,
+      description: `${shop.senderAddress}, ${shop.senderDistrict}, ${shop.senderProvince}`,
+      createdAt: shop.createdAt,
+    }).catch(error => {
+      console.error('Failed to trigger shop.created webhook:', error);
+    });
 
     return NextResponse.json({ shop }, { status: 201 })
   } catch (error) {

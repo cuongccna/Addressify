@@ -1,6 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { AuthProvider } from '@/contexts/AuthContext'
+import { ShopProvider } from '@/contexts/ShopContext'
+import { initializeScheduler } from '@/lib/jobs/init'
+
+// Initialize scheduler on server startup
+if (typeof window === 'undefined') {
+  initializeScheduler()
+}
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -71,13 +79,17 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
       <body className="relative min-h-screen bg-slate-950 text-slate-100 font-sans">
-        {/* Background Pattern */}
-        <div className="pointer-events-none fixed inset-0 bg-hero-pattern opacity-10" />
-        
-        {/* Main Content */}
-        <div className="relative z-10">
-          {children}
-        </div>
+        <AuthProvider>
+          <ShopProvider>
+            {/* Background Pattern */}
+            <div className="pointer-events-none fixed inset-0 bg-hero-pattern opacity-10" />
+            
+            {/* Main Content */}
+            <div className="relative z-10">
+              {children}
+            </div>
+          </ShopProvider>
+        </AuthProvider>
         
         {/* Global Loading Indicator */}
         <div id="global-loader" className="hidden fixed inset-0 z-50 bg-white/80 backdrop-blur-sm">

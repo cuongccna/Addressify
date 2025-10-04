@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 
 import { AddressProcessor } from "@/components/AddressProcessor";
 import { Card } from "@/components/ui/Card";
@@ -9,6 +9,7 @@ import { cn } from "@/utils/cn";
 import type { AddressData } from "@/types/address";
 import { SenderConfigDialog } from "./SenderConfigDialog";
 import { exportAddressesToCSV, exportBulkQuotesToCSV, downloadCSV, type BulkQuoteResult } from "@/utils/csvExport";
+import { useShop } from "@/contexts/ShopContext";
 
 type ProviderQuote = {
   provider: string; // Can be "GHN", "GHTK", "VTP", or "GHN - Service Name"
@@ -36,6 +37,7 @@ type AggResponse = {
 const currency = new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" });
 
 export function AddressNormalizeAndCompare() {
+  const { selectedShop } = useShop();
   const [addresses, setAddresses] = useState<AddressData[]>([]);
   const [selected, setSelected] = useState<AddressData | null>(null);
   const [sender, setSender] = useState<{
@@ -61,8 +63,71 @@ export function AddressNormalizeAndCompare() {
   const [showSenderConfig, setShowSenderConfig] = useState(false);
   const [bulkProcessing, setBulkProcessing] = useState(false);
   const [bulkProgress, setBulkProgress] = useState({ current: 0, total: 0 });
+  const [savingToDb, setSavingToDb] = useState(false);
 
   const validCount = useMemo(() => addresses.filter((a) => a.isValid).length, [addresses]);
+
+  // Load sender config from selected shop
+  useEffect(() => {
+    if (selectedShop) {
+      setSender({
+        pickProvince: selectedShop.senderProvince,
+        pickDistrict: selectedShop.senderDistrict,
+        pickAddress: selectedShop.senderAddress,
+        ghnProvinceId: selectedShop.ghnProvinceId ? Number(selectedShop.ghnProvinceId) : undefined,
+        ghnDistrictId: selectedShop.ghnDistrictId ? Number(selectedShop.ghnDistrictId) : undefined,
+        ghnWardCode: selectedShop.ghnWardCode || undefined
+      });
+    }
+  }, [selectedShop]);
+
+  // Save quote result to database
+  const saveQuoteToDatabase = async (addr: AddressData, quotes: ProviderQuote[]) => {
+    if (!selectedShop) {
+      console.warn('No shop selected, skipping database save');
+      return;
+    }
+
+    try {
+      setSavingToDb(true);
+      const response = await fetch('/api/quote-history', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          shopId: selectedShop.id,
+          recipientName: 'Customer', // AddressData doesn't have name field
+          recipientPhone: 'N/A', // AddressData doesn't have phone field
+          recipientAddress: addr.original,
+          normalizedAddress: addr.normalizedAddress || addr.original,
+          province: addr.province || '',
+          district: addr.district || '',
+          ward: addr.ward || '',
+          wardCode: addr.ghnWardCode,
+          confidence: addr.matchConfidence?.ward || 0,
+          quotes: quotes.map(q => ({
+            provider: q.provider,
+            service: q.service || '',
+            amount: q.amount || 0,
+            currency: 'VND',
+            error: q.error
+          })),
+          weight: Number(weight) || 1000,
+          value: 1000000, // Default insurance value
+          note: `Auto-saved quote on ${new Date().toLocaleString('vi-VN')}`
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save quote to database');
+      }
+
+      console.log('Quote saved to database successfully');
+    } catch (err) {
+      console.error('Error saving quote to database:', err);
+    } finally {
+      setSavingToDb(false);
+    }
+  };
 
   // Export addresses to CSV
   const handleExportAddresses = () => {
@@ -155,6 +220,11 @@ export function AddressNormalizeAndCompare() {
         }
 
         results.push({ address: addr, quotes });
+
+        // Save each quote to database
+        if (quotes.length > 0) {
+          await saveQuoteToDatabase(addr, quotes);
+        }
 
       } catch (e) {
         console.error(`Bulk quote error for address ${i}:`, e);
@@ -357,6 +427,8 @@ export function AddressNormalizeAndCompare() {
         setError("Không lấy được báo giá từ nhà vận chuyển nào");
       } else {
         setQuotes(results);
+        // Auto-save quote to database
+        await saveQuoteToDatabase(addr, results);
       }
 
     } catch (e) {
@@ -552,6 +624,7 @@ export function AddressNormalizeAndCompare() {
                   Địa chỉ gửi: <span className="text-slate-100">{sender.pickAddress}, {sender.pickDistrict}, {sender.pickProvince}</span>
                 </p>
                 {loading && <p className="text-sky-300">Đang truy vấn aggregator…</p>}
+                {savingToDb && <p className="text-purple-300">💾 Đang lưu vào database…</p>}
                 {error && <p className="text-red-300">{error}</p>}
                 
                 {quotes.length > 0 && (

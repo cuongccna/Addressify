@@ -14,13 +14,18 @@ datasource db {
 
 // User model - synced with Supabase Auth
 model User {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  name      String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id                    String   @id @default(uuid())
+  email                 String   @unique
+  name                  String?
+  emailVerified         Boolean  @default(false)
+  notificationSettings  Json     @default("{\"quoteGenerated\": false, \"dailySummary\": false, \"weeklySummary\": true, \"priceAlerts\": true, \"failedQuotes\": true}")
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
   
-  shops     Shop[]
+  shops                 Shop[]
+  emailLogs             EmailLog[]
+  apiKeys               ApiKey[]
+  webhooks              Webhook[]
   
   @@map("addressify_users")
   @@schema("public")
@@ -90,5 +95,109 @@ model QuoteHistory {
   
   @@index([shopId, createdAt])
   @@map("addressify_quote_histories")
+  @@schema("public")
+}
+
+// Email log - track all sent emails
+model EmailLog {
+  id        String   @id @default(cuid())
+  userId    String
+  type      String   // "quote_generated", "daily_summary", "weekly_summary", "price_alert", "failed_quote", "welcome"
+  to        String
+  subject   String
+  status    String   // "sent", "failed", "pending"
+  error     String?
+  sentAt    DateTime @default(now())
+  
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+  @@index([type])
+  @@index([sentAt])
+  @@map("addressify_email_logs")
+  @@schema("public")
+}
+
+// API Key - for external integrations
+model ApiKey {
+  id          String   @id @default(cuid())
+  userId      String
+  name        String
+  key         String   @unique
+  keyPrefix   String   // "addr_live" or "addr_test"
+  permissions Json     @default("[]") // ["quotes:read", "quotes:create", "shops:read"]
+  lastUsedAt  DateTime?
+  expiresAt   DateTime?
+  isActive    Boolean  @default(true)
+  rateLimit   Int      @default(100) // requests per minute
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  usage       ApiKeyUsage[]
+  
+  @@index([userId])
+  @@index([key])
+  @@map("addressify_api_keys")
+  @@schema("public")
+}
+
+// API Key Usage - track API key usage
+model ApiKeyUsage {
+  id            String   @id @default(cuid())
+  apiKeyId      String
+  endpoint      String
+  method        String
+  statusCode    Int
+  responseTime  Int      // milliseconds
+  ipAddress     String?
+  userAgent     String?
+  timestamp     DateTime @default(now())
+  
+  apiKey        ApiKey   @relation(fields: [apiKeyId], references: [id], onDelete: Cascade)
+  
+  @@index([apiKeyId])
+  @@index([timestamp])
+  @@map("addressify_api_key_usage")
+  @@schema("public")
+}
+
+// Webhook - user-defined webhooks
+model Webhook {
+  id        String   @id @default(cuid())
+  userId    String
+  url       String
+  events    String[] // ["quote.created", "shop.created", "bulk_quote.completed"]
+  secret    String   // For HMAC signature
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  logs      WebhookLog[]
+  
+  @@index([userId])
+  @@map("addressify_webhooks")
+  @@schema("public")
+}
+
+// Webhook Log - track webhook deliveries
+model WebhookLog {
+  id          String   @id @default(cuid())
+  webhookId   String
+  event       String   // "quote.created"
+  payload     Json
+  response    Json?
+  statusCode  Int?
+  attempt     Int      @default(1)
+  success     Boolean  @default(false)
+  error       String?
+  timestamp   DateTime @default(now())
+  
+  webhook     Webhook  @relation(fields: [webhookId], references: [id], onDelete: Cascade)
+  
+  @@index([webhookId])
+  @@index([timestamp])
+  @@map("addressify_webhook_logs")
   @@schema("public")
 }
