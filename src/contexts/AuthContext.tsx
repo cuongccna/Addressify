@@ -1,8 +1,13 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState } from 'react'
-import { createClient } from '@/lib/supabase/client'
-import type { User } from '@supabase/supabase-js'
+import { createContext, useContext, useEffect, useState, useCallback } from 'react'
+
+// Simple user type (no Supabase dependency)
+interface User {
+  id: string
+  email: string
+  name: string | null
+}
 
 interface AuthContextType {
   user: User | null
@@ -10,6 +15,7 @@ interface AuthContextType {
   signUp: (email: string, password: string, name?: string) => Promise<{ error: Error | null }>
   signIn: (email: string, password: string) => Promise<{ error: Error | null }>
   signOut: () => Promise<void>
+  refreshUser: () => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
@@ -17,38 +23,41 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined)
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
-  const supabase = createClient()
+
+  // Fetch current user from API
+  const fetchUser = useCallback(async () => {
+    try {
+      const response = await fetch('/api/auth/user')
+      const data = await response.json()
+      setUser(data.user)
+    } catch (error) {
+      console.error('Error fetching user:', error)
+      setUser(null)
+    } finally {
+      setLoading(false)
+    }
+  }, [])
 
   useEffect(() => {
-    // Check active session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null)
-      setLoading(false)
-    })
-
-    // Listen for auth changes
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null)
-    })
-
-    return () => subscription.unsubscribe()
-  }, [supabase.auth])
+    fetchUser()
+  }, [fetchUser])
 
   const signUp = async (email: string, password: string, name?: string) => {
     try {
-      const { error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: {
-          data: {
-            name: name || email.split('@')[0],
-          },
-        },
+      const response = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password, name }),
       })
 
-      if (error) throw error
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Đăng ký thất bại')
+      }
+
+      // Update user state
+      setUser(data.user)
       return { error: null }
     } catch (error) {
       return { error: error as Error }
@@ -57,12 +66,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signIn = async (email: string, password: string) => {
     try {
-      const { error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
       })
 
-      if (error) throw error
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Đăng nhập thất bại')
+      }
+
+      // Update user state
+      setUser(data.user)
       return { error: null }
     } catch (error) {
       return { error: error as Error }
@@ -70,11 +87,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   const signOut = async () => {
-    await supabase.auth.signOut()
+    try {
+      await fetch('/api/auth/logout', { method: 'POST' })
+      setUser(null)
+    } catch (error) {
+      console.error('Error signing out:', error)
+    }
+  }
+
+  const refreshUser = async () => {
+    await fetchUser()
   }
 
   return (
-    <AuthContext.Provider value={{ user, loading, signUp, signIn, signOut }}>
+    <AuthContext.Provider value={{ user, loading, signUp, signIn, signOut, refreshUser }}>
       {children}
     </AuthContext.Provider>
   )

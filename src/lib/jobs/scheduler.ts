@@ -124,8 +124,9 @@ const activeTasks: Array<{ name: string; task: ReturnType<typeof cron.schedule> 
 
 /**
  * Start all enabled scheduled jobs
+ * @returns Number of jobs started
  */
-export function startScheduler(): void {
+export function startScheduler(): number {
   console.log('\n🚀 Starting job scheduler...\n');
 
   let started = 0;
@@ -173,6 +174,8 @@ export function startScheduler(): void {
   }
 
   console.log(`\n📊 Scheduler started: ${started} jobs active, ${skipped} skipped\n`);
+  
+  return started;
 }
 
 /**

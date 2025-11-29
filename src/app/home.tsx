@@ -10,6 +10,8 @@ import { Card } from "@/components/ui/Card";
 import { LiveComparisonDemo } from "@/components/features/LiveComparisonDemo";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { UserMenu } from "@/components/layout/UserMenu";
+import { useAuth } from "@/contexts/AuthContext";
 
 const highlights = [
   {
@@ -82,6 +84,8 @@ const testimonials = [
 const integrations = ["Shopee", "Lazada", "TikTok Shop", "Facebook Shop", "GHN", "GHTK", "Viettel Post"];
 
 export default function Home() {
+  const { user, loading } = useAuth()
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
       <div className="absolute inset-0 -z-10">
@@ -113,17 +117,7 @@ export default function Home() {
             Bảng giá
           </Link>
         </nav>
-        <div className="flex items-center gap-3">
-          <Link
-            className={buttonVariants({ variant: "secondary", className: "hidden px-4 py-2 md:inline-flex" })}
-            href="/auth/sign-in"
-          >
-            Đăng nhập
-          </Link>
-          <Link className={buttonVariants({ className: "px-4 py-2" })} href="/auth/sign-up">
-            Dùng thử miễn phí
-          </Link>
-        </div>
+        <UserMenu />
       </header>
 
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 pb-24">
@@ -140,16 +134,46 @@ export default function Home() {
               <p className="text-lg leading-relaxed text-slate-300">
                 Addressify kết hợp AI và dữ liệu vận chuyển real-time giúp chủ shop xử lý hàng trăm đơn mỗi ngày mà vẫn chính xác, tiết kiệm và dễ quản lý.
               </p>
+              
+              {/* Conditional CTA Buttons */}
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Link className={buttonVariants({ className: "w-full text-center sm:w-auto" })} href="/auth/sign-up">
-                  Khởi tạo tài khoản ngay
-                </Link>
-                <Link
-                  className={buttonVariants({ variant: "secondary", className: "w-full text-center sm:w-auto" })}
-                  href="/demo"
-                >
-                  Xem demo 3 phút
-                </Link>
+                {!loading && (
+                  <>
+                    {user ? (
+                      // Logged in users - Show dashboard actions
+                      <>
+                        <Link 
+                          className={buttonVariants({ className: "w-full text-center sm:w-auto" })} 
+                          href="/normalize"
+                        >
+                          🎯 Bắt đầu báo giá
+                        </Link>
+                        <Link
+                          className={buttonVariants({ variant: "secondary", className: "w-full text-center sm:w-auto" })}
+                          href="/history"
+                        >
+                          📊 Xem lịch sử
+                        </Link>
+                      </>
+                    ) : (
+                      // Not logged in - Show signup/demo
+                      <>
+                        <Link 
+                          className={buttonVariants({ className: "w-full text-center sm:w-auto" })} 
+                          href="/auth/sign-up"
+                        >
+                          Khởi tạo tài khoản ngay
+                        </Link>
+                        <Link
+                          className={buttonVariants({ variant: "secondary", className: "w-full text-center sm:w-auto" })}
+                          href="/demo"
+                        >
+                          Xem demo 3 phút
+                        </Link>
+                      </>
+                    )}
+                  </>
+                )}
               </div>
               <div className="grid grid-cols-1 gap-6 pt-6 sm:grid-cols-3">
                 {highlights.map((item) => (
@@ -292,18 +316,51 @@ export default function Home() {
                 Sẵn sàng tăng tốc đơn hàng ngay hôm nay?
               </h2>
               <p className="text-base text-slate-300">
-                Hơn 1.200 shop đang dùng Addressify để xử lý đơn và tối ưu vận chuyển mỗi ngày. Gia nhập ngay để không bỏ lỡ.
+                {user 
+                  ? "Bắt đầu xử lý đơn hàng và tối ưu vận chuyển ngay hôm nay."
+                  : "Hơn 1.200 shop đang dùng Addressify để xử lý đơn và tối ưu vận chuyển mỗi ngày. Gia nhập ngay để không bỏ lỡ."
+                }
               </p>
+              
+              {/* Conditional CTA Buttons */}
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Link className={buttonVariants({ className: "w-full text-center sm:w-auto" })} href="/auth/sign-up">
-                  Đăng ký dùng thử 14 ngày
-                </Link>
-                <Link
-                  className={buttonVariants({ variant: "secondary", className: "w-full text-center sm:w-auto" })}
-                  href="/demo"
-                >
-                  Đặt lịch demo 1-1
-                </Link>
+                {!loading && (
+                  <>
+                    {user ? (
+                      // Logged in users
+                      <>
+                        <Link 
+                          className={buttonVariants({ className: "w-full text-center sm:w-auto" })} 
+                          href="/normalize"
+                        >
+                          🚀 Xử lý đơn hàng ngay
+                        </Link>
+                        <Link
+                          className={buttonVariants({ variant: "secondary", className: "w-full text-center sm:w-auto" })}
+                          href="/settings"
+                        >
+                          ⚙️ Cài đặt tài khoản
+                        </Link>
+                      </>
+                    ) : (
+                      // Not logged in
+                      <>
+                        <Link 
+                          className={buttonVariants({ className: "w-full text-center sm:w-auto" })} 
+                          href="/auth/sign-up"
+                        >
+                          Đăng ký dùng thử 14 ngày
+                        </Link>
+                        <Link
+                          className={buttonVariants({ variant: "secondary", className: "w-full text-center sm:w-auto" })}
+                          href="/demo"
+                        >
+                          Đặt lịch demo 1-1
+                        </Link>
+                      </>
+                    )}
+                  </>
+                )}
               </div>
             </div>
             <div className="relative flex items-center justify-center border-t border-slate-800 bg-gradient-to-br from-sky-500/10 via-purple-500/10 to-slate-900 md:border-l md:border-t-0">

@@ -117,7 +117,7 @@ async function logWebhookDelivery(
   error: string | null,
   attempt: number,
   success: boolean,
-  _responseTime: number
+  responseTime: number
 ) {
   try {
     await prisma.webhookLog.create({
@@ -130,6 +130,7 @@ async function logWebhookDelivery(
         attempt,
         success,
         error,
+        responseTime,
         timestamp: new Date(),
       },
     });

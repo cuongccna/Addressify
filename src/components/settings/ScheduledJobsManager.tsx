@@ -108,37 +108,37 @@ export default function ScheduledJobsManager() {
     <div className="space-y-6">
       {/* Header */}
       <div>
-        <h3 className="text-lg font-semibold">⏰ Scheduled Jobs</h3>
-        <p className="text-sm text-gray-600">
+        <h3 className="text-lg font-semibold text-white">⏰ Scheduled Jobs</h3>
+        <p className="text-sm text-slate-400">
           Các tác vụ tự động chạy theo lịch định kỳ
         </p>
       </div>
 
       {/* Job Stats */}
       <div className="grid grid-cols-4 gap-4">
-        <div className="bg-blue-50 rounded-lg p-4">
-          <div className="text-2xl font-bold text-blue-600">
+        <div className="bg-sky-500/20 rounded-lg p-4 border border-sky-500/30">
+          <div className="text-2xl font-bold text-sky-300">
             {jobs.length}
           </div>
-          <div className="text-sm text-gray-600">Tổng Jobs</div>
+          <div className="text-sm text-slate-400">Tổng Jobs</div>
         </div>
-        <div className="bg-green-50 rounded-lg p-4">
-          <div className="text-2xl font-bold text-green-600">
+        <div className="bg-green-500/20 rounded-lg p-4 border border-green-500/30">
+          <div className="text-2xl font-bold text-green-300">
             {jobs.filter(j => j.enabled).length}
           </div>
-          <div className="text-sm text-gray-600">Đang bật</div>
+          <div className="text-sm text-slate-400">Đang bật</div>
         </div>
-        <div className="bg-purple-50 rounded-lg p-4">
-          <div className="text-2xl font-bold text-purple-600">
+        <div className="bg-purple-500/20 rounded-lg p-4 border border-purple-500/30">
+          <div className="text-2xl font-bold text-purple-300">
             {jobs.filter(j => j.running).length}
           </div>
-          <div className="text-sm text-gray-600">Đang chạy</div>
+          <div className="text-sm text-slate-400">Đang chạy</div>
         </div>
-        <div className="bg-gray-50 rounded-lg p-4">
-          <div className="text-2xl font-bold text-gray-600">
+        <div className="bg-slate-500/20 rounded-lg p-4 border border-slate-500/30">
+          <div className="text-2xl font-bold text-slate-300">
             {jobs.filter(j => !j.enabled).length}
           </div>
-          <div className="text-sm text-gray-600">Bị tắt</div>
+          <div className="text-sm text-slate-400">Bị tắt</div>
         </div>
       </div>
 
@@ -148,47 +148,47 @@ export default function ScheduledJobsManager() {
         
         return (
           <div key={category} className="space-y-3">
-            <h4 className="font-medium text-gray-700 flex items-center space-x-2">
+            <h4 className="font-medium text-slate-200 flex items-center space-x-2">
               <span>{getJobCategoryIcon(categoryJobs[0]?.name || '')}</span>
               <span>{category} Jobs</span>
-              <span className="text-sm text-gray-500">({categoryJobs.length})</span>
+              <span className="text-sm text-slate-400">({categoryJobs.length})</span>
             </h4>
 
             <div className="space-y-2">
               {categoryJobs.map((job) => (
                 <div
                   key={job.name}
-                  className="bg-white border rounded-lg p-4 hover:shadow-sm transition-shadow"
+                  className="bg-slate-800/30 border border-slate-700 rounded-lg p-4 hover:bg-slate-800/50 transition-all"
                 >
                   <div className="flex justify-between items-start mb-2">
                     <div className="flex-1">
                       <div className="flex items-center space-x-2 mb-1">
-                        <span className="font-mono text-sm font-medium">
+                        <span className="font-mono text-sm font-medium text-white">
                           {job.name}
                         </span>
                         <span
                           className={`px-2 py-0.5 text-xs rounded ${
                             job.enabled
-                              ? 'bg-green-100 text-green-800'
-                              : 'bg-gray-100 text-gray-800'
+                              ? 'bg-green-500/20 text-green-300'
+                              : 'bg-slate-500/20 text-slate-300'
                           }`}
                         >
                           {job.enabled ? '✓ Enabled' : '✗ Disabled'}
                         </span>
                         {job.running && (
-                          <span className="px-2 py-0.5 text-xs rounded bg-blue-100 text-blue-800 animate-pulse">
+                          <span className="px-2 py-0.5 text-xs rounded bg-sky-500/20 text-sky-300 animate-pulse">
                             ⚡ Running
                           </span>
                         )}
                       </div>
-                      <p className="text-sm text-gray-600 mb-1">
+                      <p className="text-sm text-slate-400 mb-1">
                         {job.description}
                       </p>
-                      <div className="flex items-center space-x-4 text-xs text-gray-500">
+                      <div className="flex items-center space-x-4 text-xs text-slate-500">
                         <span>
                           📅 {formatSchedule(job.schedule)}
                         </span>
-                        <span className="font-mono text-gray-400">
+                        <span className="font-mono text-slate-600">
                           {job.schedule}
                         </span>
                       </div>
@@ -199,10 +199,10 @@ export default function ScheduledJobsManager() {
                         disabled={!job.enabled || runningJob === job.name}
                         className={`px-3 py-1 text-sm rounded transition-colors ${
                           !job.enabled
-                            ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                            ? 'bg-slate-700/50 text-slate-500 cursor-not-allowed'
                             : runningJob === job.name
-                            ? 'bg-blue-100 text-blue-600 cursor-wait'
-                            : 'bg-blue-600 text-white hover:bg-blue-700'
+                            ? 'bg-sky-500/20 text-sky-300 cursor-wait'
+                            : 'bg-sky-500 text-white hover:bg-sky-600'
                         }`}
                       >
                         {runningJob === job.name ? (
@@ -239,9 +239,9 @@ export default function ScheduledJobsManager() {
       })}
 
       {/* Info Box */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <h5 className="font-medium text-blue-900 mb-2">ℹ️ Thông tin</h5>
-        <ul className="text-sm text-blue-800 space-y-1">
+      <div className="bg-sky-500/10 border border-sky-500/30 rounded-lg p-4">
+        <h5 className="font-medium text-sky-200 mb-2">ℹ️ Thông tin</h5>
+        <ul className="text-sm text-slate-300 space-y-1">
           <li>• Jobs tự động chạy theo lịch đã định</li>
           <li>• Bạn có thể chạy thủ công bất kỳ job nào bằng nút &quot;Chạy ngay&quot;</li>
           <li>• Jobs bị tắt sẽ không chạy tự động</li>
@@ -251,19 +251,19 @@ export default function ScheduledJobsManager() {
       </div>
 
       {/* Environment Info */}
-      <div className="bg-gray-50 border rounded-lg p-4">
-        <h5 className="font-medium text-gray-900 mb-2">🔧 Cấu hình</h5>
-        <div className="text-sm text-gray-700 space-y-1 font-mono">
+      <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4">
+        <h5 className="font-medium text-white mb-2">🔧 Cấu hình</h5>
+        <div className="text-sm text-slate-300 space-y-1 font-mono">
           <div>
-            <span className="text-gray-500">NODE_ENV:</span>{' '}
-            <span className="font-semibold">{process.env.NODE_ENV || 'development'}</span>
+            <span className="text-slate-400">NODE_ENV:</span>{' '}
+            <span className="font-semibold text-white">{process.env.NODE_ENV || 'development'}</span>
           </div>
           <div>
-            <span className="text-gray-500">Timezone:</span>{' '}
-            <span className="font-semibold">{process.env.TZ || 'Asia/Ho_Chi_Minh'}</span>
+            <span className="text-slate-400">Timezone:</span>{' '}
+            <span className="font-semibold text-white">{process.env.TZ || 'Asia/Ho_Chi_Minh'}</span>
           </div>
         </div>
-        <p className="text-xs text-gray-500 mt-2">
+        <p className="text-xs text-slate-500 mt-2">
           Để enable/disable jobs trong development, thêm ENABLE_JOB_[NAME]=true vào .env
         </p>
       </div>

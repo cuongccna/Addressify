@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useMemo, useState, type FormEvent, type ChangeEvent } from "react";
+import React, { useMemo, useState, useCallback, type FormEvent, type ChangeEvent } from "react";
 
 import { Card } from "@/components/ui/Card";
 import { buttonVariants } from "@/components/ui/buttonVariants";
 import { cn } from "@/utils/cn";
+import { LocationSelector } from "./LocationSelector";
 
 const currency = new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" });
 
@@ -27,10 +28,10 @@ const defaults = {
   heightInCm: "10",
   insuranceValue: "1000000",
   codAmount: "0",
-  // GHN
-  fromDistrictId: "1451",
+  // GHN (from LocationSelector: HCM Quận 1 -> HN Hoàn Kiếm)
+  fromDistrictId: "1451", // HCM Quận 1
   fromWardCode: "20608",
-  toDistrictId: "1447",
+  toDistrictId: "1447", // HN Hoàn Kiếm
   toWardCode: "200101",
   // GHTK
   pickProvince: "TP. Hồ Chí Minh",
@@ -53,6 +54,31 @@ export function LiveComparisonDemo() {
   const [isLoading, setIsLoading] = useState(false);
 
   const isValid = useMemo(() => Number(form.weightInGrams) > 0, [form.weightInGrams]);
+
+  // Memoized callbacks to prevent infinite re-renders
+  const handleFromGhnChange = useCallback((districtId: number, wardCode: string) => {
+    setForm((prev) => ({ ...prev, fromDistrictId: String(districtId), fromWardCode: wardCode }));
+  }, []);
+
+  const handleFromGhtkChange = useCallback((province: string, district: string, address: string) => {
+    setForm((prev) => ({ ...prev, pickProvince: province, pickDistrict: district, pickAddress: address }));
+  }, []);
+
+  const handleFromVtpChange = useCallback((districtId: number) => {
+    setForm((prev) => ({ ...prev, senderDistrictId: String(districtId) }));
+  }, []);
+
+  const handleToGhnChange = useCallback((districtId: number, wardCode: string) => {
+    setForm((prev) => ({ ...prev, toDistrictId: String(districtId), toWardCode: wardCode }));
+  }, []);
+
+  const handleToGhtkChange = useCallback((province: string, district: string, address: string) => {
+    setForm((prev) => ({ ...prev, province, district, address }));
+  }, []);
+
+  const handleToVtpChange = useCallback((districtId: number) => {
+    setForm((prev) => ({ ...prev, receiverDistrictId: String(districtId) }));
+  }, []);
 
   const onChange = (field: keyof FormState) => (e: ChangeEvent<HTMLInputElement>) => {
     setForm((prev) => ({ ...prev, [field]: e.target.value }));
@@ -133,25 +159,25 @@ export function LiveComparisonDemo() {
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Input label="GHN From District ID" value={form.fromDistrictId} onChange={onChange("fromDistrictId")} />
-            <Input label="GHN From Ward Code" value={form.fromWardCode} onChange={onChange("fromWardCode")} />
-            <Input label="GHN To District ID" value={form.toDistrictId} onChange={onChange("toDistrictId")} />
-            <Input label="GHN To Ward Code" value={form.toWardCode} onChange={onChange("toWardCode")} />
-          </div>
+          {/* Location Selectors */}
+          <div className="grid gap-6 sm:grid-cols-2">
+            <LocationSelector
+              type="from"
+              initialProvinceId={201} // TP.HCM
+              initialDistrictId={1451} // Quận 1
+              onGhnChange={handleFromGhnChange}
+              onGhtkChange={handleFromGhtkChange}
+              onVtpChange={handleFromVtpChange}
+            />
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Input label="GHTK Tỉnh/Thành gửi" value={form.pickProvince} onChange={onChange("pickProvince")} />
-            <Input label="GHTK Quận/Huyện gửi" value={form.pickDistrict} onChange={onChange("pickDistrict")} />
-            <Input label="GHTK Địa chỉ lấy" value={form.pickAddress} onChange={onChange("pickAddress")} />
-            <Input label="GHTK Tỉnh/Thành nhận" value={form.province} onChange={onChange("province")} />
-            <Input label="GHTK Quận/Huyện nhận" value={form.district} onChange={onChange("district")} />
-            <Input label="GHTK Địa chỉ giao" value={form.address} onChange={onChange("address")} />
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Input label="VTP Sender District ID" value={form.senderDistrictId} onChange={onChange("senderDistrictId")} />
-            <Input label="VTP Receiver District ID" value={form.receiverDistrictId} onChange={onChange("receiverDistrictId")} />
+            <LocationSelector
+              type="to"
+              initialProvinceId={202} // Hà Nội
+              initialDistrictId={1447} // Hoàn Kiếm
+              onGhnChange={handleToGhnChange}
+              onGhtkChange={handleToGhtkChange}
+              onVtpChange={handleToVtpChange}
+            />
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row">
@@ -161,6 +187,7 @@ export function LiveComparisonDemo() {
               className={buttonVariants({
                 className: cn("w-full text-center sm:w-auto", "disabled:cursor-not-allowed disabled:opacity-50")
               })}
+              suppressHydrationWarning
             >
               {isLoading ? "Đang truy vấn..." : "Lấy báo giá tổng hợp"}
             </button>
@@ -254,6 +281,7 @@ function Input({ label, value, onChange, required }: { label: string; value: str
         value={value}
         onChange={onChange}
         className="rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-2 text-sm text-white outline-none transition focus:border-sky-500 focus:ring-2 focus:ring-sky-500/50"
+        suppressHydrationWarning
       />
     </label>
   );

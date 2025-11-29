@@ -1,16 +1,15 @@
-import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
+import { deleteSession } from '@/lib/auth'
 
 export async function POST() {
   try {
-    const supabase = await createClient()
-    await supabase.auth.signOut()
+    await deleteSession()
     
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error('Logout error:', error)
     return NextResponse.json(
-      { error: 'Failed to log out' },
+      { error: 'Đăng xuất thất bại' },
       { status: 500 }
     )
   }

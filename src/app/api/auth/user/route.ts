@@ -1,12 +1,11 @@
-import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
+import { getCurrentUser } from '@/lib/auth'
 
 export async function GET() {
   try {
-    const supabase = await createClient()
-    const { data: { user }, error } = await supabase.auth.getUser()
+    const user = await getCurrentUser()
     
-    if (error || !user) {
+    if (!user) {
       return NextResponse.json({ user: null })
     }
 
@@ -14,7 +13,7 @@ export async function GET() {
       user: {
         id: user.id,
         email: user.email,
-        name: user.user_metadata?.name || user.email,
+        name: user.name || user.email,
       }
     })
   } catch (error) {

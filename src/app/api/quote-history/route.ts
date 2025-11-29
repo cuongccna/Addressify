@@ -1,15 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { triggerQuoteCreated } from '@/lib/webhooks/trigger'
+import { sendQuoteNotificationEmail, shouldSendEmailNotification } from '@/lib/email/send-emails'
 
 // GET /api/quote-history?shopId=xxx&limit=50&dateFrom=xxx&dateTo=xxx - Get quote history for a shop
 export async function GET(request: NextRequest) {
   try {
-    const supabase = await createClient()
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    const user = await getCurrentUser()
     
-    if (authError || !user) {
+    if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -79,10 +79,9 @@ export async function GET(request: NextRequest) {
 // POST /api/quote-history - Save quote results
 export async function POST(request: NextRequest) {
   try {
-    const supabase = await createClient()
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    const user = await getCurrentUser()
     
-    if (authError || !user) {
+    if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -168,6 +167,39 @@ export async function POST(request: NextRequest) {
     }).catch(error => {
       console.error('Failed to trigger quote.created webhook:', error);
     });
+
+    // Send quote notification email if enabled
+    shouldSendEmailNotification(user.id, 'quoteGenerated').then(async (shouldSend) => {
+      if (shouldSend && user.email) {
+        // Get user name
+        const dbUser = await prisma.user.findUnique({
+          where: { id: user.id },
+          select: { name: true },
+        })
+        
+        // Transform quotes for email
+        const emailQuotes = Array.isArray(quoteHistory.quotes)
+          ? (quoteHistory.quotes as Array<{ provider: string; service: string; price: number }>).map(q => ({
+              provider: q.provider,
+              service: q.service,
+              amount: q.price,
+              currency: 'VND',
+            }))
+          : []
+        
+        await sendQuoteNotificationEmail({
+          userId: user.id,
+          email: user.email,
+          userName: dbUser?.name || undefined,
+          shopName: shop.name,
+          recipientAddress: quoteHistory.recipientAddress,
+          quotes: emailQuotes,
+          createdAt: quoteHistory.createdAt,
+        })
+      }
+    }).catch(error => {
+      console.error('Failed to send quote notification email:', error)
+    })
 
     return NextResponse.json({ quoteHistory }, { status: 201 })
   } catch (error) {

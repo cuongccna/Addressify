@@ -1,5 +1,8 @@
+'use client'
+
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/buttonVariants";
+import { useAuth } from "@/contexts/AuthContext";
 
 const footerLinks = [
   {
@@ -28,6 +31,8 @@ const footerLinks = [
 ];
 
 export function SiteFooter() {
+  const { user, loading } = useAuth()
+
   return (
     <footer className="border-t border-slate-800/80 bg-slate-950/80">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-12 text-sm text-slate-300 md:flex-row md:justify-between">
@@ -41,13 +46,34 @@ export function SiteFooter() {
           <p className="text-sm text-slate-400">
             Nền tảng Address Intelligence giúp chủ shop Việt Nam chuẩn hóa địa chỉ, tối ưu phí vận chuyển và mở rộng vận hành đa kênh.
           </p>
+          
+          {/* Conditional Footer CTA */}
           <div className="flex gap-3">
-            <Link className={buttonVariants({ className: "px-4 py-2" })} href="/auth/sign-up">
-              Dùng thử miễn phí
-            </Link>
-            <Link className={buttonVariants({ variant: "secondary", className: "px-4 py-2" })} href="/demo">
-              Xem demo
-            </Link>
+            {!loading && (
+              <>
+                {user ? (
+                  // Logged in - Quick links to main features
+                  <>
+                    <Link className={buttonVariants({ className: "px-4 py-2" })} href="/normalize">
+                      Xử lý đơn hàng
+                    </Link>
+                    <Link className={buttonVariants({ variant: "secondary", className: "px-4 py-2" })} href="/history">
+                      Lịch sử
+                    </Link>
+                  </>
+                ) : (
+                  // Not logged in - Signup/demo
+                  <>
+                    <Link className={buttonVariants({ className: "px-4 py-2" })} href="/auth/sign-up">
+                      Dùng thử miễn phí
+                    </Link>
+                    <Link className={buttonVariants({ variant: "secondary", className: "px-4 py-2" })} href="/demo">
+                      Xem demo
+                    </Link>
+                  </>
+                )}
+              </>
+            )}
           </div>
         </div>
 

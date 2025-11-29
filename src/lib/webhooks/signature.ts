@@ -70,12 +70,15 @@ export function createWebhookHeaders(
 
 /**
  * Validate webhook request from receiver's perspective
+ * @param body - The request body as a string
+ * @param signature - The X-Webhook-Signature header value
+ * @param secret - The webhook secret key
+ * @returns Validation result with valid flag and optional error message
  */
 export function validateWebhookRequest(
   body: string,
   signature: string | null,
-  secret: string,
-  _maxAge: number = 5 * 60 * 1000 // 5 minutes (reserved for future use)
+  secret: string
 ): { valid: boolean; error?: string } {
   if (!signature) {
     return { valid: false, error: 'Missing signature' };

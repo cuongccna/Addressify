@@ -199,15 +199,15 @@ export default function WebhookManager() {
       {/* Header */}
       <div className="flex justify-between items-center">
         <div>
-          <h3 className="text-lg font-semibold">🪝 Webhook Management</h3>
-          <p className="text-sm text-gray-600">
+          <h3 className="text-lg font-semibold text-white">🪝 Webhook Management</h3>
+          <p className="text-sm text-white/60">
             Nhận thông báo real-time về các events trong hệ thống
           </p>
         </div>
         {!showCreateForm && (
           <button
             onClick={() => setShowCreateForm(true)}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+            className="px-4 py-2 bg-sky-500 text-white rounded-lg hover:bg-sky-600 transition"
           >
             ➕ Tạo Webhook
           </button>
@@ -216,12 +216,12 @@ export default function WebhookManager() {
 
       {/* Create Form */}
       {showCreateForm && (
-        <div className="bg-white border rounded-lg p-6 space-y-4">
-          <h4 className="font-semibold">Tạo Webhook Mới</h4>
+        <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4">
+          <h4 className="font-semibold text-white">Tạo Webhook Mới</h4>
 
           {/* URL Input */}
           <div>
-            <label className="block text-sm font-medium mb-1">
+            <label className="block text-sm font-medium mb-1 text-slate-300">
               Webhook URL *
             </label>
             <input
@@ -229,29 +229,29 @@ export default function WebhookManager() {
               value={url}
               onChange={(e) => setUrl(e.target.value)}
               placeholder="https://your-domain.com/webhook"
-              className="w-full px-3 py-2 border rounded-lg"
+              className="w-full px-3 py-2 border border-slate-600 rounded-lg bg-slate-900/50 text-white placeholder:text-slate-500 focus:border-sky-400 focus:outline-none"
               required
             />
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-xs text-slate-400 mt-1">
               URL sẽ nhận POST requests với event data
             </p>
           </div>
 
           {/* Events Selection */}
           <div>
-            <label className="block text-sm font-medium mb-2">
+            <label className="block text-sm font-medium mb-2 text-slate-300">
               Events * ({selectedEvents.length} selected)
             </label>
 
             {/* Quote Events */}
             <div className="mb-4">
               <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-medium text-gray-700">
+                <span className="text-sm font-medium text-slate-200">
                   📊 Quote Events
                 </span>
                 <button
                   onClick={() => selectAllInCategory(EVENT_CATEGORIES.quotes)}
-                  className="text-xs text-blue-600 hover:underline"
+                  className="text-xs text-sky-400 hover:text-sky-300 transition"
                 >
                   {EVENT_CATEGORIES.quotes.every(e => selectedEvents.includes(e))
                     ? 'Bỏ chọn tất cả'
@@ -260,14 +260,14 @@ export default function WebhookManager() {
               </div>
               <div className="space-y-2 pl-4">
                 {EVENT_CATEGORIES.quotes.map((event) => (
-                  <label key={event} className="flex items-center space-x-2">
+                  <label key={event} className="flex items-center space-x-2 cursor-pointer group">
                     <input
                       type="checkbox"
                       checked={selectedEvents.includes(event)}
                       onChange={() => toggleEvent(event)}
-                      className="rounded"
+                      className="rounded border-slate-600 bg-slate-900 text-sky-500 focus:ring-sky-500"
                     />
-                    <span className="text-sm">
+                    <span className="text-sm text-slate-300 group-hover:text-white transition">
                       {EVENT_DESCRIPTIONS[event as WebhookEventType]}
                     </span>
                   </label>
@@ -278,12 +278,12 @@ export default function WebhookManager() {
             {/* Shop Events */}
             <div className="mb-4">
               <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-medium text-gray-700">
+                <span className="text-sm font-medium text-slate-200">
                   🏪 Shop Events
                 </span>
                 <button
                   onClick={() => selectAllInCategory(EVENT_CATEGORIES.shops)}
-                  className="text-xs text-blue-600 hover:underline"
+                  className="text-xs text-sky-400 hover:text-sky-300 transition"
                 >
                   {EVENT_CATEGORIES.shops.every(e => selectedEvents.includes(e))
                     ? 'Bỏ chọn tất cả'
@@ -292,12 +292,12 @@ export default function WebhookManager() {
               </div>
               <div className="space-y-2 pl-4">
                 {EVENT_CATEGORIES.shops.map((event) => (
-                  <label key={event} className="flex items-center space-x-2">
+                  <label key={event} className="flex items-center space-x-2 cursor-pointer group">
                     <input
                       type="checkbox"
                       checked={selectedEvents.includes(event)}
                       onChange={() => toggleEvent(event)}
-                      className="rounded"
+                      className="rounded border-slate-600 bg-slate-900 text-sky-500 focus:ring-sky-500"
                     />
                     <span className="text-sm">
                       {EVENT_DESCRIPTIONS[event as WebhookEventType]}
@@ -310,12 +310,12 @@ export default function WebhookManager() {
             {/* Address Events */}
             <div className="mb-4">
               <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-medium text-gray-700">
+                <span className="text-sm font-medium text-slate-200">
                   📍 Address Events
                 </span>
                 <button
                   onClick={() => selectAllInCategory(EVENT_CATEGORIES.addresses)}
-                  className="text-xs text-blue-600 hover:underline"
+                  className="text-xs text-sky-400 hover:text-sky-300 transition"
                 >
                   {EVENT_CATEGORIES.addresses.every(e => selectedEvents.includes(e))
                     ? 'Bỏ chọn tất cả'
@@ -324,14 +324,14 @@ export default function WebhookManager() {
               </div>
               <div className="space-y-2 pl-4">
                 {EVENT_CATEGORIES.addresses.map((event) => (
-                  <label key={event} className="flex items-center space-x-2">
+                  <label key={event} className="flex items-center space-x-2 group cursor-pointer">
                     <input
                       type="checkbox"
                       checked={selectedEvents.includes(event)}
                       onChange={() => toggleEvent(event)}
-                      className="rounded"
+                      className="rounded border-slate-600 bg-slate-900 text-sky-500 focus:ring-sky-500"
                     />
-                    <span className="text-sm">
+                    <span className="text-sm text-slate-300 group-hover:text-white transition">
                       {EVENT_DESCRIPTIONS[event as WebhookEventType]}
                     </span>
                   </label>
@@ -342,12 +342,12 @@ export default function WebhookManager() {
             {/* Analytics Events */}
             <div>
               <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-medium text-gray-700">
+                <span className="text-sm font-medium text-slate-200">
                   📈 Analytics Events
                 </span>
                 <button
                   onClick={() => selectAllInCategory(EVENT_CATEGORIES.analytics)}
-                  className="text-xs text-blue-600 hover:underline"
+                  className="text-xs text-sky-400 hover:text-sky-300 transition"
                 >
                   {EVENT_CATEGORIES.analytics.every(e => selectedEvents.includes(e))
                     ? 'Bỏ chọn tất cả'
@@ -356,14 +356,14 @@ export default function WebhookManager() {
               </div>
               <div className="space-y-2 pl-4">
                 {EVENT_CATEGORIES.analytics.map((event) => (
-                  <label key={event} className="flex items-center space-x-2">
+                  <label key={event} className="flex items-center space-x-2 group cursor-pointer">
                     <input
                       type="checkbox"
                       checked={selectedEvents.includes(event)}
                       onChange={() => toggleEvent(event)}
-                      className="rounded"
+                      className="rounded border-slate-600 bg-slate-900 text-sky-500 focus:ring-sky-500"
                     />
-                    <span className="text-sm">
+                    <span className="text-sm text-slate-300 group-hover:text-white transition">
                       {EVENT_DESCRIPTIONS[event as WebhookEventType]}
                     </span>
                   </label>
@@ -380,7 +380,7 @@ export default function WebhookManager() {
                 setUrl('');
                 setSelectedEvents([]);
               }}
-              className="px-4 py-2 border rounded-lg hover:bg-gray-50"
+              className="px-4 py-2 border border-slate-600 text-slate-300 rounded-lg hover:bg-slate-700 transition"
               disabled={creating}
             >
               Hủy
@@ -388,7 +388,7 @@ export default function WebhookManager() {
             <button
               onClick={handleCreate}
               disabled={creating || !url || selectedEvents.length === 0}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+              className="px-4 py-2 bg-sky-500 text-white rounded-lg hover:bg-sky-600 disabled:opacity-50 disabled:cursor-not-allowed transition"
             >
               {creating ? 'Đang tạo...' : '✨ Tạo Webhook'}
             </button>
@@ -398,17 +398,17 @@ export default function WebhookManager() {
 
       {/* Show Secret */}
       {showSecret && webhooks.find(w => w.id === showSecret) && (
-        <div className="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6">
+        <div className="bg-yellow-900/30 border-2 border-yellow-500/50 rounded-lg p-6">
           <div className="flex items-start space-x-3">
             <span className="text-2xl">⚠️</span>
             <div className="flex-1">
-              <h4 className="font-semibold text-yellow-800 mb-2">
+              <h4 className="font-semibold text-yellow-200 mb-2">
                 Lưu Webhook Secret
               </h4>
-              <p className="text-sm text-yellow-700 mb-3">
+              <p className="text-sm text-yellow-300/80 mb-3">
                 Đây là lần duy nhất bạn có thể xem secret. Lưu lại ngay!
               </p>
-              <div className="bg-white p-3 rounded border font-mono text-sm break-all">
+              <div className="bg-slate-900 p-3 rounded border border-slate-700 font-mono text-sm break-all text-white">
                 {webhooks.find(w => w.id === showSecret)?.secret}
               </div>
               <button
@@ -419,13 +419,13 @@ export default function WebhookManager() {
                     alert('Đã copy secret!');
                   }
                 }}
-                className="mt-3 px-3 py-1 bg-yellow-600 text-white rounded text-sm hover:bg-yellow-700"
+                className="mt-3 px-3 py-1 bg-yellow-600 text-white rounded text-sm hover:bg-yellow-700 transition"
               >
                 📋 Copy Secret
               </button>
               <button
                 onClick={() => setShowSecret(null)}
-                className="mt-3 ml-2 px-3 py-1 bg-gray-600 text-white rounded text-sm hover:bg-gray-700"
+                className="mt-3 ml-2 px-3 py-1 bg-slate-600 text-white rounded text-sm hover:bg-slate-700 transition"
               >
                 Đã lưu
               </button>
@@ -437,11 +437,11 @@ export default function WebhookManager() {
       {/* Webhook List */}
       <div className="space-y-4">
         {webhooks.length === 0 ? (
-          <div className="text-center py-12 border-2 border-dashed rounded-lg">
-            <p className="text-gray-500">Chưa có webhook nào</p>
+          <div className="text-center py-12 border-2 border-dashed border-slate-700 rounded-lg">
+            <p className="text-slate-400">Chưa có webhook nào</p>
             <button
               onClick={() => setShowCreateForm(true)}
-              className="mt-4 text-blue-600 hover:underline"
+              className="mt-4 text-sky-400 hover:text-sky-300 transition"
             >
               Tạo webhook đầu tiên
             </button>
@@ -450,25 +450,25 @@ export default function WebhookManager() {
           webhooks.map((webhook) => (
             <div
               key={webhook.id}
-              className="bg-white border rounded-lg p-4"
+              className="bg-slate-800/30 border border-slate-700 rounded-lg p-4 hover:bg-slate-800/50 transition"
             >
               <div className="flex justify-between items-start mb-3">
                 <div className="flex-1">
                   <div className="flex items-center space-x-2 mb-1">
-                    <span className="font-mono text-sm font-medium">
+                    <span className="font-mono text-sm font-medium text-white">
                       {webhook.url}
                     </span>
                     <span
                       className={`px-2 py-0.5 text-xs rounded ${
                         webhook.isActive
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-gray-100 text-gray-800'
+                          ? 'bg-green-500/20 text-green-300'
+                          : 'bg-slate-500/20 text-slate-300'
                       }`}
                     >
                       {webhook.isActive ? '✓ Active' : '✗ Inactive'}
                     </span>
                   </div>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-slate-400">
                     {webhook.events.length} events • Created{' '}
                     {new Date(webhook.createdAt).toLocaleDateString('vi-VN')}
                   </p>
@@ -476,14 +476,14 @@ export default function WebhookManager() {
                 <div className="flex space-x-2">
                   <button
                     onClick={() => handleTest(webhook.id)}
-                    className="px-3 py-1 text-sm border rounded hover:bg-gray-50"
+                    className="px-3 py-1 text-sm border border-slate-600 text-slate-300 rounded hover:bg-slate-700 transition"
                     title="Send test webhook"
                   >
                     🧪 Test
                   </button>
                   <button
                     onClick={() => handleToggle(webhook.id)}
-                    className="px-3 py-1 text-sm border rounded hover:bg-gray-50"
+                    className="px-3 py-1 text-sm border border-slate-600 text-slate-300 rounded hover:bg-slate-700 transition"
                   >
                     {webhook.isActive ? 'Pause' : 'Resume'}
                   </button>
@@ -497,13 +497,13 @@ export default function WebhookManager() {
                         loadLogs(webhook.id);
                       }
                     }}
-                    className="px-3 py-1 text-sm border rounded hover:bg-gray-50"
+                    className="px-3 py-1 text-sm border border-slate-600 text-slate-300 rounded hover:bg-slate-700 transition"
                   >
                     📋 Logs
                   </button>
                   <button
                     onClick={() => handleDelete(webhook.id)}
-                    className="px-3 py-1 text-sm border border-red-300 text-red-600 rounded hover:bg-red-50"
+                    className="px-3 py-1 text-sm border border-red-500/50 text-red-400 rounded hover:bg-red-500/20 transition"
                   >
                     🗑️
                   </button>
@@ -515,7 +515,7 @@ export default function WebhookManager() {
                 {webhook.events.map((event) => (
                   <span
                     key={event}
-                    className="px-2 py-0.5 bg-blue-50 text-blue-700 text-xs rounded"
+                    className="px-2 py-0.5 bg-sky-500/20 text-sky-300 text-xs rounded"
                   >
                     {event}
                   </span>
@@ -524,12 +524,12 @@ export default function WebhookManager() {
 
               {/* Logs */}
               {selectedWebhook === webhook.id && (
-                <div className="mt-4 pt-4 border-t">
-                  <h5 className="font-medium mb-3">Recent Deliveries</h5>
+                <div className="mt-4 pt-4 border-t border-slate-700">
+                  <h5 className="font-medium text-white mb-3">Recent Deliveries</h5>
                   {loadingLogs ? (
-                    <div className="text-center py-4">Loading...</div>
+                    <div className="text-center py-4 text-slate-400">Loading...</div>
                   ) : logs.length === 0 ? (
-                    <div className="text-center py-4 text-gray-500">
+                    <div className="text-center py-4 text-slate-400">
                       No deliveries yet
                     </div>
                   ) : (
@@ -537,7 +537,7 @@ export default function WebhookManager() {
                       {logs.map((log) => (
                         <div
                           key={log.id}
-                          className="flex justify-between items-center p-2 bg-gray-50 rounded text-sm"
+                          className="flex justify-between items-center p-2 bg-slate-900/50 rounded text-sm border border-slate-700"
                         >
                           <div className="flex items-center space-x-3">
                             <span
@@ -548,23 +548,23 @@ export default function WebhookManager() {
                               {log.success ? '✅' : '❌'}
                             </span>
                             <div>
-                              <div className="font-medium">{log.event}</div>
-                              <div className="text-xs text-gray-600">
+                              <div className="font-medium text-white">{log.event}</div>
+                              <div className="text-xs text-slate-400">
                                 {new Date(log.timestamp).toLocaleString('vi-VN')}
                               </div>
                             </div>
                           </div>
                           <div className="text-right">
                             {log.statusCode && (
-                              <div className="font-mono text-xs">
+                              <div className="font-mono text-xs text-slate-300">
                                 {log.statusCode}
                               </div>
                             )}
-                            <div className="text-xs text-gray-600">
+                            <div className="text-xs text-slate-400">
                               Attempt {log.attempt}
                             </div>
                             {log.error && (
-                              <div className="text-xs text-red-600 max-w-xs truncate">
+                              <div className="text-xs text-red-400 max-w-xs truncate">
                                 {log.error}
                               </div>
                             )}

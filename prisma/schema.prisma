@@ -9,13 +9,14 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
-  schemas  = ["public", "auth"]
+  schemas  = ["public"]
 }
 
-// User model - synced with Supabase Auth
+// User model - Authentication managed by Prisma
 model User {
   id                    String   @id @default(uuid())
   email                 String   @unique
+  password              String   // Hashed password
   name                  String?
   emailVerified         Boolean  @default(false)
   notificationSettings  Json     @default("{\"quoteGenerated\": false, \"dailySummary\": false, \"weeklySummary\": true, \"priceAlerts\": true, \"failedQuotes\": true}")
@@ -26,8 +27,25 @@ model User {
   emailLogs             EmailLog[]
   apiKeys               ApiKey[]
   webhooks              Webhook[]
+  sessions              Session[]
   
   @@map("addressify_users")
+  @@schema("public")
+}
+
+// Session model for authentication
+model Session {
+  id        String   @id @default(uuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([token])
+  @@index([userId])
+  @@map("addressify_sessions")
   @@schema("public")
 }
 
@@ -37,22 +55,31 @@ model Shop {
   name            String
   userId          String
   
-  // Sender address configuration
-  senderAddress   String
-  senderDistrict  String
-  senderProvince  String
+  // Sender address configuration (linh hoạt cho cả địa chỉ cũ và mới)
+  senderAddress   String   // Số nhà, tên đường
+  senderWard      String?  // Phường/Xã (có thể null với địa chỉ mới)
+  senderDistrict  String   // Quận/Huyện hoặc Phường/Xã (địa chỉ mới)
+  senderProvince  String   // Tỉnh/Thành phố
   
-  // GHN IDs (optional)
+  // GHN configuration (Giao Hàng Nhanh)
   ghnProvinceId   String?
   ghnDistrictId   String?
   ghnWardCode     String?
   ghnShopId       String?
   
-  // GHTK configuration (optional)
+  // GHTK configuration (Giao Hàng Tiết Kiệm)
   ghtkPickAddress String?
   ghtkPickProvince String?
   ghtkPickDistrict String?
   ghtkPickWard    String?
+  ghtkPartnerId   String?  // Partner ID/Shop ID của GHTK
+  
+  // VTP configuration (Viettel Post)
+  vtpProvinceId   String?
+  vtpDistrictId   String?
+  vtpWardId       String?
+  vtpCustomerId   String?  // Mã khách hàng VTP
+  vtpGroupId      String?  // Mã nhóm địa chỉ
   
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
@@ -183,16 +210,17 @@ model Webhook {
 
 // Webhook Log - track webhook deliveries
 model WebhookLog {
-  id          String   @id @default(cuid())
-  webhookId   String
-  event       String   // "quote.created"
-  payload     Json
-  response    Json?
-  statusCode  Int?
-  attempt     Int      @default(1)
-  success     Boolean  @default(false)
-  error       String?
-  timestamp   DateTime @default(now())
+  id           String   @id @default(cuid())
+  webhookId    String
+  event        String   // "quote.created"
+  payload      Json
+  response     Json?
+  statusCode   Int?
+  attempt      Int      @default(1)
+  success      Boolean  @default(false)
+  error        String?
+  responseTime Int?     // Response time in milliseconds
+  timestamp    DateTime @default(now())
   
   webhook     Webhook  @relation(fields: [webhookId], references: [id], onDelete: Cascade)
   

@@ -3,15 +3,14 @@ import { sendEmail } from '@/lib/email/resend'
 import WelcomeEmail from '@/lib/email/templates/WelcomeEmail'
 import QuoteGeneratedEmail from '@/lib/email/templates/QuoteGeneratedEmail'
 import WeeklySummaryEmail from '@/lib/email/templates/WeeklySummaryEmail'
-import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/auth'
 
 export async function GET(request: NextRequest) {
   try {
     // Get authenticated user
-    const supabase = await createClient()
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    const user = await getCurrentUser()
 
-    if (authError || !user) {
+    if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 

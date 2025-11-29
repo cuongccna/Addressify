@@ -3,12 +3,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { ShopProvider } from '@/contexts/ShopContext'
-import { initializeScheduler } from '@/lib/jobs/init'
 
-// Initialize scheduler on server startup
-if (typeof window === 'undefined') {
-  initializeScheduler()
-}
+// Note: Scheduler is initialized separately in production
+// Use /api/jobs/start endpoint or process manager to start scheduler
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -70,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="vi" className={`${inter.variable} antialiased`}>
+    <html lang="vi" className={`${inter.variable} antialiased`} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -78,7 +75,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#3b82f6" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
-      <body className="relative min-h-screen bg-slate-950 text-slate-100 font-sans">
+      <body className="relative min-h-screen bg-slate-950 text-slate-100 font-sans" suppressHydrationWarning>
         <AuthProvider>
           <ShopProvider>
             {/* Background Pattern */}

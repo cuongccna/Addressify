@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { triggerWebhook } from '@/lib/webhooks/trigger'
 
@@ -10,10 +10,9 @@ interface RouteContext {
 // GET /api/shops/[id] - Get a specific shop
 export async function GET(_request: NextRequest, context: RouteContext) {
   try {
-    const supabase = await createClient()
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    const user = await getCurrentUser()
     
-    if (authError || !user) {
+    if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -45,10 +44,9 @@ export async function GET(_request: NextRequest, context: RouteContext) {
 // PATCH /api/shops/[id] - Update a shop
 export async function PATCH(request: NextRequest, context: RouteContext) {
   try {
-    const supabase = await createClient()
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    const user = await getCurrentUser()
     
-    if (authError || !user) {
+    if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -98,10 +96,9 @@ export async function PATCH(request: NextRequest, context: RouteContext) {
 // DELETE /api/shops/[id] - Delete a shop
 export async function DELETE(_request: NextRequest, context: RouteContext) {
   try {
-    const supabase = await createClient()
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    const user = await getCurrentUser()
     
-    if (authError || !user) {
+    if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
