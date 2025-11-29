@@ -146,9 +146,23 @@ export class GHTKClient extends BaseShippingClient {
   }
 
   async getLeadtime(input: GHTKLeadtimeRequest): Promise<GHTKLeadtimeEstimate> {
-    const payload = buildLeadtimePayload(input);
-    const response = await this.post<GHTKLeadtimeEnvelope>("/services/shipment/leadtime", payload);
-    return mapLeadtimeEnvelope(response);
+    try {
+      const payload = buildLeadtimePayload(input);
+      const response = await this.post<GHTKLeadtimeEnvelope>("/services/shipment/leadtime", payload);
+      return mapLeadtimeEnvelope(response);
+    } catch (error: unknown) {
+      const err = error as { response?: { status?: number } };
+      // Handle 404 - API endpoint may not be available
+      if (err.response?.status === 404) {
+        console.warn('[GHTKClient] Leadtime API returned 404 - endpoint may not be available');
+        return {
+          estimatedDays: null,
+          expectedPickupTime: null,
+          expectedDeliveryTime: null
+        };
+      }
+      throw error;
+    }
   }
 }
 

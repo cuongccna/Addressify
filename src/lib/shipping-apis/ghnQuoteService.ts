@@ -23,6 +23,7 @@ export interface GHNServiceQuote {
 export interface GHNServiceFailure {
   service: GHNServiceDescription;
   error: string;
+  errorCode?: string;
 }
 
 export interface GHNQuoteResult {
@@ -34,6 +35,12 @@ interface GHNClientLike {
   listAvailableServices(filter: GHNServiceFilter): Promise<GHNServiceDescription[]>;
   calculateFee(input: GHNCalculateFeeInput): Promise<GHNFeeQuotation>;
 }
+
+// Service type constraints based on GHN documentation
+const SERVICE_WEIGHT_LIMITS: Record<number, { min: number; max: number; name: string }> = {
+  2: { min: 0, max: 20000, name: "Hàng nhẹ" },      // Hàng nhẹ: 0-20kg
+  5: { min: 20000, max: 50000, name: "Hàng nặng" }  // Hàng nặng: 20-50kg
+};
 
 export class GHNQuoteService {
   constructor(private readonly client: GHNClientLike) {}
@@ -55,8 +62,44 @@ export class GHNQuoteService {
       return { quotes: [], failures: [] };
     }
 
+    // Filter services based on weight constraints
+    const eligibleServices = services.filter(service => {
+      const limits = SERVICE_WEIGHT_LIMITS[service.serviceTypeId];
+      if (!limits) return true; // Unknown service type, try it
+      
+      const weight = input.weightInGrams;
+      if (weight < limits.min) {
+        console.log(`[GHNQuoteService] Skipping ${service.shortName} (${limits.name}): weight ${weight}g < min ${limits.min}g`);
+        return false;
+      }
+      if (weight > limits.max) {
+        console.log(`[GHNQuoteService] Skipping ${service.shortName} (${limits.name}): weight ${weight}g > max ${limits.max}g`);
+        return false;
+      }
+      return true;
+    });
+
+    console.log(`[GHNQuoteService] Eligible services: ${eligibleServices.length}/${services.length} for weight ${input.weightInGrams}g`);
+
+    if (!eligibleServices.length) {
+      // Return info about why services were filtered
+      return {
+        quotes: [],
+        failures: services.map(service => {
+          const limits = SERVICE_WEIGHT_LIMITS[service.serviceTypeId];
+          return {
+            service,
+            error: limits 
+              ? `Weight ${input.weightInGrams}g not in range ${limits.min}-${limits.max}g for ${limits.name}`
+              : "No eligible service for this weight",
+            errorCode: "WEIGHT_OUT_OF_RANGE"
+          };
+        })
+      };
+    }
+
     const settled = await Promise.allSettled(
-      services.map(async (service) => {
+      eligibleServices.map(async (service) => {
         const feeInput: GHNCalculateFeeInput = {
           fromDistrictId: input.fromDistrictId,
           fromWardCode: input.fromWardCode,
@@ -81,13 +124,23 @@ export class GHNQuoteService {
     const failures: GHNServiceFailure[] = [];
 
     settled.forEach((result, index) => {
-      const service = services[index];
+      const service = eligibleServices[index];
       if (result.status === "fulfilled") {
         quotes.push(result.value);
       } else {
+        const errorMessage = result.reason instanceof Error ? result.reason.message : String(result.reason);
+        // Extract error code from message if available
+        let errorCode = "UNKNOWN";
+        if (errorMessage.includes("route not found")) {
+          errorCode = "ROUTE_NOT_FOUND";
+        } else if (errorMessage.includes("Cân nặng không hợp lệ")) {
+          errorCode = "INVALID_WEIGHT";
+        }
+        
         failures.push({
           service,
-          error: result.reason instanceof Error ? result.reason.message : String(result.reason)
+          error: errorMessage,
+          errorCode
         });
       }
     });

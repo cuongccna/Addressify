@@ -1,16 +1,24 @@
 import { NextResponse } from "next/server";
-import { GHNMasterDataService } from "@/lib/master-data/ghn-master-data";
+import { masterDataDB } from "@/lib/master-data/master-data-db";
 
 export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
-    const service = GHNMasterDataService.fromEnv();
-    const provinces = await service.getProvinces(true);
+    const provinces = await masterDataDB.getProvinces();
+
+    // Transform to GHN format for backward compatibility
+    const data = provinces.map(p => ({
+      ProvinceID: p.ghnId,
+      ProvinceName: p.name,
+      Code: p.code,
+      NameExtension: p.nameExtensions
+    }));
 
     return NextResponse.json({
       success: true,
-      data: provinces
+      data,
+      source: "postgresql"
     });
   } catch (error) {
     console.error("[MasterData] Get provinces error:", error);

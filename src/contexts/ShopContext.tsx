@@ -8,16 +8,27 @@ interface Shop {
   name: string
   userId: string
   senderAddress: string
+  senderWard?: string | null
   senderDistrict: string
   senderProvince: string
+  // GHN
   ghnProvinceId?: string | null
   ghnDistrictId?: string | null
   ghnWardCode?: string | null
   ghnShopId?: string | null
+  // GHTK
   ghtkPickAddress?: string | null
   ghtkPickProvince?: string | null
   ghtkPickDistrict?: string | null
   ghtkPickWard?: string | null
+  ghtkPartnerId?: string | null
+  // VTP
+  vtpProvinceId?: string | null
+  vtpDistrictId?: string | null
+  vtpWardId?: string | null
+  vtpCustomerId?: string | null
+  vtpGroupId?: string | null
+  
   createdAt: string
   updatedAt: string
 }

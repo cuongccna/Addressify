@@ -229,3 +229,155 @@ model WebhookLog {
   @@map("addressify_webhook_logs")
   @@schema("public")
 }
+
+// ==================== MASTER DATA TABLES ====================
+
+// Province/City master data
+model Province {
+  id             String   @id @default(cuid())
+  name           String   // Tên tỉnh/thành phố
+  code           String?  // Mã vùng
+  
+  // Provider IDs
+  ghnId          Int?     @unique // GHN ProvinceID
+  ghtkId         String?  // GHTK province code
+  vtpId          String?  // Viettel Post province ID
+  
+  // Name variations for fuzzy matching
+  nameExtensions String[] // ["Hồ Chí Minh", "TP.HCM", "TPHCM", "Sài Gòn", ...]
+  
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  
+  districts      District[]
+  
+  @@index([name])
+  @@index([ghnId])
+  @@map("addressify_provinces")
+  @@schema("public")
+}
+
+// District master data
+model District {
+  id             String   @id @default(cuid())
+  provinceId     String
+  name           String   // Tên quận/huyện
+  code           String?  // Mã quận/huyện
+  type           Int?     // 1: Quận, 2: Huyện, 3: Thị xã, etc.
+  
+  // Provider IDs
+  ghnId          Int?     @unique // GHN DistrictID
+  ghtkId         String?  // GHTK district code
+  vtpId          String?  // Viettel Post district ID
+  supportType    Int?     // GHN support type (1,2,3)
+  
+  // Name variations
+  nameExtensions String[]
+  
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  
+  province       Province @relation(fields: [provinceId], references: [id], onDelete: Cascade)
+  wards          Ward[]
+  
+  @@index([provinceId])
+  @@index([name])
+  @@index([ghnId])
+  @@map("addressify_districts")
+  @@schema("public")
+}
+
+// Ward master data
+model Ward {
+  id             String   @id @default(cuid())
+  districtId     String
+  name           String   // Tên phường/xã
+  
+  // Provider IDs
+  ghnCode        String?  @unique // GHN WardCode (string)
+  ghtkId         String?  // GHTK ward code
+  vtpId          String?  // Viettel Post ward ID
+  supportType    Int?     // GHN support type
+  canUpdateCOD   Boolean  @default(false)
+  
+  // Name variations
+  nameExtensions String[]
+  
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  
+  district       District @relation(fields: [districtId], references: [id], onDelete: Cascade)
+  
+  @@index([districtId])
+  @@index([name])
+  @@index([ghnCode])
+  @@map("addressify_wards")
+  @@schema("public")
+}
+
+// Street master data (optional, for future use)
+model Street {
+  id             String   @id @default(cuid())
+  wardId         String?  // Có thể null nếu đường chạy qua nhiều phường
+  districtId     String
+  name           String   // Tên đường
+  
+  // Name variations
+  nameExtensions String[]
+  
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  
+  @@index([districtId])
+  @@index([name])
+  @@map("addressify_streets")
+  @@schema("public")
+}
+
+// ==================== PROCESSED ADDRESS HISTORY ====================
+
+// Processed address history - lưu lịch sử địa chỉ đã xử lý
+model ProcessedAddress {
+  id                String   @id @default(cuid())
+  
+  // Original input
+  originalAddress   String   // Địa chỉ gốc người dùng nhập
+  
+  // Normalized components
+  streetNumber      String?  // Số nhà
+  streetName        String?  // Tên đường
+  wardName          String?  // Tên phường/xã (đã chuẩn hóa)
+  districtName      String?  // Tên quận/huyện (đã chuẩn hóa)
+  provinceName      String?  // Tên tỉnh/thành phố (đã chuẩn hóa)
+  
+  // Full normalized address
+  normalizedAddress String?  // Địa chỉ đầy đủ đã chuẩn hóa
+  
+  // Provider IDs (for quick lookup)
+  ghnProvinceId     Int?
+  ghnDistrictId     Int?
+  ghnWardCode       String?
+  
+  // Matching confidence scores
+  provinceConfidence Float?  // 0.0 - 1.0
+  districtConfidence Float?
+  wardConfidence     Float?
+  
+  // Validation
+  isValid           Boolean  @default(false)
+  validationErrors  String[] // Các lỗi nếu không hợp lệ
+  
+  // Metadata
+  source            String?  // "manual", "bulk_upload", "api"
+  userId            String?  // Người dùng xử lý (nếu có)
+  
+  createdAt         DateTime @default(now())
+  
+  @@index([originalAddress])
+  @@index([provinceName, districtName, wardName])
+  @@index([ghnProvinceId, ghnDistrictId])
+  @@index([createdAt])
+  @@index([userId])
+  @@map("addressify_processed_addresses")
+  @@schema("public")
+}

@@ -1,17 +1,17 @@
 /**
  * Server-only address normalization functions
- * Uses GHN Master Data with fuzzy matching
+ * Uses PostgreSQL Master Data with fuzzy matching
  * 
- * ⚠️ WARNING: This file imports Node.js modules (fs/promises)
+ * ⚠️ WARNING: This file uses Prisma (server-side only)
  * Only import this in API routes or Server Components
  */
 
 import { AddressData } from '@/types/address'
-import { AddressMatcher } from '@/lib/master-data/address-matcher'
+import { AddressMatcherDB } from '@/lib/master-data/address-matcher-db'
 import { processAddress } from './addressNormalizer'
 
 /**
- * Enhanced address processing with GHN Master Data fuzzy matching
+ * Enhanced address processing with PostgreSQL Master Data fuzzy matching
  * 
  * @param rawAddress - Raw address string to normalize
  * @returns Promise<AddressData> with GHN IDs and confidence scores
@@ -27,9 +27,8 @@ export async function processAddressWithMasterData(rawAddress: string): Promise<
   const basicResult = processAddress(rawAddress)
   
   try {
-    // Try to match with GHN master data
-    const matcher = new AddressMatcher()
-    await matcher.loadCache()
+    // Try to match with master data from PostgreSQL
+    const matcher = new AddressMatcherDB()
     
     console.log('[AddressNormalizer] Resolving address:', {
       province: basicResult.province,
@@ -44,9 +43,9 @@ export async function processAddressWithMasterData(rawAddress: string): Promise<
     )
     
     console.log('[AddressNormalizer] Resolved result:', {
-      province: resolved.province ? { id: resolved.province.id, name: resolved.province.name, confidence: resolved.province.confidence } : null,
-      district: resolved.district ? { id: resolved.district.id, name: resolved.district.name, confidence: resolved.district.confidence } : null,
-      ward: resolved.ward ? { code: resolved.ward.code, name: resolved.ward.name, confidence: resolved.ward.confidence } : null
+      province: resolved.province ? { ghnId: resolved.province.ghnId, name: resolved.province.name, confidence: resolved.province.confidence } : null,
+      district: resolved.district ? { ghnId: resolved.district.ghnId, name: resolved.district.name, confidence: resolved.district.confidence } : null,
+      ward: resolved.ward ? { ghnCode: resolved.ward.ghnCode, name: resolved.ward.name, confidence: resolved.ward.confidence } : null
     })
     
     if (resolved.province) {
@@ -56,11 +55,11 @@ export async function processAddressWithMasterData(rawAddress: string): Promise<
         province: resolved.province.name,
         district: resolved.district?.name || basicResult.district,
         ward: resolved.ward?.name || basicResult.ward,
-        ghnProvinceId: resolved.province.id,
+        ghnProvinceId: resolved.province.ghnId,
         ghnProvinceName: resolved.province.name,
-        ghnDistrictId: resolved.district?.id,
+        ghnDistrictId: resolved.district?.ghnId,
         ghnDistrictName: resolved.district?.name,
-        ghnWardCode: resolved.ward?.code,
+        ghnWardCode: resolved.ward?.ghnCode,
         ghnWardName: resolved.ward?.name,
         matchConfidence: {
           province: resolved.province.confidence,

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="180" height="180" fill="url(#grad1)"/>
+  
+  <!-- Location pin shape -->
+  <path d="M90 28c-23.3 0-42.2 18.9-42.2 42.2 0 31.6 42.2 70.3 42.2 70.3s42.2-38.7 42.2-70.3c0-23.3-18.9-42.2-42.2-42.2z" 
+        fill="white" opacity="0.95"/>
+  
+  <!-- Inner circle with checkmark -->
+  <circle cx="90" cy="70.2" r="21.1" fill="url(#grad2)"/>
+  
+  <!-- Checkmark -->
+  <path d="M81 70.2 L88 77.2 L100.3 63.2" 
+        stroke="white" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Network dots -->
+  <circle cx="63.3" cy="133.5" r="4.2" fill="white" opacity="0.7"/>
+  <circle cx="90" cy="147.6" r="4.2" fill="white" opacity="0.7"/>
+  <circle cx="116.7" cy="133.5" r="4.2" fill="white" opacity="0.7"/>
+  
+  <!-- Connection lines -->
+  <line x1="63.3" y1="133.5" x2="90" y2="112.5" stroke="white" stroke-width="1.1" opacity="0.5"/>
+  <line x1="90" y1="147.6" x2="90" y2="112.5" stroke="white" stroke-width="1.1" opacity="0.5"/>
+  <line x1="116.7" y1="133.5" x2="90" y2="112.5" stroke="white" stroke-width="1.1" opacity="0.5"/>
+</svg>

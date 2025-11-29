@@ -17,7 +17,11 @@ type ProviderQuote = {
   days?: number | null;
   service?: string;
   error?: string;
+  weight?: number; // Weight in grams for this quote
 };
+
+// Standard weight tiers for shipping quotes (in grams)
+const WEIGHT_TIERS = [500, 1000, 2000, 3000, 5000, 10000, 20000];
 
 type AggResponse = {
   success: boolean;
@@ -56,7 +60,6 @@ export function AddressNormalizeAndCompare() {
     ghnDistrictId: 1454, // Example: Quận 1
     ghnWardCode: undefined
   });
-  const [weight, setWeight] = useState("1000");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [quotes, setQuotes] = useState<ProviderQuote[]>([]);
@@ -64,6 +67,7 @@ export function AddressNormalizeAndCompare() {
   const [bulkProcessing, setBulkProcessing] = useState(false);
   const [bulkProgress, setBulkProgress] = useState({ current: 0, total: 0 });
   const [savingToDb, setSavingToDb] = useState(false);
+  const defaultWeightForBulk = 1000; // Default 1kg for bulk export
 
   const validCount = useMemo(() => addresses.filter((a) => a.isValid).length, [addresses]);
 
@@ -111,7 +115,7 @@ export function AddressNormalizeAndCompare() {
             currency: 'VND',
             error: q.error
           })),
-          weight: Number(weight) || 1000,
+          weight: defaultWeightForBulk,
           value: 1000000, // Default insurance value
           note: `Auto-saved quote on ${new Date().toLocaleString('vi-VN')}`
         })
@@ -158,7 +162,7 @@ export function AddressNormalizeAndCompare() {
       try {
         // Call aggregator
         const payload: Record<string, unknown> = {
-          weightInGrams: Number(weight) || 1000,
+          weightInGrams: defaultWeightForBulk,
           pickProvince: sender.pickProvince,
           pickDistrict: sender.pickDistrict,
           pickAddress: sender.pickAddress,
@@ -254,185 +258,130 @@ export function AddressNormalizeAndCompare() {
     setLoading(true);
     
     try {
-      // Build payload based on available GHN IDs
-      const payload: Record<string, unknown> = {
-        weightInGrams: Number(weight) || 1000,
-        // GHTK fields (text-based)
-        pickProvince: sender.pickProvince,
-        pickDistrict: sender.pickDistrict,
-        pickAddress: sender.pickAddress,
-        province: addr.province,
-        district: addr.district,
-        address: [addr.ward, addr.district, addr.province].filter(Boolean).join(", ")
-      };
+      const allQuotes: ProviderQuote[] = [];
+      
+      // Fetch quotes for all weight tiers in parallel
+      const quotePromises = WEIGHT_TIERS.map(async (weightInGrams) => {
+        // Build payload based on available GHN IDs
+        const payload: Record<string, unknown> = {
+          weightInGrams,
+          // GHTK fields (text-based)
+          pickProvince: sender.pickProvince,
+          pickDistrict: sender.pickDistrict,
+          pickAddress: sender.pickAddress,
+          province: addr.province,
+          district: addr.district,
+          address: [addr.ward, addr.district, addr.province].filter(Boolean).join(", ")
+        };
 
-      // Debug: Log address data
-      console.log('[AddressNormalize] Address GHN IDs:', {
-        ghnProvinceId: addr.ghnProvinceId,
-        ghnDistrictId: addr.ghnDistrictId,
-        ghnWardCode: addr.ghnWardCode,
-        ward: addr.ward
-      });
-
-      // Add GHN/VTP IDs if available
-      if (addr.ghnProvinceId && addr.ghnDistrictId) {
-        // GHN fields
-        payload.fromDistrictId = sender.ghnDistrictId;
-        payload.toDistrictId = addr.ghnDistrictId;
-        if (addr.ghnWardCode) {
-          payload.toWardCode = addr.ghnWardCode;
-          console.log('[AddressNormalize] GHN ward code present:', addr.ghnWardCode);
-        } else {
-          console.warn('[AddressNormalize] ⚠️ Missing GHN ward code - GHN may not return quote');
+        // Add GHN/VTP IDs if available
+        if (addr.ghnProvinceId && addr.ghnDistrictId) {
+          // GHN fields
+          payload.fromDistrictId = sender.ghnDistrictId;
+          payload.toDistrictId = addr.ghnDistrictId;
+          if (addr.ghnWardCode) {
+            payload.toWardCode = addr.ghnWardCode;
+          }
+          
+          // VTP fields (same structure as GHN)
+          payload.senderDistrictId = sender.ghnDistrictId;
+          payload.receiverDistrictId = addr.ghnDistrictId;
+          if (addr.ghnWardCode) {
+            payload.receiverWardCode = addr.ghnWardCode;
+          }
         }
-        
-        // VTP fields (same structure as GHN)
-        payload.senderDistrictId = sender.ghnDistrictId;
-        payload.receiverDistrictId = addr.ghnDistrictId;
-        if (addr.ghnWardCode) {
-          payload.receiverWardCode = addr.ghnWardCode;
-        }
-      }
-      
-      console.log('[AddressNormalize] Final payload for aggregator:', payload);
 
-      const res = await fetch("/api/shipping/quotes", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-      
-      const data: AggResponse = await res.json();
-      
-      // Debug logging
-      console.log('[AddressNormalize] Aggregator response:', {
-        success: data.success,
-        providers: Object.keys(data.data || {}),
-        ghn: data.data?.ghn ? 'present' : 'missing',
-        ghtk: data.data?.ghtk ? 'present' : 'missing',
-        vtp: data.data?.vtp ? 'present' : 'missing'
-      });
-      
-      if (!res.ok || !data.success) {
-        throw new Error(data.message ?? `Request failed (${res.status})`);
-      }
+        try {
+          const res = await fetch("/api/shipping/quotes", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+          
+          const data: AggResponse = await res.json();
+          
+          if (!res.ok || !data.success) {
+            return { weight: weightInGrams, quotes: [] as ProviderQuote[] };
+          }
 
-      // Parse results from all providers
-      const results: ProviderQuote[] = [];
+          // Parse results from all providers
+          const weightQuotes: ProviderQuote[] = [];
 
-      // GHN - Show ALL services
-      if (data.data?.ghn) {
-        console.log('[AddressNormalize] GHN data:', data.data.ghn);
-        
-        const ghnData = data.data.ghn as Record<string, unknown>;
-        
-        if (ghnData.error) {
-          results.push({ provider: 'GHN', error: String(ghnData.error) });
-        } else if (ghnData.quotes && Array.isArray(ghnData.quotes)) {
-          // GHN returns array of quotes - show ALL
-          const ghnQuotes = ghnData.quotes as Array<Record<string, unknown>>;
-          if (ghnQuotes.length > 0) {
-            for (const quote of ghnQuotes) {
-              const fee = quote.fee as Record<string, unknown> | undefined;
-              const service = quote.service as Record<string, unknown> | undefined;
-              const serviceName = (service?.shortName as string) || (quote.service_name as string) || 'GHN';
-              
-              results.push({
-                provider: `GHN - ${serviceName}`,
-                amount: (fee?.total as number) || (quote.total as number),
-                service: serviceName,
-                days: null // GHN doesn't return leadtime in fee response
+          // GHN
+          if (data.data?.ghn) {
+            const ghnData = data.data.ghn as Record<string, unknown>;
+            
+            if (!ghnData.error && ghnData.quotes && Array.isArray(ghnData.quotes)) {
+              const ghnQuotes = ghnData.quotes as Array<Record<string, unknown>>;
+              for (const quote of ghnQuotes) {
+                const fee = quote.fee as Record<string, unknown> | undefined;
+                const service = quote.service as Record<string, unknown> | undefined;
+                weightQuotes.push({
+                  provider: `GHN${service?.shortName ? ` - ${service.shortName}` : ''}`,
+                  amount: (fee?.total as number) || 0,
+                  days: (quote.leadtime as Record<string, unknown>)?.estimatedDays as number || null,
+                  service: (service?.shortName as string) || '',
+                  weight: weightInGrams
+                });
+              }
+            }
+          }
+
+          // GHTK
+          if (data.data?.ghtk) {
+            const ghtkData = data.data.ghtk as Record<string, unknown>;
+            if (!ghtkData.error && ghtkData.quote) {
+              const ghtkQuote = ghtkData.quote as Record<string, unknown>;
+              weightQuotes.push({
+                provider: 'GHTK',
+                amount: (ghtkQuote.shipFee as number) || (ghtkQuote.total as number) || 0,
+                days: (ghtkData.leadtime as Record<string, unknown>)?.estimatedDays as number || null,
+                weight: weightInGrams
               });
             }
-          } else {
-            results.push({ provider: 'GHN', error: 'No services available' });
           }
-        } else if (data.data.ghn.quote) {
-          // Fallback to old structure
-          results.push({
-            provider: 'GHN',
-            amount: data.data.ghn.quote.total,
-            days: data.data.ghn.leadtime?.estimatedDays ?? null,
-            service: data.data.ghn.quote.service_type_id ? `Service ${data.data.ghn.quote.service_type_id}` : undefined
-          });
-        }
-      }
 
-      // GHTK
-      if (data.data?.ghtk) {
-        console.log('[AddressNormalize] GHTK data:', data.data.ghtk);
-        
-        const ghtkData = data.data.ghtk as Record<string, unknown>;
-        
-        if (ghtkData.error) {
-          results.push({ provider: 'GHTK', error: String(ghtkData.error) });
-        } else if (ghtkData.quote) {
-          const ghtkQuote = ghtkData.quote as Record<string, unknown>;
-          const fee = ghtkQuote.fee as Record<string, unknown> | undefined;
-          const leadtime = ghtkData.leadtime as Record<string, unknown> | undefined;
-          
-          results.push({
-            provider: 'GHTK',
-            amount: (fee?.total as number) || (ghtkQuote.total as number) || (ghtkQuote.shipFee as number) || (ghtkQuote.ship_fee_only as number),
-            days: (leadtime?.estimatedDays as number) ?? null
-          });
-        }
-      }
-
-      // VTP
-      if (data.data?.vtp) {
-        if (data.data.vtp.error) {
-          results.push({ provider: 'VTP', error: data.data.vtp.error });
-        } else if (data.data.vtp.quote) {
-          const vtpQuote = data.data.vtp.quote as Record<string, unknown>;
-          results.push({
-            provider: 'VTP',
-            amount: (vtpQuote.total as number) || undefined,
-            days: data.data.vtp.leadtime?.estimatedDays ?? null
-          });
-        }
-      }
-
-      // Add placeholder for missing providers to show why they failed
-      const expectedProviders = ['GHN', 'GHTK', 'VTP'] as const;
-      const returnedProviders = new Set(results.map(r => {
-        // Handle "GHN - Service Name" by extracting base provider
-        const match = r.provider.match(/^(GHN|GHTK|VTP)/);
-        return match ? match[1] : r.provider;
-      }));
-      
-      expectedProviders.forEach(provider => {
-        if (!returnedProviders.has(provider)) {
-          // Provider wasn't called or returned nothing
-          if (provider === 'GHN' && !addr.ghnWardCode) {
-            results.push({ 
-              provider, 
-              error: 'Thiếu mã phường/xã (ward code) - không thể gọi API GHN' 
-            });
-          } else if (provider === 'GHN' && !data.data?.ghn) {
-            results.push({ 
-              provider, 
-              error: 'API không trả về dữ liệu - có thể thiếu thông tin bắt buộc' 
-            });
-          } else if (provider === 'VTP' && !process.env.NEXT_PUBLIC_VTP_TOKEN && !data.data?.vtp) {
-            results.push({ 
-              provider, 
-              error: 'VTP_API_TOKEN chưa được cấu hình' 
-            });
+          // VTP
+          if (data.data?.vtp) {
+            const vtpData = data.data.vtp as Record<string, unknown>;
+            if (!vtpData.error && vtpData.quote) {
+              const vtpQuote = vtpData.quote as Record<string, unknown>;
+              weightQuotes.push({
+                provider: 'VTP',
+                amount: (vtpQuote.total as number) || 0,
+                days: (vtpData.leadtime as Record<string, unknown>)?.estimatedDays as number || null,
+                weight: weightInGrams
+              });
+            }
           }
+
+          return { weight: weightInGrams, quotes: weightQuotes };
+        } catch (e) {
+          console.error(`Error fetching quotes for ${weightInGrams}g:`, e);
+          return { weight: weightInGrams, quotes: [] as ProviderQuote[] };
         }
       });
 
-      if (results.length === 0) {
-        setError("Không lấy được báo giá từ nhà vận chuyển nào");
-      } else {
-        setQuotes(results);
-        // Auto-save quote to database
-        await saveQuoteToDatabase(addr, results);
+      const results = await Promise.all(quotePromises);
+      
+      // Flatten all quotes
+      for (const result of results) {
+        allQuotes.push(...result.quotes);
       }
 
+      if (allQuotes.length === 0) {
+        setError("Không lấy được báo giá từ nhà vận chuyển nào");
+      } else {
+        setQuotes(allQuotes);
+        // Auto-save quote to database (use 1kg as default)
+        const oneKgQuotes = allQuotes.filter(q => q.weight === 1000);
+        if (oneKgQuotes.length > 0) {
+          await saveQuoteToDatabase(addr, oneKgQuotes);
+        }
+      }
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Không thể gọi aggregator");
+      console.error("Quote error:", e);
+      setError(e instanceof Error ? e.message : "Lỗi không xác định");
     } finally {
       setLoading(false);
     }
@@ -499,14 +448,7 @@ export function AddressNormalizeAndCompare() {
                 </>
               )}
               
-              <label className="text-xs text-slate-300">
-                Cân nặng (gram)
-                <input
-                  value={weight}
-                  onChange={(e) => setWeight(e.target.value)}
-                  className="ml-2 w-28 rounded-lg border border-slate-700 bg-slate-950/60 px-3 py-1 text-sm text-white outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/40"
-                />
-              </label>
+
             </div>
           </div>
 
@@ -612,7 +554,7 @@ export function AddressNormalizeAndCompare() {
         </Card>
 
         <Card glass padding="lg" className="space-y-4">
-          <h4 className="text-base font-semibold text-white">Kết quả báo giá</h4>
+          <h4 className="text-base font-semibold text-white">Bảng giá vận chuyển (tất cả khối lượng)</h4>
           <div className="rounded-2xl border border-slate-800 bg-slate-950/60 p-5 text-sm">
             {!selected && <p className="text-slate-300">Chọn một địa chỉ hợp lệ và nhấn “Lấy báo giá”.</p>}
             {selected && (
@@ -623,61 +565,60 @@ export function AddressNormalizeAndCompare() {
                 <p className="text-slate-300">
                   Địa chỉ gửi: <span className="text-slate-100">{sender.pickAddress}, {sender.pickDistrict}, {sender.pickProvince}</span>
                 </p>
-                {loading && <p className="text-sky-300">Đang truy vấn aggregator…</p>}
+                {loading && <p className="text-sky-300">Đang truy vấn báo giá cho {WEIGHT_TIERS.length} mức cân nặng…</p>}
                 {savingToDb && <p className="text-purple-300">💾 Đang lưu vào database…</p>}
                 {error && <p className="text-red-300">{error}</p>}
                 
                 {quotes.length > 0 && (
                   <div className="space-y-4">
-                    <p className="text-sm font-semibold text-white">So sánh giá từ {quotes.length} nhà vận chuyển:</p>
-                    
-                    <div className="space-y-3">
-                      {quotes.map((q, idx) => (
-                        <div
-                          key={`${q.provider}-${idx}`}
-                          className={cn(
-                            "rounded-xl border p-4",
-                            q.error 
-                              ? "border-red-500/30 bg-red-950/20" 
-                              : "border-slate-700 bg-slate-900/40"
-                          )}
-                        >
-                          <div className="flex items-start justify-between">
-                            <div className="space-y-1">
-                              <p className="text-sm font-semibold text-white">{q.provider}</p>
-                              {q.error ? (
-                                <p className="text-xs text-red-300">{q.error}</p>
-                              ) : (
-                                <>
-                                  <p className="text-lg font-bold text-emerald-300">
-                                    {q.amount ? currency.format(q.amount) : 'N/A'}
-                                  </p>
-                                  {q.days != null && (
-                                    <p className="text-xs text-slate-400">
-                                      Thời gian: {q.days} ngày
-                                    </p>
-                                  )}
-                                  {q.service && (
-                                    <p className="text-xs text-slate-400">{q.service}</p>
-                                  )}
-                                </>
-                              )}
-                            </div>
-                            
-                            {!q.error && q.amount && (
-                              <div className={cn(
-                                "rounded-lg px-2 py-1 text-xs font-semibold",
-                                q.provider === 'GHN' ? "bg-orange-500/20 text-orange-300" :
-                                q.provider === 'GHTK' ? "bg-blue-500/20 text-blue-300" :
-                                "bg-green-500/20 text-green-300"
+                    {/* Summary table */}
+                    <div className="overflow-x-auto">
+                      <table className="min-w-full text-xs">
+                        <thead>
+                          <tr className="border-b border-slate-700 text-left text-slate-400">
+                            <th className="px-2 py-2">Dịch vụ</th>
+                            {WEIGHT_TIERS.map(w => (
+                              <th key={w} className="px-2 py-2 text-right">
+                                {w >= 1000 ? `${w/1000}kg` : `${w}g`}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {/* Group by unique provider names */}
+                          {Array.from(new Set(quotes.map(q => q.provider))).map(provider => (
+                            <tr key={provider} className="border-b border-slate-800 hover:bg-slate-800/40">
+                              <td className={cn(
+                                "px-2 py-2 font-medium whitespace-nowrap",
+                                provider.startsWith('GHN') ? "text-orange-300" :
+                                provider.startsWith('GHTK') ? "text-blue-300" :
+                                "text-green-300"
                               )}>
-                                {q.provider}
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      ))}
+                                {provider}
+                              </td>
+                              {WEIGHT_TIERS.map(w => {
+                                const q = quotes.find(q => q.provider === provider && q.weight === w);
+                                return (
+                                  <td key={w} className="px-2 py-2 text-right">
+                                    {q?.error ? (
+                                      <span className="text-red-400" title={q.error}>—</span>
+                                    ) : q?.amount ? (
+                                      <span className="text-emerald-300">{currency.format(q.amount)}</span>
+                                    ) : (
+                                      <span className="text-slate-500">—</span>
+                                    )}
+                                  </td>
+                                );
+                              })}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
                     </div>
+                    
+                    <p className="text-xs text-slate-400">
+                      💡 Tổng cộng {quotes.filter(q => !q.error).length}/{quotes.length} dịch vụ có báo giá thành công
+                    </p>
                     
                     {selected?.ghnProvinceId && (
                       <p className="text-xs text-slate-400">

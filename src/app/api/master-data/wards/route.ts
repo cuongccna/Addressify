@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { GHNMasterDataService } from "@/lib/master-data/ghn-master-data";
+import { masterDataDB } from "@/lib/master-data/master-data-db";
 
 export const dynamic = "force-dynamic";
 
@@ -18,12 +18,21 @@ export async function GET(request: Request) {
       );
     }
 
-    const service = GHNMasterDataService.fromEnv();
-    const wards = await service.getWards(Number(districtId), true);
+    const wards = await masterDataDB.getWards(Number(districtId));
+
+    // Transform to GHN format for backward compatibility
+    const data = wards.map(w => ({
+      WardCode: w.ghnCode,
+      WardName: w.name,
+      SupportType: w.supportType,
+      CanUpdateCOD: w.canUpdateCOD,
+      NameExtension: w.nameExtensions
+    }));
 
     return NextResponse.json({
       success: true,
-      data: wards
+      data,
+      source: "postgresql"
     });
   } catch (error) {
     console.error("[MasterData] Get wards error:", error);

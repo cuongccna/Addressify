@@ -1,0 +1,17 @@
+# Addressify Robots.txt
+# https://addressify.vn
+
+User-agent: *
+Allow: /
+
+# Disallow API routes
+Disallow: /api/
+
+# Disallow auth pages from indexing
+Disallow: /auth/
+
+# Sitemap
+Sitemap: https://addressify.vn/sitemap.xml
+
+# Crawl delay (optional, for politeness)
+Crawl-delay: 1

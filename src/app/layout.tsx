@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'Addressify',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'Addressify - AI Address Processing Platform',
@@ -46,8 +46,21 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Addressify - AI-Powered Address Intelligence',
     description: 'Chuẩn hóa địa chỉ Việt Nam và tối ưu chi phí vận chuyển',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.svg'],
+    creator: '@addressify_vn',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.svg', sizes: '180x180', type: 'image/svg+xml' },
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/favicon.svg', color: '#3b82f6' },
+    ],
+  },
+  manifest: '/manifest.json',
   robots: {
     index: true,
     follow: true,
@@ -69,11 +82,16 @@ export default function RootLayout({
   return (
     <html lang="vi" className={`${inter.variable} antialiased`} suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#3b82f6" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="msapplication-TileColor" content="#3b82f6" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Addressify" />
       </head>
       <body className="relative min-h-screen bg-slate-950 text-slate-100 font-sans" suppressHydrationWarning>
         <AuthProvider>

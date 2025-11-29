@@ -32,22 +32,28 @@ export function AddressProcessor({ onAddressesProcessed, useMasterData = true }:
           .map(line => line.trim())
           .filter(line => line.length > 0)
         
-        const response = await fetch('/api/normalize', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ addresses: lines, useMasterData: true })
-        })
-        
-        if (!response.ok) {
-          throw new Error(`API error: ${response.status}`)
+        try {
+          const response = await fetch('/api/normalize', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ addresses: lines, useMasterData: true })
+          })
+          
+          if (!response.ok) {
+            throw new Error(`API error: ${response.status}`)
+          }
+          
+          const result = await response.json()
+          if (!result.success) {
+            throw new Error(result.message || 'Failed to normalize addresses')
+          }
+          
+          addresses = result.data
+        } catch (fetchError) {
+          // If fetch fails (network error, server down, etc.), fallback to client-side processing
+          console.warn('API call failed, using client-side fallback:', fetchError)
+          addresses = processAddressesFromText(inputText)
         }
-        
-        const result = await response.json()
-        if (!result.success) {
-          throw new Error(result.message || 'Failed to normalize addresses')
-        }
-        
-        addresses = result.data
       } else {
         // Fallback to regex-based extraction (client-side)
         addresses = inputType === 'csv' 

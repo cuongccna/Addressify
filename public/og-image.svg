@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Decorative grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="white" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="630" stroke="white" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="630" stroke="white" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="white" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="630" stroke="white" stroke-width="1"/>
+    <line x1="1000" y1="0" x2="1000" y2="630" stroke="white" stroke-width="1"/>
+  </g>
+  
+  <!-- Logo icon -->
+  <g transform="translate(150, 165)">
+    <circle cx="150" cy="150" r="140" fill="url(#accent)"/>
+    <path d="M150 47c-38.8 0-70.3 31.5-70.3 70.3 0 52.7 70.3 117.2 70.3 117.2s70.3-64.5 70.3-117.2c0-38.8-31.5-70.3-70.3-70.3z" 
+          fill="white" opacity="0.95"/>
+    <circle cx="150" cy="117.3" r="35.2" fill="url(#inner)"/>
+    <path d="M135 117.3 L146.7 129 L167.2 105.6" 
+          stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="105.5" cy="222.8" r="7" fill="white" opacity="0.7"/>
+    <circle cx="150" cy="246" r="7" fill="white" opacity="0.7"/>
+    <circle cx="194.5" cy="222.8" r="7" fill="white" opacity="0.7"/>
+    <line x1="105.5" y1="222.8" x2="150" y2="187.5" stroke="white" stroke-width="1.8" opacity="0.5"/>
+    <line x1="150" y1="246" x2="150" y2="187.5" stroke="white" stroke-width="1.8" opacity="0.5"/>
+    <line x1="194.5" y1="222.8" x2="150" y2="187.5" stroke="white" stroke-width="1.8" opacity="0.5"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="500" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="100" font-weight="700" fill="white">
+    Addressify
+  </text>
+  
+  <text x="500" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="32" fill="#94a3b8">
+    AI-Powered Address Intelligence Platform
+  </text>
+  
+  <!-- Tagline -->
+  <text x="500" y="430" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#64748b">
+    Chuẩn hóa địa chỉ • So sánh phí ship • Tối ưu vận chuyển
+  </text>
+  
+  <!-- Bottom accent line -->
+  <rect x="500" y="470" width="400" height="4" rx="2" fill="url(#accent)"/>
+  
+  <!-- Domain -->
+  <text x="500" y="540" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="600" fill="#3b82f6">
+    addressify.vn
+  </text>
+</svg>
