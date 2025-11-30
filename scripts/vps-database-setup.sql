@@ -14,8 +14,11 @@ END
 $$;
 
 -- 2. Create database
--- Note: Run this command separately if it fails in transaction
-CREATE DATABASE addressify_db OWNER addressify_user ENCODING 'UTF8' LC_COLLATE 'en_US.UTF-8' LC_CTYPE 'en_US.UTF-8';
+-- Use C.UTF-8 collation (compatible with VPS template)
+-- Run this command separately: 
+-- CREATE DATABASE addressify_db OWNER addressify_user ENCODING 'UTF8' LC_COLLATE 'C.UTF-8' LC_CTYPE 'C.UTF-8';
+-- Or simply without collation specification (inherits from template):
+CREATE DATABASE addressify_db OWNER addressify_user ENCODING 'UTF8';
 
 -- 3. Connect to addressify_db and run the rest
 \c addressify_db
