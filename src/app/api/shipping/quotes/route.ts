@@ -102,13 +102,13 @@ export async function POST(request: Request) {
 
     const tasks: Array<Promise<[string, unknown]>> = [];
 
-    // GHN call if sufficient fields present
+    // GHN call if sufficient fields present (toWardCode optional - API will return error if needed)
     if (
       payload.fromDistrictId &&
       payload.toDistrictId &&
-      payload.toWardCode &&
       payload.weightInGrams
     ) {
+      console.log('[QuotesAPI] GHN call with:', { fromDistrictId: payload.fromDistrictId, toDistrictId: payload.toDistrictId, toWardCode: payload.toWardCode || 'MISSING' });
       tasks.push(
         (async () => {
           try {

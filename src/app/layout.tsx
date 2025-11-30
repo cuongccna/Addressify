@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { ShopProvider } from '@/contexts/ShopContext'
+import { SiteHeader } from '@/components/layout/SiteHeader'
 
 // Note: Scheduler is initialized separately in production
 // Use /api/jobs/start endpoint or process manager to start scheduler
@@ -98,6 +99,9 @@ export default function RootLayout({
           <ShopProvider>
             {/* Background Pattern */}
             <div className="pointer-events-none fixed inset-0 bg-hero-pattern opacity-10" />
+            
+            {/* Site Header */}
+            <SiteHeader />
             
             {/* Main Content */}
             <div className="relative z-10">

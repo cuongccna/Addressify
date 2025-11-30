@@ -23,7 +23,7 @@ export interface GHNCalculateFeeInput {
   fromDistrictId: number;
   fromWardCode?: string;
   toDistrictId: number;
-  toWardCode: string;
+  toWardCode?: string; // Optional - API may require but we handle gracefully
   weightInGrams: number;
   serviceId?: number;
   serviceTypeId?: number;
@@ -47,7 +47,7 @@ export interface GHNServiceFilter {
   fromDistrictId: number;
   fromWardCode?: string;
   toDistrictId: number;
-  toWardCode: string;
+  toWardCode?: string; // Optional - some areas may not have ward codes
   weightInGrams: number;
 }
 
@@ -145,9 +145,13 @@ function buildFeePayload(shopId: string, input: GHNCalculateFeeInput) {
   // Required fields per GHN API docs
   const payload: Record<string, unknown> = {
     shop_id: Number(shopId),
-    to_district_id: input.toDistrictId,
-    to_ward_code: input.toWardCode
+    to_district_id: input.toDistrictId
   };
+  
+  // Ward code - required by GHN but may not always be available
+  if (input.toWardCode) {
+    payload.to_ward_code = input.toWardCode;
+  }
   
   // Must have either service_id OR service_type_id
   if (input.serviceId) {

@@ -10,7 +10,6 @@ import { Card } from "@/components/ui/Card";
 import { LiveComparisonDemo } from "@/components/features/LiveComparisonDemo";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
-import { UserMenu } from "@/components/layout/UserMenu";
 import { useAuth } from "@/contexts/AuthContext";
 
 const highlights = [
@@ -93,34 +92,7 @@ export default function Home() {
         <div className="absolute inset-x-0 bottom-[-40%] h-[400px] bg-gradient-to-t from-purple-500/30 via-purple-500/10 to-transparent blur-3xl" />
       </div>
 
-      <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-8">
-        <div className="flex items-center gap-3">
-          <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-500 text-xl font-semibold text-white shadow-lg shadow-sky-500/40">
-            A
-          </span>
-          <div>
-            <p className="text-lg font-semibold tracking-tight">Addressify</p>
-            <p className="text-xs text-slate-300">Smart Address & Shipping Intelligence</p>
-          </div>
-        </div>
-        <nav className="hidden items-center gap-8 text-sm text-slate-200 md:flex">
-          <Link className="transition hover:text-white" href="#features">
-            Tính năng
-          </Link>
-          <Link className="transition hover:text-white" href="#workflow">
-            Quy trình
-          </Link>
-          <Link className="transition hover:text-white" href="#integrations">
-            Tích hợp
-          </Link>
-          <Link className="transition hover:text-white" href="#pricing">
-            Bảng giá
-          </Link>
-        </nav>
-        <UserMenu />
-      </header>
-
-      <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 pb-24">
+      <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 pb-24 pt-8">
         <section className="rounded-[32px] border border-slate-800 bg-slate-900/70 p-10 backdrop-blur-xl">
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="max-w-xl space-y-6">
