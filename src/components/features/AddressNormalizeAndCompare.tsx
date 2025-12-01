@@ -7,9 +7,18 @@ import { Card } from "@/components/ui/Card";
 import { buttonVariants } from "@/components/ui/buttonVariants";
 import { cn } from "@/utils/cn";
 import type { AddressData } from "@/types/address";
+import type { LabelTemplateState } from "@/types/label";
 import { SenderConfigDialog, type SenderConfig } from "./SenderConfigDialog";
+import { LabelTemplateDialog } from "./LabelTemplateDialog";
+import { BulkLabelPrintDialog } from "./BulkLabelPrintDialog";
 import { exportAddressesToCSV, exportBulkQuotesToCSV, downloadCSV, type BulkQuoteResult } from "@/utils/csvExport";
 import { useShop } from "@/contexts/ShopContext";
+import {
+  DEFAULT_LABEL_TEMPLATE,
+  LABEL_TEMPLATE_PRESETS,
+  loadLabelTemplates,
+  saveLabelTemplates
+} from "@/utils/labelTemplates";
 
 type ProviderQuote = {
   provider: string; // Can be "GHN", "GHTK", "VTP", or "GHN - Service Name"
@@ -58,6 +67,12 @@ export function AddressNormalizeAndCompare() {
   const [error, setError] = useState<string | null>(null);
   const [quotes, setQuotes] = useState<ProviderQuote[]>([]);
   const [showSenderConfig, setShowSenderConfig] = useState(false);
+  const [labelTemplates, setLabelTemplates] = useState<LabelTemplateState>({
+    templates: LABEL_TEMPLATE_PRESETS,
+    activeTemplateId: DEFAULT_LABEL_TEMPLATE.id
+  });
+  const [showTemplateDialog, setShowTemplateDialog] = useState(false);
+  const [showLabelPrinter, setShowLabelPrinter] = useState(false);
   const [bulkProcessing, setBulkProcessing] = useState(false);
   const [bulkProgress, setBulkProgress] = useState({ current: 0, total: 0 });
   const [savingToDb, setSavingToDb] = useState(false);
@@ -74,6 +89,12 @@ export function AddressNormalizeAndCompare() {
 
   // Reset page when addresses change
   useEffect(() => { setCurrentPage(1); }, [addresses.length]);
+
+  // Load label templates from localStorage
+  useEffect(() => {
+    const storedTemplates = loadLabelTemplates();
+    setLabelTemplates(storedTemplates);
+  }, []);
 
   // Load sender config from selected shop
   useEffect(() => {
@@ -94,6 +115,11 @@ export function AddressNormalizeAndCompare() {
       setSender(DEFAULT_SENDER);
     }
   }, [selectedShop]);
+
+  const persistLabelTemplates = (nextState: LabelTemplateState) => {
+    setLabelTemplates(nextState);
+    saveLabelTemplates(nextState);
+  };
 
   // Save quote result to database
   const saveQuoteToDatabase = async (addr: AddressData, quotes: ProviderQuote[]) => {
@@ -487,6 +513,16 @@ export function AddressNormalizeAndCompare() {
               >
                 🛠️ Địa chỉ gửi
               </button>
+              <button
+                onClick={() => setShowTemplateDialog(true)}
+                className={cn(
+                  buttonVariants({ variant: "outline" }),
+                  "px-3 py-1.5 text-xs"
+                )}
+                title="Tùy chỉnh template in tem"
+              >
+                🎨 Template tem
+              </button>
               
               {addresses.length > 0 && (
                 <>
@@ -499,6 +535,17 @@ export function AddressNormalizeAndCompare() {
                     title="Export địa chỉ đã chuẩn hóa ra CSV"
                   >
                     📥 Export địa chỉ
+                  </button>
+                  <button
+                    onClick={() => setShowLabelPrinter(true)}
+                    disabled={validCount === 0}
+                    className={cn(
+                      buttonVariants({ variant: "outline" }),
+                      "px-3 py-1.5 text-xs disabled:opacity-50"
+                    )}
+                    title="In tem vận đơn cho các địa chỉ hợp lệ"
+                  >
+                    🖨️ In tem
                   </button>
                   
                   <button
@@ -652,6 +699,23 @@ export function AddressNormalizeAndCompare() {
           config={sender}
           onSave={(newConfig) => { setSender(newConfig); localStorage.setItem('sender-config', JSON.stringify(newConfig)); }}
           onClose={() => setShowSenderConfig(false)}
+        />
+      )}
+      {showTemplateDialog && (
+        <LabelTemplateDialog
+          state={labelTemplates}
+          sender={sender}
+          onSave={persistLabelTemplates}
+          onClose={() => setShowTemplateDialog(false)}
+        />
+      )}
+      {showLabelPrinter && (
+        <BulkLabelPrintDialog
+          addresses={addresses}
+          templateState={labelTemplates}
+          sender={sender}
+          shopName={selectedShop?.name}
+          onClose={() => setShowLabelPrinter(false)}
         />
       )}
     </div>

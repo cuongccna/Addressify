@@ -184,7 +184,7 @@
 - [ ] Report generation (PDF/Excel)
 
 ### Future Features
-- [ ] In tem PDF (print shipping labels)
+- [x] In tem PDF (print shipping labels - beta)
 - [ ] Mobile app (iOS/Android)
 - [ ] Payment integration
 - [ ] Multi-language support

@@ -58,7 +58,7 @@
 
 ### 🚧 Tính năng đang phát triển  
 1. **Advanced Analytics** - Dashboard thống kê chi tiết
-2. **In tem PDF** - In tem vận đơn hàng loạt
+2. **In tem PDF (Beta)** - Template builder + in tem hàng loạt trực tiếp từ trình duyệt
 
 ### 📋 Tính năng chưa bắt đầu
 1. **Mobile App** - Ứng dụng di động iOS/Android
@@ -82,8 +82,14 @@
 
 ### 📊 Xuất dữ liệu
 - **Xuất CSV**: Export kết quả với đầy đủ thông tin phí ship ✅
-- **In tem PDF**: UI sẵn sàng, tính năng đang được phát triển 🚧
+- **In tem PDF**: Template builder + in/lưu PDF trực tiếp (Beta) ✅
 - **Chọn lọc dữ liệu**: Chỉ xuất những địa chỉ đã chọn ✅
+
+### 🖨️ In tem vận đơn (Beta)
+- Tuỳ chỉnh layout: A6 / 100×150mm, nhiều preset, màu sắc riêng
+- Chọn nội dung hiển thị: người gửi, GHN IDs, barcode, QR, ghi chú
+- Lưu nhiều template trong trình duyệt, chuyển đổi nhanh khi in
+- In hàng loạt từ danh sách địa chỉ đã chuẩn hoá; hỗ trợ lưu PDF qua hộp thoại print
 
 ### 🔐 Authentication & Multi-shop (Phase 4)
 - **Supabase Auth**: Đăng ký, đăng nhập, quản lý session
