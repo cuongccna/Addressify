@@ -87,7 +87,7 @@ DATABASE_URL="postgresql://addressify_user:AddressifyVPS2025!@#@localhost:5432/a
 DIRECT_URL="postgresql://addressify_user:AddressifyVPS2025!@#@localhost:5432/addressify_db?schema=public"
 
 # App
-NEXT_PUBLIC_APP_URL=https://addressify.vn
+NEXT_PUBLIC_APP_URL=https://addressify.cloud
 NODE_ENV=production
 PORT=3002
 
@@ -234,21 +234,21 @@ curl http://localhost:3002/api/auth/user
 
 Trỏ domain về IP VPS:
 ```
-A    addressify.vn      72.61.114.103
-A    www.addressify.vn  72.61.114.103
+A    addressify.cloud      72.61.114.103
+A    www.addressify.cloud  72.61.114.103
 ```
 
 ## 📊 STEP 6: Sync Master Data
 
 Sau khi deploy xong, vào UI để sync master data:
 
-1. Truy cập: https://addressify.vn/master-data
+1. Truy cập: https://addressify.cloud/master-data
 2. Đăng nhập với tài khoản admin
 3. Click "Sync từ GHN API" để đồng bộ dữ liệu địa chỉ
 
 Hoặc qua API:
 ```bash
-curl -X POST https://addressify.vn/api/master-data/sync
+curl -X POST https://addressify.cloud/api/master-data/sync
 ```
 
 ## 🔄 Update Deployment

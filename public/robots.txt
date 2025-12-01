@@ -1,5 +1,5 @@
 # Addressify Robots.txt
-# https://addressify.vn
+# https://addressify.cloud
 
 User-agent: *
 Allow: /
@@ -11,7 +11,7 @@ Disallow: /api/
 Disallow: /auth/
 
 # Sitemap
-Sitemap: https://addressify.vn/sitemap.xml
+Sitemap: https://addressify.cloud/sitemap.xml
 
 # Crawl delay (optional, for politeness)
 Crawl-delay: 1

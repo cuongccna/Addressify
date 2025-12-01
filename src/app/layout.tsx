@@ -8,8 +8,9 @@ import { SiteHeader } from '@/components/layout/SiteHeader'
 // Note: Scheduler is initialized separately in production
 // Use /api/jobs/start endpoint or process manager to start scheduler
 
-const inter = Inter({ 
-  subsets: ['latin'],
+const inter = Inter({
+  // Thêm 'latin-ext' để bảo đảm đầy đủ ký tự tiếng Việt trong font
+  subsets: ['latin', 'latin-ext'],
   variable: '--font-inter',
   display: 'swap',
 })
@@ -26,11 +27,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://addressify.vn'),
+  metadataBase: new URL('https://addressify.cloud'),
   openGraph: {
     type: 'website',
     locale: 'vi_VN',
-    url: 'https://addressify.vn',
+    url: 'https://addressify.cloud',
     title: 'Addressify - AI-Powered Address Intelligence',
     description: 'Chuẩn hóa địa chỉ Việt Nam và tối ưu chi phí vận chuyển với AI',
     siteName: 'Addressify',
@@ -83,6 +84,8 @@ export default function RootLayout({
   return (
     <html lang="vi" className={`${inter.variable} antialiased`} suppressHydrationWarning>
       <head>
+        {/* Bổ sung meta charset để tránh lỗi suy luận encoding tại một số proxy */}
+        <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="alternate icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />

@@ -52,9 +52,9 @@ export function AddressNormalizeAndCompare() {
     ghnDistrictId?: number;
     ghnWardCode?: string;
   }>({
-    pickProvince: "TP. Há»“ ChÃ­ Minh",
-    pickDistrict: "Quáº­n 1",
-    pickAddress: "19 Nguyá»…n TrÃ£i",
+    pickProvince: "TP.Hồ Chí Minh",
+    pickDistrict: "Quận 1",
+    pickAddress: "19 Nguyễn Trãi",
     // GHN IDs for sender (Quáº­n 1, TPHCM)
     ghnProvinceId: 202,
     ghnDistrictId: 1454, // Example: Quáº­n 1
@@ -380,7 +380,7 @@ export function AddressNormalizeAndCompare() {
       }
 
       if (allQuotes.length === 0) {
-        setError("KhÃ´ng láº¥y Ä‘Æ°á»£c bÃ¡o giÃ¡ tá»« nhÃ  váº­n chuyá»ƒn nÃ o");
+        setError("Không lấy được báo giá từ các đơn vị vận chuyển.");
       } else {
         setQuotes(allQuotes);
         // Auto-save quote to database (use 1kg as default)
@@ -391,7 +391,7 @@ export function AddressNormalizeAndCompare() {
       }
     } catch (e) {
       console.error("Quote error:", e);
-      setError(e instanceof Error ? e.message : "Lá»—i khÃ´ng xÃ¡c Ä‘á»‹nh");
+      setError(e instanceof Error ? e.message : "Lỗi không xác định");
     } finally {
       setLoading(false);
     }
@@ -401,26 +401,26 @@ export function AddressNormalizeAndCompare() {
     <div className="grid gap-8 lg:grid-cols-[1.1fr,0.9fr]">
       <Card glass padding="lg" className="space-y-6">
         <div>
-          <h3 className="text-xl font-semibold text-white">Chuáº©n hÃ³a Ä‘á»‹a chá»‰ hÃ ng loáº¡t</h3>
+          <h3 className="text-xl font-semibold text-white">Chuẩn hóa địa chỉ hàng loạt</h3>
           <p className="mt-2 text-sm text-slate-300">
-            DÃ¡n danh sÃ¡ch Ä‘á»‹a chá»‰, há»‡ thá»‘ng tá»± nháº­n diá»‡n Tá»‰nh/Quáº­n/PhÆ°á»ng vÃ  chuáº©n hÃ³a Ä‘á»‹nh dáº¡ng.
+            Dán danh sách địa chỉ, hệ thống tự nhận diện Tỉnh/Quận/Phường và chuẩn hóa định dạng.
           </p>
         </div>
         <AddressProcessor onAddressesProcessed={setAddresses} />
       </Card>
 
       <div className="space-y-6">
-        {/* Báº£ng giÃ¡ váº­n chuyá»ƒn - Äáº¶T LÃŠN TRÃŠN */}
+        {/* Bảng giá vận chuyển - ĐẶT LÊN TRÊN */}
         <Card glass padding="lg" className="space-y-4">
-          <h4 className="text-base font-semibold text-white">Báº£ng giÃ¡ váº­n chuyá»ƒn (táº¥t cáº£ khá»‘i lÆ°á»£ng)</h4>
+          <h4 className="text-base font-semibold text-white">Bảng giá vận chuyển (tất cả khối lượng)</h4>
           <div className="rounded-2xl border border-slate-800 bg-slate-950/60 p-5 text-sm">
-            {!selected && <p className="text-slate-300">Chá»n má»™t Ä‘á»‹a chá»‰ há»£p lá»‡ vÃ  nháº¥n &quot;Láº¥y bÃ¡o giÃ¡&quot;.</p>}
+            {!selected && <p className="text-slate-300">Chuẩn một địa chỉ hợp lệ và nhấn &quot;Lấy báo giá&quot;.</p>}
             {selected && (
               <div className="space-y-3">
-                <p className="text-slate-300">Äá»‹a chá»‰ nháº­n: <span className="text-slate-100">{selected.normalizedAddress ?? selected.original}</span></p>
-                <p className="text-slate-300">Äá»‹a chá»‰ gá»­i: <span className="text-slate-100">{sender.pickAddress}, {sender.pickDistrict}, {sender.pickProvince}</span></p>
-                {loading && <p className="text-sky-300">Äang truy váº¥n bÃ¡o giÃ¡ cho {WEIGHT_TIERS.length} má»©c cÃ¢n náº·ngâ€¦</p>}
-                {savingToDb && <p className="text-purple-300">ðŸ’¾ Äang lÆ°u vÃ o databaseâ€¦</p>}
+                <p className="text-slate-300">Địa chỉ nhận: <span className="text-slate-100">{selected.normalizedAddress ?? selected.original}</span></p>
+                <p className="text-slate-300">Địa chỉ gửi: <span className="text-slate-100">{sender.pickAddress}, {sender.pickDistrict}, {sender.pickProvince}</span></p>
+                {loading && <p className="text-sky-300">Đang truy vấn báo giá cho {WEIGHT_TIERS.length} mức cân nặng…</p>}
+                {savingToDb && <p className="text-purple-300">Đang lưu vào database…</p>}
                 {error && <p className="text-red-300">{error}</p>}
                 {quotes.length > 0 && (
                   <div className="space-y-4">
@@ -428,7 +428,7 @@ export function AddressNormalizeAndCompare() {
                       <table className="min-w-full text-xs">
                         <thead>
                           <tr className="border-b border-slate-700 text-left text-slate-400">
-                            <th className="px-2 py-2">Dá»‹ch vá»¥</th>
+                            <th className="px-2 py-2">Dịch vụ</th>
                             {WEIGHT_TIERS.map(w => (<th key={w} className="px-2 py-2 text-right">{w >= 1000 ? `${w/1000}kg` : `${w}g`}</th>))}
                           </tr>
                         </thead>
@@ -445,9 +445,9 @@ export function AddressNormalizeAndCompare() {
                         </tbody>
                       </table>
                     </div>
-                    <p className="text-xs text-slate-400">ðŸ’¡ Tá»•ng cá»™ng {quotes.filter(q => !q.error).length}/{quotes.length} dá»‹ch vá»¥ cÃ³ bÃ¡o giÃ¡ thÃ nh cÃ´ng</p>
-                    {selected?.ghnProvinceId && <p className="text-xs text-slate-400">âœ… Sá»­ dá»¥ng GHN IDs: Province {selected.ghnProvinceId}, District {selected.ghnDistrictId}, Ward {selected.ghnWardCode || 'N/A'}</p>}
-                    {!selected?.ghnProvinceId && <p className="text-xs text-amber-400">âš ï¸ Thiáº¿u GHN IDs - chá»‰ cÃ³ thá»ƒ láº¥y bÃ¡o giÃ¡ GHTK (text-based)</p>}
+                    <p className="text-xs text-slate-400">💡 Tổng cộng {quotes.filter(q => !q.error).length}/{quotes.length} dịch vụ có báo giá thành công</p>
+                    {selected?.ghnProvinceId && <p className="text-xs text-slate-400">✔️ Sử dụng GHN IDs: Province {selected.ghnProvinceId}, District {selected.ghnDistrictId}, Ward {selected.ghnWardCode || 'N/A'}</p>}
+                    {!selected?.ghnProvinceId && <p className="text-xs text-amber-400">⚠️ Thiếu GHN IDs - chỉ có thể lấy báo giá GHTK (text-based)</p>}
                   </div>
                 )}
               </div>
@@ -455,12 +455,14 @@ export function AddressNormalizeAndCompare() {
           </div>
         </Card>
 
-        {/* Káº¿t quáº£ chuáº©n hÃ³a */}
+        { /* Kết quả chuẩn hóa */}
+        {/* Kết quả chuẩn hóa */}
+
         <Card glass padding="lg" className="space-y-4">
           <div className="flex items-center justify-between">
             <div>
-              <h4 className="text-base font-semibold text-white">Káº¿t quáº£ chuáº©n hÃ³a</h4>
-              <p className="mt-1 text-xs text-slate-300">Há»£p lá»‡: {validCount}/{addresses.length}</p>
+              <h4 className="text-base font-semibold text-white">Kết quả chuẩn hóa</h4>
+              <p className="mt-1 text-xs text-slate-300">Hợp lệ: {validCount}/{addresses.length}</p>
             </div>
             <div className="flex items-center gap-3">
               <button
@@ -469,9 +471,9 @@ export function AddressNormalizeAndCompare() {
                   buttonVariants({ variant: "secondary" }),
                   "px-3 py-1.5 text-xs"
                 )}
-                title="Cáº¥u hÃ¬nh Ä‘á»‹a chá»‰ gá»­i hÃ ng"
+                title="Cấu hình địa chỉ gửi hàng"
               >
-                âš™ï¸ Äá»‹a chá»‰ gá»­i
+                🛠️ Địa chỉ gửi
               </button>
               
               {addresses.length > 0 && (
@@ -482,9 +484,9 @@ export function AddressNormalizeAndCompare() {
                       buttonVariants({ variant: "outline" }),
                       "px-3 py-1.5 text-xs"
                     )}
-                    title="Export Ä‘á»‹a chá»‰ Ä‘Ã£ chuáº©n hÃ³a ra CSV"
+                    title="Export địa chỉ đã chuẩn hóa ra CSV"
                   >
-                    ðŸ“¥ Export Ä‘á»‹a chá»‰
+                    📥 Export địa chỉ
                   </button>
                   
                   <button
@@ -494,11 +496,11 @@ export function AddressNormalizeAndCompare() {
                       buttonVariants({ variant: "primary" }),
                       "px-3 py-1.5 text-xs disabled:opacity-50"
                     )}
-                    title={`Láº¥y bÃ¡o giÃ¡ hÃ ng loáº¡t cho ${validCount} Ä‘á»‹a chá»‰ há»£p lá»‡ vÃ  export CSV`}
+                    title={`Lấy báo giá hàng loạt cho ${validCount} địa chỉ hợp lệ và export CSV`}
                   >
                     {bulkProcessing 
-                      ? `â³ ${bulkProgress.current}/${bulkProgress.total}` 
-                      : `ðŸš€ Láº¥y ${validCount} bÃ¡o giÃ¡`
+                      ? `⏳ ${bulkProgress.current}/${bulkProgress.total}` 
+                      : `🚀 Lấy ${validCount} báo giá`
                     }
                   </button>
                 </>
@@ -518,39 +520,39 @@ export function AddressNormalizeAndCompare() {
               <table className="min-w-full divide-y divide-slate-800">
                 <thead className="bg-slate-900/60">
                   <tr className="text-left text-xs uppercase tracking-wide text-slate-400">
-                    <th className="px-4 py-3">Äá»‹a chá»‰ gá»‘c</th>
-                    <th className="px-4 py-3">Chuáº©n hÃ³a</th>
-                    <th className="px-4 py-3">Sá»‘ nhÃ </th>
-                    <th className="px-4 py-3">TÃªn Ä‘Æ°á»ng</th>
-                    <th className="px-4 py-3">Tá»‰nh/TP</th>
-                    <th className="px-4 py-3">Quáº­n/Huyá»‡n</th>
-                    <th className="px-4 py-3">PhÆ°á»ng/XÃ£</th>
+                    <th className="px-4 py-3">Địa chỉ gốc</th>
+                    <th className="px-4 py-3">Chuẩn hóa</th>
+                    <th className="px-4 py-3">Số nhà</th>
+                    <th className="px-4 py-3">Tên đường</th>
+                    <th className="px-4 py-3">Tỉnh/TP</th>
+                    <th className="px-4 py-3">Quận/Huyện</th>
+                    <th className="px-4 py-3">Phường/Xã</th>
                     <th className="px-4 py-3">GHN IDs</th>
-                    <th className="px-4 py-3">Äá»™ chÃ­nh xÃ¡c</th>
-                    <th className="px-4 py-3">BÃ¡o giÃ¡</th>
+                    <th className="px-4 py-3">Độ chính xác</th>
+                    <th className="px-4 py-3">Báo giá</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-800">
                   {paginatedAddresses.map((a, idx) => (
                     <tr key={`${a.original}-${(currentPage-1)*itemsPerPage+idx}`} className="text-sm text-slate-200">
                       <td className="px-4 py-3 align-top text-slate-300">{a.original}</td>
-                      <td className="px-4 py-3 align-top text-slate-200">{a.normalizedAddress ?? "â€”"}</td>
-                      <td className="px-4 py-3 align-top">{a.streetNumber || "â€”"}</td>
-                      <td className="px-4 py-3 align-top">{a.streetName || "â€”"}</td>
+                      <td className="px-4 py-3 align-top text-slate-200">{a.normalizedAddress ?? "—"}</td>
+                      <td className="px-4 py-3 align-top">{a.streetNumber || "—"}</td>
+                      <td className="px-4 py-3 align-top">{a.streetName || "—"}</td>
                       <td className="px-4 py-3 align-top">
-                        {a.province || "â€”"}
+                        {a.province || "—"}
                         {a.ghnProvinceId && (
                           <span className="ml-1 text-xs text-slate-400">({a.ghnProvinceId})</span>
                         )}
                       </td>
                       <td className="px-4 py-3 align-top">
-                        {a.district || "â€”"}
+                        {a.district || "—"}
                         {a.ghnDistrictId && (
                           <span className="ml-1 text-xs text-slate-400">({a.ghnDistrictId})</span>
                         )}
                       </td>
                       <td className="px-4 py-3 align-top">
-                        {a.ward || "â€”"}
+                        {a.ward || "—"}
                         {a.ghnWardCode && (
                           <span className="ml-1 text-xs text-slate-400">({a.ghnWardCode})</span>
                         )}
@@ -563,7 +565,7 @@ export function AddressNormalizeAndCompare() {
                             {a.ghnWardCode && <div>W: {a.ghnWardCode}</div>}
                           </div>
                         ) : (
-                          <span className="text-slate-500">â€”</span>
+                          <span className="text-slate-500">—</span>
                         )}
                       </td>
                       <td className="px-4 py-3 align-top text-xs">
@@ -597,9 +599,9 @@ export function AddressNormalizeAndCompare() {
                               "disabled:cursor-not-allowed disabled:opacity-50"
                             )
                           })}
-                          title={a.ghnProvinceId ? "Láº¥y bÃ¡o giÃ¡ tá»« GHN, GHTK, VTP" : "Chá»‰ láº¥y bÃ¡o giÃ¡ GHTK (thiáº¿u GHN IDs)"}
+                          title={a.ghnProvinceId ? " Lấy báo giá từ GHN, GHTK, VTP" : "Chỉ lấy báo giá GHTK (thiếu GHN IDs)"}
                         >
-                          {a.ghnProvinceId ? "Láº¥y táº¥t cáº£ bÃ¡o giÃ¡" : "Láº¥y bÃ¡o giÃ¡ (GHTK)"}
+                          {a.ghnProvinceId ? "Lấy tất cả báo giá" : "Lấy báo giá (GHTK)"}
                         </button>
                       </td>
                     </tr>
@@ -610,10 +612,10 @@ export function AddressNormalizeAndCompare() {
             {/* Pagination */}
             {totalPages > 1 && (
               <div className="flex items-center justify-between pt-4 border-t border-slate-800">
-                <p className="text-xs text-slate-400">Hiá»ƒn thá»‹ {(currentPage-1)*itemsPerPage+1}-{Math.min(currentPage*itemsPerPage, addresses.length)} / {addresses.length} Ä‘á»‹a chá»‰</p>
+                <p className="text-xs text-slate-400">Hiển thị {(currentPage-1)*itemsPerPage+1}-{Math.min(currentPage*itemsPerPage, addresses.length)} / {addresses.length} địa chỉ</p>
                 <div className="flex items-center gap-1">
-                  <button onClick={() => setCurrentPage(1)} disabled={currentPage === 1} className={cn("px-2 py-1 text-xs rounded", currentPage === 1 ? "text-slate-600" : "text-slate-300 hover:bg-slate-800")}>Â«Â«</button>
-                  <button onClick={() => setCurrentPage(p => Math.max(1, p-1))} disabled={currentPage === 1} className={cn("px-2 py-1 text-xs rounded", currentPage === 1 ? "text-slate-600" : "text-slate-300 hover:bg-slate-800")}>Â«</button>
+                  <button onClick={() => setCurrentPage(1)} disabled={currentPage === 1} className={cn("px-2 py-1 text-xs rounded", currentPage === 1 ? "text-slate-600" : "text-slate-300 hover:bg-slate-800")}>««</button>
+                  <button onClick={() => setCurrentPage(p => Math.max(1, p-1))} disabled={currentPage === 1} className={cn("px-2 py-1 text-xs rounded", currentPage === 1 ? "text-slate-600" : "text-slate-300 hover:bg-slate-800")}>««</button>
                   {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
                     let pn = i + 1;
                     if (totalPages > 5) {
@@ -623,8 +625,8 @@ export function AddressNormalizeAndCompare() {
                     }
                     return (<button key={pn} onClick={() => setCurrentPage(pn)} className={cn("px-3 py-1 text-xs rounded", currentPage === pn ? "bg-purple-600 text-white" : "text-slate-300 hover:bg-slate-800")}>{pn}</button>);
                   })}
-                  <button onClick={() => setCurrentPage(p => Math.min(totalPages, p+1))} disabled={currentPage === totalPages} className={cn("px-2 py-1 text-xs rounded", currentPage === totalPages ? "text-slate-600" : "text-slate-300 hover:bg-slate-800")}>Â»</button>
-                  <button onClick={() => setCurrentPage(totalPages)} disabled={currentPage === totalPages} className={cn("px-2 py-1 text-xs rounded", currentPage === totalPages ? "text-slate-600" : "text-slate-300 hover:bg-slate-800")}>Â»Â»</button>
+                  <button onClick={() => setCurrentPage(p => Math.min(totalPages, p+1))} disabled={currentPage === totalPages} className={cn("px-2 py-1 text-xs rounded", currentPage === totalPages ? "text-slate-600" : "text-slate-300 hover:bg-slate-800")}>»»</button>
+                  <button onClick={() => setCurrentPage(totalPages)} disabled={currentPage === totalPages} className={cn("px-2 py-1 text-xs rounded", currentPage === totalPages ? "text-slate-600" : "text-slate-300 hover:bg-slate-800")}>»»</button>
                 </div>
               </div>
             )}

@@ -64,7 +64,7 @@ DATABASE_URL="postgresql://addressify_user:AddressifyVPS2025!@#@localhost:5432/a
 DIRECT_URL="postgresql://addressify_user:AddressifyVPS2025!@#@localhost:5432/addressify_db?schema=public"
 
 # App
-NEXT_PUBLIC_APP_URL=https://addressify.vn
+NEXT_PUBLIC_APP_URL=https://addressify.cloud
 NODE_ENV=production
 PORT=3002
 

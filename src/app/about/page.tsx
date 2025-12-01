@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "thương mại điện tử Việt Nam",
   ],
   alternates: {
-    canonical: "https://addressify.vn/about",
+    canonical: "https://addressify.cloud/about",
   },
 };
 
@@ -25,8 +25,8 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Addressify',
-  url: 'https://addressify.vn',
-  logo: 'https://addressify.vn/logo.svg',
+  url: 'https://addressify.cloud',
+  logo: 'https://addressify.cloud/logo.svg',
   description:
     'Addressify giúp chủ shop Việt Nam chuẩn hóa địa chỉ, tối ưu chi phí vận chuyển và quản lý đa kênh bằng trí tuệ nhân tạo.',
   foundingDate: '2024-01-01',
