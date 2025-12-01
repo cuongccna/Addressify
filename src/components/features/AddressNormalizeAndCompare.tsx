@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/Card";
 import { buttonVariants } from "@/components/ui/buttonVariants";
 import { cn } from "@/utils/cn";
 import type { AddressData } from "@/types/address";
-import { SenderConfigDialog } from "./SenderConfigDialog";
+import { SenderConfigDialog, type SenderConfig } from "./SenderConfigDialog";
 import { exportAddressesToCSV, exportBulkQuotesToCSV, downloadCSV, type BulkQuoteResult } from "@/utils/csvExport";
 import { useShop } from "@/contexts/ShopContext";
 
@@ -40,26 +40,20 @@ type AggResponse = {
 
 const currency = new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" });
 
+const DEFAULT_SENDER: SenderConfig = {
+  pickProvince: "TP.Hồ Chí Minh",
+  pickDistrict: "Quận 1",
+  pickAddress: "19 Nguyễn Trãi",
+  ghnProvinceId: 202,
+  ghnDistrictId: 1454,
+  ghnWardCode: undefined as string | undefined
+};
+
 export function AddressNormalizeAndCompare() {
   const { selectedShop } = useShop();
   const [addresses, setAddresses] = useState<AddressData[]>([]);
   const [selected, setSelected] = useState<AddressData | null>(null);
-  const [sender, setSender] = useState<{
-    pickProvince: string;
-    pickDistrict: string;
-    pickAddress: string;
-    ghnProvinceId?: number;
-    ghnDistrictId?: number;
-    ghnWardCode?: string;
-  }>({
-    pickProvince: "TP.Hồ Chí Minh",
-    pickDistrict: "Quận 1",
-    pickAddress: "19 Nguyễn Trãi",
-    // GHN IDs for sender (Quáº­n 1, TPHCM)
-    ghnProvinceId: 202,
-    ghnDistrictId: 1454, // Example: Quáº­n 1
-    ghnWardCode: undefined
-  });
+  const [sender, setSender] = useState<SenderConfig>(DEFAULT_SENDER);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [quotes, setQuotes] = useState<ProviderQuote[]>([]);
@@ -84,14 +78,20 @@ export function AddressNormalizeAndCompare() {
   // Load sender config from selected shop
   useEffect(() => {
     if (selectedShop) {
-      setSender({
-        pickProvince: selectedShop.senderProvince,
-        pickDistrict: selectedShop.senderDistrict,
-        pickAddress: selectedShop.senderAddress,
-        ghnProvinceId: selectedShop.ghnProvinceId ? Number(selectedShop.ghnProvinceId) : undefined,
-        ghnDistrictId: selectedShop.ghnDistrictId ? Number(selectedShop.ghnDistrictId) : undefined,
-        ghnWardCode: selectedShop.ghnWardCode || undefined
-      });
+      setSender((prev) => ({
+        pickProvince: selectedShop.senderProvince || prev.pickProvince || DEFAULT_SENDER.pickProvince,
+        pickDistrict: selectedShop.senderDistrict || prev.pickDistrict || DEFAULT_SENDER.pickDistrict,
+        pickAddress: selectedShop.senderAddress || prev.pickAddress || DEFAULT_SENDER.pickAddress,
+        ghnProvinceId: selectedShop.ghnProvinceId
+          ? Number(selectedShop.ghnProvinceId)
+          : prev.ghnProvinceId ?? DEFAULT_SENDER.ghnProvinceId,
+        ghnDistrictId: selectedShop.ghnDistrictId
+          ? Number(selectedShop.ghnDistrictId)
+          : prev.ghnDistrictId ?? DEFAULT_SENDER.ghnDistrictId,
+        ghnWardCode: selectedShop.ghnWardCode || prev.ghnWardCode || DEFAULT_SENDER.ghnWardCode
+      }));
+    } else {
+      setSender(DEFAULT_SENDER);
     }
   }, [selectedShop]);
 
@@ -181,14 +181,20 @@ export function AddressNormalizeAndCompare() {
           address: [addr.ward, addr.district, addr.province].filter(Boolean).join(", ")
         };
 
-        if (addr.ghnProvinceId && addr.ghnDistrictId) {
-          payload.fromDistrictId = sender.ghnDistrictId;
+        const senderDistrictId = sender.ghnDistrictId ?? DEFAULT_SENDER.ghnDistrictId;
+        const senderWardCode = sender.ghnWardCode ?? DEFAULT_SENDER.ghnWardCode;
+
+        if (addr.ghnProvinceId && addr.ghnDistrictId && senderDistrictId) {
+          payload.fromDistrictId = senderDistrictId;
           payload.toDistrictId = addr.ghnDistrictId;
           if (addr.ghnWardCode) {
             payload.toWardCode = addr.ghnWardCode;
           }
-          payload.senderDistrictId = sender.ghnDistrictId;
+          payload.senderDistrictId = senderDistrictId;
           payload.receiverDistrictId = addr.ghnDistrictId;
+          if (senderWardCode) {
+            payload.senderWardCode = senderWardCode;
+          }
           if (addr.ghnWardCode) {
             payload.receiverWardCode = addr.ghnWardCode;
           }
@@ -284,18 +290,24 @@ export function AddressNormalizeAndCompare() {
           address: [addr.ward, addr.district, addr.province].filter(Boolean).join(", ")
         };
 
+        const senderDistrictId = sender.ghnDistrictId ?? DEFAULT_SENDER.ghnDistrictId;
+        const senderWardCode = sender.ghnWardCode ?? DEFAULT_SENDER.ghnWardCode;
+
         // Add GHN/VTP IDs if available
-        if (addr.ghnProvinceId && addr.ghnDistrictId) {
+        if (addr.ghnProvinceId && addr.ghnDistrictId && senderDistrictId) {
           // GHN fields
-          payload.fromDistrictId = sender.ghnDistrictId;
+          payload.fromDistrictId = senderDistrictId;
           payload.toDistrictId = addr.ghnDistrictId;
           if (addr.ghnWardCode) {
             payload.toWardCode = addr.ghnWardCode;
           }
           
           // VTP fields (same structure as GHN)
-          payload.senderDistrictId = sender.ghnDistrictId;
+          payload.senderDistrictId = senderDistrictId;
           payload.receiverDistrictId = addr.ghnDistrictId;
+          if (senderWardCode) {
+            payload.senderWardCode = senderWardCode;
+          }
           if (addr.ghnWardCode) {
             payload.receiverWardCode = addr.ghnWardCode;
           }
